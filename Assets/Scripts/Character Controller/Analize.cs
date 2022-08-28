@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.InputSystem;
 
 public class Analize : MonoBehaviour
 {
@@ -10,10 +11,27 @@ public class Analize : MonoBehaviour
 
     float rotationSpeed = 1f;
 
+    //Input area
+    private ThirdPersonActionsAssets playerActionsAssets;
+    private InputAction interact;
+
     private void Awake()
     {
         analizeCam.gameObject.SetActive(false);
+        playerActionsAssets = new ThirdPersonActionsAssets();
     }
+
+    private void OnEnable()
+    {
+        interact = playerActionsAssets.Player.Interact;
+        playerActionsAssets.Player.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerActionsAssets.Player.Disable();
+    }
+
     public void GoToAnalize()
     {
         gameCam.gameObject.SetActive(false);
@@ -26,10 +44,13 @@ public class Analize : MonoBehaviour
         gameCam.gameObject.SetActive(true);
     }
 
-    public void OnMouseDrag()
+    public void OnMouseDrag(GameObject target)
     {
-        float xAxisRotation = Input.GetAxis("Mouse X") * rotationSpeed;
-        float yAxisRotation = Input.GetAxis("Mouse Y") * rotationSpeed;
+        objectToRotate = target;
+
+        float xAxisRotation = playerActionsAssets.Player.MouseX.ReadValue<float>() * rotationSpeed;
+        float yAxisRotation = playerActionsAssets.Player.MouseY.ReadValue<float>() * rotationSpeed;
+        Debug.Log(xAxisRotation);
 
         objectToRotate.transform.Rotate(Vector3.down, xAxisRotation);
         objectToRotate.transform.Rotate(Vector3.down, yAxisRotation);
