@@ -10,7 +10,7 @@ public class CharacterMechanics : MonoBehaviour
     private bool isInteracting, analizable, pickable, pushable, talkable;
 
     //Mechanics scripts
-    private Analize analize;
+    [SerializeField] public Analize analize;
 
     //Input area
     private ThirdPersonActionsAssets playerActionsAssets;
@@ -20,8 +20,6 @@ public class CharacterMechanics : MonoBehaviour
     {
         charCollider = GetComponentInParent<CapsuleCollider>();
         playerActionsAssets = new ThirdPersonActionsAssets();
-
-        analize = gameObject.AddComponent<Analize>();
     }
 
     private void OnEnable()
