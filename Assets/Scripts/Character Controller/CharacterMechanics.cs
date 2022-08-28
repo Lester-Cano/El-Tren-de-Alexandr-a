@@ -7,20 +7,18 @@ public class CharacterMechanics : MonoBehaviour
 {
     //Mechanics area
     [SerializeField] private CapsuleCollider charCollider;
-    private bool isInteracting;
+    private bool isInteracting, analizable, pickable, pushable, talkable;
 
     //Mechanics scripts
     private Analize analize;
 
     //Input area
-    private Rigidbody rb;
     private ThirdPersonActionsAssets playerActionsAssets;
     private InputAction interact;
 
     private void Awake()
     {
         charCollider = GetComponentInParent<CapsuleCollider>();
-        rb = GetComponent<Rigidbody>();
         playerActionsAssets = new ThirdPersonActionsAssets();
 
         analize = gameObject.AddComponent<Analize>();
@@ -37,39 +35,56 @@ public class CharacterMechanics : MonoBehaviour
         playerActionsAssets.Player.Disable();
     }
 
+    private void Update()
+    {
+        if (playerActionsAssets.Player.Interact.triggered && isInteracting)
+        {
+            if (analizable)
+            {
+                analize.GoToAnalize();
+
+            }
+            else if (pickable)
+            {
+
+            }
+            else if (pushable)
+            {
+
+            }
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Analizable"))
         {
             isInteracting = true;
-
-            if (isInteracting)
-            {
-                Debug.Log("Analizable Object");
-            }
+            analizable = true;
         }
         else if (other.gameObject.CompareTag("Pickable"))
         {
             isInteracting = true;
-
-            if (isInteracting)
-            {
-                Debug.Log("Pickable Object");
-            }
+            pickable = true;
         }
         else if (other.gameObject.CompareTag("Pushable"))
         {
             isInteracting = true;
-
-            if (isInteracting)
-            {
-                Debug.Log("Pushable Object");
-            }
+            pushable = true;
+        }
+        else if (other.gameObject.CompareTag("Talkable"))
+        {
+            isInteracting = true;
+            talkable = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         isInteracting = false;
+        analizable = false;
+        pickable = false;
+        pushable = false;
+        talkable = false;
     }
 }
