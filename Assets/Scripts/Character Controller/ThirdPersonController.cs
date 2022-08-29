@@ -24,13 +24,13 @@ public class ThirdPersonController : MonoBehaviour
         playerActionsAssets = new ThirdPersonActionsAssets();
     }
 
-    private void OnEnable()
+    public void OnEnable()
     {
         move = playerActionsAssets.Player.Move;
         playerActionsAssets.Player.Enable();
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         playerActionsAssets.Player.Disable();
     }
