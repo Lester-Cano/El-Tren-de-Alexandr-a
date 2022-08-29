@@ -151,6 +151,17 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 },
                 {
                     ""name"": """",
+                    ""id"": ""cd6342fb-31a8-4250-b3b2-e369eab32c7c"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throw"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""898dbe20-33a2-44ed-b3a8-98672bacf10c"",
                     ""path"": ""<Mouse>/delta/x"",
                     ""interactions"": """",
@@ -181,17 +192,6 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cd6342fb-31a8-4250-b3b2-e369eab32c7c"",
-                    ""path"": ""<Keyboard>/t"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Throw"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -202,10 +202,10 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_Throw = m_Player.FindAction("Throw", throwIfNotFound: true);
         m_Player_MouseX = m_Player.FindAction("MouseX", throwIfNotFound: true);
         m_Player_MouseY = m_Player.FindAction("MouseY", throwIfNotFound: true);
         m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
-        m_Player_Throw = m_Player.FindAction("Throw", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -267,20 +267,20 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_Throw;
     private readonly InputAction m_Player_MouseX;
     private readonly InputAction m_Player_MouseY;
     private readonly InputAction m_Player_Rotate;
-    private readonly InputAction m_Player_Throw;
     public struct PlayerActions
     {
         private @ThirdPersonActionsAssets m_Wrapper;
         public PlayerActions(@ThirdPersonActionsAssets wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @Throw => m_Wrapper.m_Player_Throw;
         public InputAction @MouseX => m_Wrapper.m_Player_MouseX;
         public InputAction @MouseY => m_Wrapper.m_Player_MouseY;
         public InputAction @Rotate => m_Wrapper.m_Player_Rotate;
-        public InputAction @Throw => m_Wrapper.m_Player_Throw;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -296,6 +296,9 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @Throw.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
+                @Throw.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
+                @Throw.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
                 @MouseX.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseX;
                 @MouseX.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseX;
                 @MouseX.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseX;
@@ -305,9 +308,6 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @Rotate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
-                @Throw.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
-                @Throw.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
-                @Throw.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -318,6 +318,9 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @Throw.started += instance.OnThrow;
+                @Throw.performed += instance.OnThrow;
+                @Throw.canceled += instance.OnThrow;
                 @MouseX.started += instance.OnMouseX;
                 @MouseX.performed += instance.OnMouseX;
                 @MouseX.canceled += instance.OnMouseX;
@@ -327,9 +330,6 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @Rotate.started += instance.OnRotate;
                 @Rotate.performed += instance.OnRotate;
                 @Rotate.canceled += instance.OnRotate;
-                @Throw.started += instance.OnThrow;
-                @Throw.performed += instance.OnThrow;
-                @Throw.canceled += instance.OnThrow;
             }
         }
     }
@@ -338,9 +338,9 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
     {
         void OnMove(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnThrow(InputAction.CallbackContext context);
         void OnMouseX(InputAction.CallbackContext context);
         void OnMouseY(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
-        void OnThrow(InputAction.CallbackContext context);
     }
 }
