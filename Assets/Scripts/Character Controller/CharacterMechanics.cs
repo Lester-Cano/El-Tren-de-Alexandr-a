@@ -16,21 +16,24 @@ public class CharacterMechanics : MonoBehaviour
     private ThirdPersonActionsAssets playerActionsAssets;
     private InputAction interact;
 
+    //Private for Analize Mechanic
+    private GameObject objectToAnalize;
+
     private void Awake()
     {
         charCollider = GetComponentInParent<CapsuleCollider>();
         playerActionsAssets = new ThirdPersonActionsAssets();
     }
 
-    private void OnEnable()
+    public void OnEnable()
     {
         interact = playerActionsAssets.Player.Interact;
-        playerActionsAssets.Player.Enable();
+        playerActionsAssets.Player.Interact.Enable();
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
-        playerActionsAssets.Player.Disable();
+        playerActionsAssets.Player.Interact.Disable();
     }
 
     private void Update()
@@ -39,7 +42,7 @@ public class CharacterMechanics : MonoBehaviour
         {
             if (analizable)
             {
-                analize.GoToAnalize();
+                analize.GoToAnalize(objectToAnalize);
 
             }
             else if (pickable)
@@ -47,6 +50,10 @@ public class CharacterMechanics : MonoBehaviour
 
             }
             else if (pushable)
+            {
+
+            }
+            else if (talkable)
             {
 
             }
@@ -59,6 +66,8 @@ public class CharacterMechanics : MonoBehaviour
         {
             isInteracting = true;
             analizable = true;
+
+            objectToAnalize = other.gameObject;
         }
         else if (other.gameObject.CompareTag("Pickable"))
         {
