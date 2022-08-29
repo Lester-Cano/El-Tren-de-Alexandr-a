@@ -9,7 +9,7 @@ public class Analize : MonoBehaviour
     [SerializeField] public CinemachineVirtualCamera gameCam, analizeCam;
     public GameObject objectToRotate, pivot, canvas;
 
-    float rotationSpeed = 1f;
+    float rotationSpeed = 0.5f;
 
     //Input area
     private ThirdPersonActionsAssets playerActionsAssets;
@@ -30,6 +30,11 @@ public class Analize : MonoBehaviour
         OnDisable();
     }
 
+    private void Start()
+    {
+        OnDisable();
+    }
+
     private void OnEnable()
     {
         interaction = playerActionsAssets.Player.Interact;
@@ -38,7 +43,7 @@ public class Analize : MonoBehaviour
 
     private void OnDisable()
     {
-        playerActionsAssets.Player.Disable();
+        playerActionsAssets.Player.Rotate.Disable();
     }
 
     private void Update()
@@ -71,6 +76,7 @@ public class Analize : MonoBehaviour
 
     public void BackToGame()
     {
+
         analizeCam.gameObject.SetActive(false);
         gameCam.gameObject.SetActive(true);
 

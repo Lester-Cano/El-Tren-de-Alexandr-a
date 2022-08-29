@@ -28,12 +28,12 @@ public class CharacterMechanics : MonoBehaviour
     public void OnEnable()
     {
         interact = playerActionsAssets.Player.Interact;
-        playerActionsAssets.Player.Enable();
+        playerActionsAssets.Player.Interact.Enable();
     }
 
     public void OnDisable()
     {
-        playerActionsAssets.Player.Disable();
+        playerActionsAssets.Player.Interact.Disable();
     }
 
     private void Update()
@@ -50,6 +50,10 @@ public class CharacterMechanics : MonoBehaviour
 
             }
             else if (pushable)
+            {
+
+            }
+            else if (talkable)
             {
 
             }
