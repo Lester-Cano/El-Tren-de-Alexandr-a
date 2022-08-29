@@ -30,11 +30,6 @@ public class Analize : MonoBehaviour
         OnDisable();
     }
 
-    private void Start()
-    {
-        OnDisable();
-    }
-
     private void OnEnable()
     {
         interaction = playerActionsAssets.Player.Interact;
