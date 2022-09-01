@@ -26,10 +26,10 @@ public class ButtonManager : MonoBehaviour
         optionsP.transform.DOMove(LPosition.gameObject.transform.position, 0.5f);
     }
     public void OnPlayButton() {
-        SceneManager.LoadScene("1");
+        SceneManager.LoadScene("Object PickUp");
     }
 
     public void OnExitButton() {
-        Application.Quit();
+        Debug.Log("Adiós"); Application.Quit();
     }
 }
