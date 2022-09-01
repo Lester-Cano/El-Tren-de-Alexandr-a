@@ -80,6 +80,15 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseDrag"",
+                    ""type"": ""Value"",
+                    ""id"": ""8827135b-e488-479d-9ec5-70661e00c2da"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -192,6 +201,17 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7994dc10-a2af-4630-bb86-c9b20e9837bd"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseDrag"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -206,6 +226,7 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         m_Player_MouseX = m_Player.FindAction("MouseX", throwIfNotFound: true);
         m_Player_MouseY = m_Player.FindAction("MouseY", throwIfNotFound: true);
         m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
+        m_Player_MouseDrag = m_Player.FindAction("MouseDrag", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -271,6 +292,7 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
     private readonly InputAction m_Player_MouseX;
     private readonly InputAction m_Player_MouseY;
     private readonly InputAction m_Player_Rotate;
+    private readonly InputAction m_Player_MouseDrag;
     public struct PlayerActions
     {
         private @ThirdPersonActionsAssets m_Wrapper;
@@ -281,6 +303,7 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         public InputAction @MouseX => m_Wrapper.m_Player_MouseX;
         public InputAction @MouseY => m_Wrapper.m_Player_MouseY;
         public InputAction @Rotate => m_Wrapper.m_Player_Rotate;
+        public InputAction @MouseDrag => m_Wrapper.m_Player_MouseDrag;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -308,6 +331,9 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @Rotate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
+                @MouseDrag.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseDrag;
+                @MouseDrag.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseDrag;
+                @MouseDrag.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseDrag;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -330,6 +356,9 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @Rotate.started += instance.OnRotate;
                 @Rotate.performed += instance.OnRotate;
                 @Rotate.canceled += instance.OnRotate;
+                @MouseDrag.started += instance.OnMouseDrag;
+                @MouseDrag.performed += instance.OnMouseDrag;
+                @MouseDrag.canceled += instance.OnMouseDrag;
             }
         }
     }
@@ -342,5 +371,6 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         void OnMouseX(InputAction.CallbackContext context);
         void OnMouseY(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
+        void OnMouseDrag(InputAction.CallbackContext context);
     }
 }

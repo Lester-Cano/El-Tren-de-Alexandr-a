@@ -406,7 +406,7 @@ MeshCollider:
   m_GameObject: {fileID: 314169748}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -1579,6 +1579,7 @@ MonoBehaviour:
   objectToRotate: {fileID: 0}
   pivot: {fileID: 978562753}
   canvas: {fileID: 1167091412}
+  rotationSpeed: 0.5
 --- !u!1 &1874533105
 GameObject:
   m_ObjectHideFlags: 3
@@ -1833,7 +1834,7 @@ MeshCollider:
   m_GameObject: {fileID: 2119205471}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30

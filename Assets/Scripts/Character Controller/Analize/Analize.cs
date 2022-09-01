@@ -9,7 +9,7 @@ public class Analize : MonoBehaviour
     [SerializeField] public CinemachineVirtualCamera gameCam, analizeCam;
     public GameObject objectToRotate, pivot, canvas;
 
-    float rotationSpeed = 0.5f;
+    public float rotationSpeed = 100f;
 
     //Input area
     private ThirdPersonActionsAssets playerActionsAssets;
@@ -45,11 +45,10 @@ public class Analize : MonoBehaviour
     {
         if (playerActionsAssets.Player.Rotate.IsPressed())
         {
-            float xAxisRotation = playerActionsAssets.Player.MouseX.ReadValue<float>() * rotationSpeed;
-            float yAxisRotation = playerActionsAssets.Player.MouseY.ReadValue<float>() * rotationSpeed;
+            Vector2 deltaAxisRotation = playerActionsAssets.Player.MouseDrag.ReadValue<Vector2>() * rotationSpeed * Time.deltaTime;
 
-            objectToRotate.transform.Rotate(Vector3.up, xAxisRotation);
-            objectToRotate.transform.Rotate(Vector3.left, yAxisRotation);
+            var finalRotation = Quaternion.Euler(deltaAxisRotation.x, 0, 0) * Quaternion.Euler(0, 0, deltaAxisRotation.y);
+            objectToRotate.transform.localRotation *= finalRotation;
         }
     }
 
