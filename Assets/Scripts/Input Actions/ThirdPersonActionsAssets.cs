@@ -53,6 +53,42 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseX"",
+                    ""type"": ""Value"",
+                    ""id"": ""18542fe2-c7a0-4b96-8db2-5ef0043f42db"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MouseY"",
+                    ""type"": ""Value"",
+                    ""id"": ""7df07449-efa9-4184-880e-a01374a7cc47"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Rotate"",
+                    ""type"": ""Button"",
+                    ""id"": ""e9741e3e-aca5-47b4-9cea-60c91652c436"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseDrag"",
+                    ""type"": ""Value"",
+                    ""id"": ""8827135b-e488-479d-9ec5-70661e00c2da"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -132,6 +168,50 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""action"": ""Throw"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""898dbe20-33a2-44ed-b3a8-98672bacf10c"",
+                    ""path"": ""<Mouse>/delta/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseX"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d93f64aa-3837-4ac2-9763-eb03394633c7"",
+                    ""path"": ""<Mouse>/delta/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseY"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4fdb6ea1-a793-41a7-a6ee-91ba997fed29"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7994dc10-a2af-4630-bb86-c9b20e9837bd"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseDrag"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +223,10 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Throw = m_Player.FindAction("Throw", throwIfNotFound: true);
+        m_Player_MouseX = m_Player.FindAction("MouseX", throwIfNotFound: true);
+        m_Player_MouseY = m_Player.FindAction("MouseY", throwIfNotFound: true);
+        m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
+        m_Player_MouseDrag = m_Player.FindAction("MouseDrag", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -205,6 +289,10 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Throw;
+    private readonly InputAction m_Player_MouseX;
+    private readonly InputAction m_Player_MouseY;
+    private readonly InputAction m_Player_Rotate;
+    private readonly InputAction m_Player_MouseDrag;
     public struct PlayerActions
     {
         private @ThirdPersonActionsAssets m_Wrapper;
@@ -212,6 +300,10 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Throw => m_Wrapper.m_Player_Throw;
+        public InputAction @MouseX => m_Wrapper.m_Player_MouseX;
+        public InputAction @MouseY => m_Wrapper.m_Player_MouseY;
+        public InputAction @Rotate => m_Wrapper.m_Player_Rotate;
+        public InputAction @MouseDrag => m_Wrapper.m_Player_MouseDrag;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -230,6 +322,18 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @Throw.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
                 @Throw.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
                 @Throw.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
+                @MouseX.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseX;
+                @MouseX.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseX;
+                @MouseX.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseX;
+                @MouseY.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseY;
+                @MouseY.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseY;
+                @MouseY.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseY;
+                @Rotate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
+                @Rotate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
+                @Rotate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
+                @MouseDrag.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseDrag;
+                @MouseDrag.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseDrag;
+                @MouseDrag.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseDrag;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -243,6 +347,18 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @Throw.started += instance.OnThrow;
                 @Throw.performed += instance.OnThrow;
                 @Throw.canceled += instance.OnThrow;
+                @MouseX.started += instance.OnMouseX;
+                @MouseX.performed += instance.OnMouseX;
+                @MouseX.canceled += instance.OnMouseX;
+                @MouseY.started += instance.OnMouseY;
+                @MouseY.performed += instance.OnMouseY;
+                @MouseY.canceled += instance.OnMouseY;
+                @Rotate.started += instance.OnRotate;
+                @Rotate.performed += instance.OnRotate;
+                @Rotate.canceled += instance.OnRotate;
+                @MouseDrag.started += instance.OnMouseDrag;
+                @MouseDrag.performed += instance.OnMouseDrag;
+                @MouseDrag.canceled += instance.OnMouseDrag;
             }
         }
     }
@@ -252,5 +368,9 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         void OnMove(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnThrow(InputAction.CallbackContext context);
+        void OnMouseX(InputAction.CallbackContext context);
+        void OnMouseY(InputAction.CallbackContext context);
+        void OnRotate(InputAction.CallbackContext context);
+        void OnMouseDrag(InputAction.CallbackContext context);
     }
 }
