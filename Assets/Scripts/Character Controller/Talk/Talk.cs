@@ -10,8 +10,8 @@ public class Talk : MonoBehaviour
     //Mechanic area
 
     [SerializeField] public CinemachineVirtualCamera gameCam;
-
-    public GameObject canvas;
+    NPCDialogue dialogue;
+    private int count = 0;
 
     //Input area
     private ThirdPersonActionsAssets playerActionsAssets;
@@ -24,6 +24,7 @@ public class Talk : MonoBehaviour
 
     public GameObject textContainer;
     public TMP_Text text;
+    public GameObject canvas;
 
     private void Awake()
     {
@@ -50,11 +51,43 @@ public class Talk : MonoBehaviour
 
     public void TalkToNPC(GameObject target)
     {
+        canvas.SetActive(true);
 
+        dialogue = target.GetComponent<NPCDialogue>();
+
+        if(dialogue != null)
+        {
+            text.text = dialogue.dialogues[0];
+        }
+        else
+        {
+            StopTalking();
+        }
     }
 
     public void StopTalking()
     {
+        canvas.SetActive(false);
+        text.text = null;
+    }
 
+    public void NextText()
+    {
+        if (dialogue != null)
+        {
+            count++;
+            if (count < dialogue.dialogues.Length)
+            {
+                text.text = dialogue.dialogues[count];
+            }
+            else
+            {
+                StopTalking();
+            }
+        }
+        else if(dialogue == null)
+        {
+            StopTalking();
+        }
     }
 }
