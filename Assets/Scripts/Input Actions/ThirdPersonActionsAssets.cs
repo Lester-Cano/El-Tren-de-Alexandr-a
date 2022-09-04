@@ -115,7 +115,7 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""name"": """",
                     ""id"": ""4a86e5f1-d543-4874-904f-4de236a4032f"",
                     ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interact"",
