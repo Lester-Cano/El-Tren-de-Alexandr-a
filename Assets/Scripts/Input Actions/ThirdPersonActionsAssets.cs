@@ -55,24 +55,6 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""MouseX"",
-                    ""type"": ""Value"",
-                    ""id"": ""18542fe2-c7a0-4b96-8db2-5ef0043f42db"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""MouseY"",
-                    ""type"": ""Value"",
-                    ""id"": ""7df07449-efa9-4184-880e-a01374a7cc47"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
                     ""name"": ""Rotate"",
                     ""type"": ""Button"",
                     ""id"": ""e9741e3e-aca5-47b4-9cea-60c91652c436"",
@@ -89,6 +71,24 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ZoomIn"",
+                    ""type"": ""Button"",
+                    ""id"": ""4a62f776-9f4a-4496-99d1-bf48b4cf19f7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ZoomOut"",
+                    ""type"": ""Button"",
+                    ""id"": ""20e78ee8-8944-4d38-899f-817548a10272"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -171,28 +171,6 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 },
                 {
                     ""name"": """",
-                    ""id"": ""898dbe20-33a2-44ed-b3a8-98672bacf10c"",
-                    ""path"": ""<Mouse>/delta/x"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MouseX"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d93f64aa-3837-4ac2-9763-eb03394633c7"",
-                    ""path"": ""<Mouse>/delta/y"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MouseY"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""4fdb6ea1-a793-41a7-a6ee-91ba997fed29"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
@@ -212,6 +190,28 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""action"": ""MouseDrag"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""13f3bb08-93c6-46f3-9f69-808228bc8705"",
+                    ""path"": ""<Mouse>/forwardButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ZoomIn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c4c4c438-807b-4ce8-9fe8-19be5643b6ba"",
+                    ""path"": ""<Mouse>/backButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ZoomOut"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -223,10 +223,10 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Throw = m_Player.FindAction("Throw", throwIfNotFound: true);
-        m_Player_MouseX = m_Player.FindAction("MouseX", throwIfNotFound: true);
-        m_Player_MouseY = m_Player.FindAction("MouseY", throwIfNotFound: true);
         m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
         m_Player_MouseDrag = m_Player.FindAction("MouseDrag", throwIfNotFound: true);
+        m_Player_ZoomIn = m_Player.FindAction("ZoomIn", throwIfNotFound: true);
+        m_Player_ZoomOut = m_Player.FindAction("ZoomOut", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -289,10 +289,10 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Throw;
-    private readonly InputAction m_Player_MouseX;
-    private readonly InputAction m_Player_MouseY;
     private readonly InputAction m_Player_Rotate;
     private readonly InputAction m_Player_MouseDrag;
+    private readonly InputAction m_Player_ZoomIn;
+    private readonly InputAction m_Player_ZoomOut;
     public struct PlayerActions
     {
         private @ThirdPersonActionsAssets m_Wrapper;
@@ -300,10 +300,10 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Throw => m_Wrapper.m_Player_Throw;
-        public InputAction @MouseX => m_Wrapper.m_Player_MouseX;
-        public InputAction @MouseY => m_Wrapper.m_Player_MouseY;
         public InputAction @Rotate => m_Wrapper.m_Player_Rotate;
         public InputAction @MouseDrag => m_Wrapper.m_Player_MouseDrag;
+        public InputAction @ZoomIn => m_Wrapper.m_Player_ZoomIn;
+        public InputAction @ZoomOut => m_Wrapper.m_Player_ZoomOut;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -322,18 +322,18 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @Throw.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
                 @Throw.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
                 @Throw.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
-                @MouseX.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseX;
-                @MouseX.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseX;
-                @MouseX.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseX;
-                @MouseY.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseY;
-                @MouseY.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseY;
-                @MouseY.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseY;
                 @Rotate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @MouseDrag.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseDrag;
                 @MouseDrag.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseDrag;
                 @MouseDrag.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseDrag;
+                @ZoomIn.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoomIn;
+                @ZoomIn.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoomIn;
+                @ZoomIn.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoomIn;
+                @ZoomOut.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoomOut;
+                @ZoomOut.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoomOut;
+                @ZoomOut.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoomOut;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -347,18 +347,18 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @Throw.started += instance.OnThrow;
                 @Throw.performed += instance.OnThrow;
                 @Throw.canceled += instance.OnThrow;
-                @MouseX.started += instance.OnMouseX;
-                @MouseX.performed += instance.OnMouseX;
-                @MouseX.canceled += instance.OnMouseX;
-                @MouseY.started += instance.OnMouseY;
-                @MouseY.performed += instance.OnMouseY;
-                @MouseY.canceled += instance.OnMouseY;
                 @Rotate.started += instance.OnRotate;
                 @Rotate.performed += instance.OnRotate;
                 @Rotate.canceled += instance.OnRotate;
                 @MouseDrag.started += instance.OnMouseDrag;
                 @MouseDrag.performed += instance.OnMouseDrag;
                 @MouseDrag.canceled += instance.OnMouseDrag;
+                @ZoomIn.started += instance.OnZoomIn;
+                @ZoomIn.performed += instance.OnZoomIn;
+                @ZoomIn.canceled += instance.OnZoomIn;
+                @ZoomOut.started += instance.OnZoomOut;
+                @ZoomOut.performed += instance.OnZoomOut;
+                @ZoomOut.canceled += instance.OnZoomOut;
             }
         }
     }
@@ -368,9 +368,9 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         void OnMove(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnThrow(InputAction.CallbackContext context);
-        void OnMouseX(InputAction.CallbackContext context);
-        void OnMouseY(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
         void OnMouseDrag(InputAction.CallbackContext context);
+        void OnZoomIn(InputAction.CallbackContext context);
+        void OnZoomOut(InputAction.CallbackContext context);
     }
 }

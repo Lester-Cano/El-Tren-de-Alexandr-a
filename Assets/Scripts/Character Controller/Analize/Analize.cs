@@ -50,6 +50,16 @@ public class Analize : MonoBehaviour
             var finalRotation = Quaternion.Euler(deltaAxisRotation.x, 0, 0) * Quaternion.Euler(0, 0, deltaAxisRotation.y);
             objectToRotate.transform.localRotation *= finalRotation;
         }
+
+        if (playerActionsAssets.Player.ZoomIn.IsPressed())
+        {
+
+        }
+
+        if (playerActionsAssets.Player.ZoomOut.IsPressed())
+        {
+
+        }
     }
 
     public void GoToAnalize(GameObject target)
