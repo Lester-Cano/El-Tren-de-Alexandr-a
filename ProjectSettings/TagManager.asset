@@ -8,6 +8,7 @@ TagManager:
   - Pickable
   - Pushable
   - Talkable
+  - Clickable
   layers:
   - Default
   - TransparentFX

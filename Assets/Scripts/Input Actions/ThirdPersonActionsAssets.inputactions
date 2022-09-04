@@ -31,42 +31,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "MouseX",
-                    "type": "Value",
-                    "id": "18542fe2-c7a0-4b96-8db2-5ef0043f42db",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "MouseY",
-                    "type": "Value",
-                    "id": "7df07449-efa9-4184-880e-a01374a7cc47",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Rotate",
-                    "type": "Button",
-                    "id": "e9741e3e-aca5-47b4-9cea-60c91652c436",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "MouseDrag",
-                    "type": "Value",
-                    "id": "8827135b-e488-479d-9ec5-70661e00c2da",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -146,53 +110,103 @@
                     "action": "Throw",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "Analize",
+            "id": "c6958ffc-ea15-4f7c-9f39-95acf8b5a543",
+            "actions": [
                 {
-                    "name": "",
-                    "id": "898dbe20-33a2-44ed-b3a8-98672bacf10c",
-                    "path": "<Mouse>/delta/x",
-                    "interactions": "",
+                    "name": "Rotate",
+                    "type": "Button",
+                    "id": "e50d2645-7d49-4b3e-8301-6625b42559a2",
+                    "expectedControlType": "Button",
                     "processors": "",
-                    "groups": "",
-                    "action": "MouseX",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d93f64aa-3837-4ac2-9763-eb03394633c7",
-                    "path": "<Mouse>/delta/y",
                     "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MouseY",
-                    "isComposite": false,
-                    "isPartOfComposite": false
+                    "initialStateCheck": false
                 },
                 {
+                    "name": "ClickObjects",
+                    "type": "Button",
+                    "id": "981153bb-d175-49d5-b493-ed44795c20de",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DeltaMouse",
+                    "type": "Value",
+                    "id": "68c13d22-39b2-4d6b-aaf0-409cfcc85aca",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Zoom",
+                    "type": "Value",
+                    "id": "19e7fb99-5b56-4e98-9092-3c43dd31c400",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
                     "name": "",
-                    "id": "4fdb6ea1-a793-41a7-a6ee-91ba997fed29",
+                    "id": "76f45627-2027-46c8-a454-69a9c95668c5",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PC",
                     "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "7994dc10-a2af-4630-bb86-c9b20e9837bd",
+                    "id": "493738e1-444e-43ed-81c8-83727636c546",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "ClickObjects",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fc084112-a38c-45a1-94c1-db750232d27d",
                     "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "MouseDrag",
+                    "groups": "PC",
+                    "action": "DeltaMouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "518406b8-9e1a-4354-a283-89c6955074c2",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "Zoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "PC",
+            "bindingGroup": "PC",
+            "devices": []
+        }
+    ]
 }
