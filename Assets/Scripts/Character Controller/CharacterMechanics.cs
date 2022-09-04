@@ -7,10 +7,11 @@ public class CharacterMechanics : MonoBehaviour
 {
     //Mechanics area
     [SerializeField] private CapsuleCollider charCollider;
-    private bool isInteracting, analizable, pickable, pushable, talkable;
+    private bool isInteracting, analizable, pickable, talkable;
 
     //Mechanics scripts
-    [SerializeField] public Analize analize;
+    private Analize analize;
+    private Talk talk;
 
     //Input area
     private ThirdPersonActionsAssets playerActionsAssets;
@@ -23,6 +24,8 @@ public class CharacterMechanics : MonoBehaviour
     {
         charCollider = GetComponentInParent<CapsuleCollider>();
         playerActionsAssets = new ThirdPersonActionsAssets();
+        analize = GetComponentInParent<Analize>();
+        talk = GetComponent<Talk>();
     }
 
     public void OnEnable()
@@ -51,13 +54,9 @@ public class CharacterMechanics : MonoBehaviour
             {
 
             }
-            else if (pushable)
-            {
-
-            }
             else if (talkable)
             {
-
+                talk.TalkToNPC(objectToAnalize);
             }
         }
     }
@@ -76,15 +75,12 @@ public class CharacterMechanics : MonoBehaviour
             isInteracting = true;
             pickable = true;
         }
-        else if (other.gameObject.CompareTag("Pushable"))
-        {
-            isInteracting = true;
-            pushable = true;
-        }
         else if (other.gameObject.CompareTag("Talkable"))
         {
             isInteracting = true;
             talkable = true;
+
+            objectToAnalize = other.gameObject;
         }
     }
 
@@ -93,7 +89,6 @@ public class CharacterMechanics : MonoBehaviour
         isInteracting = false;
         analizable = false;
         pickable = false;
-        pushable = false;
         talkable = false;
     }
 }

@@ -9,7 +9,6 @@ public class Analize : MonoBehaviour
 {
     //Mechanic area
 
-
     [SerializeField] public CinemachineVirtualCamera gameCam, analizeCam;
     [SerializeField] public Camera mainCam;
     CinemachineComponentBase componentBase;
