@@ -44,6 +44,8 @@ public class CharacterMechanics : MonoBehaviour
             {
                 analize.GoToAnalize(objectToAnalize);
 
+                StartCoroutine(analize.AllanBothering());
+
             }
             else if (pickable)
             {
