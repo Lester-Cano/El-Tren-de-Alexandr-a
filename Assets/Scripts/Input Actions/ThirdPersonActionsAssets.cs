@@ -73,22 +73,22 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""ZoomIn"",
-                    ""type"": ""Button"",
+                    ""name"": ""Zoom"",
+                    ""type"": ""Value"",
                     ""id"": ""4a62f776-9f4a-4496-99d1-bf48b4cf19f7"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""ZoomOut"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""20e78ee8-8944-4d38-899f-817548a10272"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -194,11 +194,11 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 {
                     ""name"": """",
                     ""id"": ""13f3bb08-93c6-46f3-9f69-808228bc8705"",
-                    ""path"": ""<Mouse>/forwardButton"",
+                    ""path"": ""<Mouse>/scroll/y"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ZoomIn"",
+                    ""action"": ""Zoom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -225,7 +225,7 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         m_Player_Throw = m_Player.FindAction("Throw", throwIfNotFound: true);
         m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
         m_Player_MouseDrag = m_Player.FindAction("MouseDrag", throwIfNotFound: true);
-        m_Player_ZoomIn = m_Player.FindAction("ZoomIn", throwIfNotFound: true);
+        m_Player_Zoom = m_Player.FindAction("Zoom", throwIfNotFound: true);
         m_Player_ZoomOut = m_Player.FindAction("ZoomOut", throwIfNotFound: true);
     }
 
@@ -291,7 +291,7 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
     private readonly InputAction m_Player_Throw;
     private readonly InputAction m_Player_Rotate;
     private readonly InputAction m_Player_MouseDrag;
-    private readonly InputAction m_Player_ZoomIn;
+    private readonly InputAction m_Player_Zoom;
     private readonly InputAction m_Player_ZoomOut;
     public struct PlayerActions
     {
@@ -302,7 +302,7 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         public InputAction @Throw => m_Wrapper.m_Player_Throw;
         public InputAction @Rotate => m_Wrapper.m_Player_Rotate;
         public InputAction @MouseDrag => m_Wrapper.m_Player_MouseDrag;
-        public InputAction @ZoomIn => m_Wrapper.m_Player_ZoomIn;
+        public InputAction @Zoom => m_Wrapper.m_Player_Zoom;
         public InputAction @ZoomOut => m_Wrapper.m_Player_ZoomOut;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
@@ -328,9 +328,9 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @MouseDrag.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseDrag;
                 @MouseDrag.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseDrag;
                 @MouseDrag.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseDrag;
-                @ZoomIn.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoomIn;
-                @ZoomIn.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoomIn;
-                @ZoomIn.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoomIn;
+                @Zoom.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoom;
+                @Zoom.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoom;
+                @Zoom.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoom;
                 @ZoomOut.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoomOut;
                 @ZoomOut.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoomOut;
                 @ZoomOut.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoomOut;
@@ -353,9 +353,9 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @MouseDrag.started += instance.OnMouseDrag;
                 @MouseDrag.performed += instance.OnMouseDrag;
                 @MouseDrag.canceled += instance.OnMouseDrag;
-                @ZoomIn.started += instance.OnZoomIn;
-                @ZoomIn.performed += instance.OnZoomIn;
-                @ZoomIn.canceled += instance.OnZoomIn;
+                @Zoom.started += instance.OnZoom;
+                @Zoom.performed += instance.OnZoom;
+                @Zoom.canceled += instance.OnZoom;
                 @ZoomOut.started += instance.OnZoomOut;
                 @ZoomOut.performed += instance.OnZoomOut;
                 @ZoomOut.canceled += instance.OnZoomOut;
@@ -370,7 +370,7 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         void OnThrow(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
         void OnMouseDrag(InputAction.CallbackContext context);
-        void OnZoomIn(InputAction.CallbackContext context);
+        void OnZoom(InputAction.CallbackContext context);
         void OnZoomOut(InputAction.CallbackContext context);
     }
 }

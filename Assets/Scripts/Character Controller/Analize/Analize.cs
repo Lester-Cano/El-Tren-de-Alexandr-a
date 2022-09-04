@@ -7,9 +7,12 @@ using UnityEngine.InputSystem;
 public class Analize : MonoBehaviour
 {
     [SerializeField] public CinemachineVirtualCamera gameCam, analizeCam;
+    CinemachineComponentBase componentBase;
+    float cameraDistance;
+    [SerializeField] float sensitivity = 10f;
     public GameObject objectToRotate, pivot, canvas;
 
-    public float rotationSpeed = 100f;
+    public float rotationSpeed = 0.01f;
 
     //Input area
     private ThirdPersonActionsAssets playerActionsAssets;
@@ -45,20 +48,27 @@ public class Analize : MonoBehaviour
     {
         if (playerActionsAssets.Player.Rotate.IsPressed())
         {
-            Vector2 deltaAxisRotation = playerActionsAssets.Player.MouseDrag.ReadValue<Vector2>() * rotationSpeed * Time.deltaTime;
+            Vector2 deltaAxisRotation = playerActionsAssets.Player.MouseDrag.ReadValue<Vector2>() * rotationSpeed;
 
             var finalRotation = Quaternion.Euler(deltaAxisRotation.x, 0, 0) * Quaternion.Euler(0, 0, deltaAxisRotation.y);
             objectToRotate.transform.localRotation *= finalRotation;
         }
 
-        if (playerActionsAssets.Player.ZoomIn.IsPressed())
+        if(componentBase == null)
         {
-
+            componentBase = analizeCam.GetCinemachineComponent(CinemachineCore.Stage.Body);
         }
 
-        if (playerActionsAssets.Player.ZoomOut.IsPressed())
+        if (playerActionsAssets.Player.Zoom.ReadValue<float>() != 0)
         {
+            cameraDistance = playerActionsAssets.Player.Zoom.ReadValue<float>() * sensitivity;
 
+            Debug.Log(cameraDistance);
+
+            if(componentBase is CinemachineFramingTransposer)
+            {
+                (componentBase as CinemachineFramingTransposer).m_CameraDistance -= cameraDistance;
+            }
         }
     }
 

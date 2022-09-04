@@ -51,22 +51,22 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "ZoomIn",
-                    "type": "Button",
+                    "name": "Zoom",
+                    "type": "Value",
                     "id": "4a62f776-9f4a-4496-99d1-bf48b4cf19f7",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "ZoomOut",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "20e78ee8-8944-4d38-899f-817548a10272",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -172,11 +172,11 @@
                 {
                     "name": "",
                     "id": "13f3bb08-93c6-46f3-9f69-808228bc8705",
-                    "path": "<Mouse>/forwardButton",
+                    "path": "<Mouse>/scroll/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ZoomIn",
+                    "action": "Zoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
