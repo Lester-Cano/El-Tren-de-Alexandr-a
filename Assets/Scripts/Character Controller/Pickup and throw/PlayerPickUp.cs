@@ -13,7 +13,6 @@ public class PlayerPickUp : MonoBehaviour
     public BoxCollider bcoll;
     public Transform player, objectpickupContainer, mainCamera;
 
-    public float pickUpRange;
     public float dropForwardForce, dropUpwardForce;
 
     public bool onHand;
@@ -48,10 +47,7 @@ public class PlayerPickUp : MonoBehaviour
 
     private void Update()
     {
-
-        Vector3 distanceToPlayer = player.position - transform.position;
-
-        if (!onHand && distanceToPlayer.magnitude <= pickUpRange && interact.triggered && !HandsFull)
+        if (!onHand && interact.triggered && !HandsFull)
         {
             PickUp();
         }
@@ -60,13 +56,10 @@ public class PlayerPickUp : MonoBehaviour
         {
             Drop();
         }
-
-
     }
 
-    void PickUp()
+    public void PickUp()
     {
-
         onHand = true;
         HandsFull = true;
 
@@ -82,9 +75,8 @@ public class PlayerPickUp : MonoBehaviour
 
     }
 
-    void Drop()
+    public void Drop()
     {
-
         onHand = false;
         HandsFull = false;
 
@@ -99,10 +91,5 @@ public class PlayerPickUp : MonoBehaviour
         bcoll.isTrigger = false;
 
         objectPickUp.enabled = false;
-
     }
-
-    
-
-
 }

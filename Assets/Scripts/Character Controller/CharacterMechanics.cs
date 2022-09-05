@@ -18,7 +18,7 @@ public class CharacterMechanics : MonoBehaviour
     private InputAction interact;
 
     //Private for Analize Mechanic
-    private GameObject objectToAnalize;
+    private GameObject objectToInteractWith;
 
     private void Awake()
     {
@@ -45,7 +45,7 @@ public class CharacterMechanics : MonoBehaviour
         {
             if (analizable)
             {
-                analize.GoToAnalize(objectToAnalize);
+                analize.GoToAnalize(objectToInteractWith);
 
                 StartCoroutine(analize.AllanBothering());
 
@@ -56,7 +56,7 @@ public class CharacterMechanics : MonoBehaviour
             }
             else if (talkable)
             {
-                talk.TalkToNPC(objectToAnalize);
+                talk.TalkToNPC(objectToInteractWith);
             }
         }
     }
@@ -68,19 +68,21 @@ public class CharacterMechanics : MonoBehaviour
             isInteracting = true;
             analizable = true;
 
-            objectToAnalize = other.gameObject;
+            objectToInteractWith = other.gameObject;
         }
         else if (other.gameObject.CompareTag("Pickable"))
         {
             isInteracting = true;
             pickable = true;
+
+            objectToInteractWith = other.gameObject;
         }
         else if (other.gameObject.CompareTag("Talkable"))
         {
             isInteracting = true;
             talkable = true;
 
-            objectToAnalize = other.gameObject;
+            objectToInteractWith = other.gameObject;
         }
     }
 
