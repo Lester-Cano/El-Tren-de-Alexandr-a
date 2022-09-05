@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR;
 
 public class CharacterMechanics : MonoBehaviour
 {
     //Mechanics area
-    [SerializeField] private CapsuleCollider charCollider;
-    private bool isInteracting, analizable, pickable, talkable;
+    public bool isInteracting, analizable, pickable, talkable;
 
     //Mechanics scripts
     private Analize analize;
     private Talk talk;
+    private PlayerPickUp playerPickUp;
 
     //Input area
     private ThirdPersonActionsAssets playerActionsAssets;
@@ -22,10 +23,10 @@ public class CharacterMechanics : MonoBehaviour
 
     private void Awake()
     {
-        charCollider = GetComponentInParent<CapsuleCollider>();
         playerActionsAssets = new ThirdPersonActionsAssets();
         analize = GetComponentInParent<Analize>();
         talk = GetComponent<Talk>();
+        playerPickUp = GetComponent<PlayerPickUp>();
     }
 
     public void OnEnable()
@@ -52,7 +53,10 @@ public class CharacterMechanics : MonoBehaviour
             }
             else if (pickable)
             {
-
+                if (!playerPickUp.onHand && !playerPickUp.HandsFull)
+                {
+                    playerPickUp.PickUp(objectToInteractWith);
+                }
             }
             else if (talkable)
             {

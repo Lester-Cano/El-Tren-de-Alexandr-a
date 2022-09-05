@@ -6,9 +6,9 @@ TagManager:
   tags:
   - Analizable
   - Pickable
-  - Pushable
   - Talkable
   - Clickable
+  - PhysicObject
   layers:
   - Default
   - TransparentFX

@@ -24,12 +24,12 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Throw",
+                    "name": "ThrowObject",
                     "type": "Button",
-                    "id": "1e9fc2f7-fb14-429a-b26e-38c8945f4f9e",
+                    "id": "f0ab0399-dab8-48f9-ab8c-4ccb606a3ae1",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -102,12 +102,12 @@
                 },
                 {
                     "name": "",
-                    "id": "cd6342fb-31a8-4250-b3b2-e369eab32c7c",
+                    "id": "8171d06d-502c-44a4-bb08-b9e01d65e863",
                     "path": "<Keyboard>/t",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
-                    "action": "Throw",
+                    "action": "ThrowObject",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

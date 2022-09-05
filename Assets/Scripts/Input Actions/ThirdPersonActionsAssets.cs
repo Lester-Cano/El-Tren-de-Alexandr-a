@@ -46,12 +46,12 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Throw"",
+                    ""name"": ""ThrowObject"",
                     ""type"": ""Button"",
-                    ""id"": ""1e9fc2f7-fb14-429a-b26e-38c8945f4f9e"",
+                    ""id"": ""f0ab0399-dab8-48f9-ab8c-4ccb606a3ae1"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""initialStateCheck"": false
                 }
             ],
@@ -124,12 +124,12 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 },
                 {
                     ""name"": """",
-                    ""id"": ""cd6342fb-31a8-4250-b3b2-e369eab32c7c"",
+                    ""id"": ""8171d06d-502c-44a4-bb08-b9e01d65e863"",
                     ""path"": ""<Keyboard>/t"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Throw"",
+                    ""action"": ""ThrowObject"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -236,7 +236,7 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
-        m_Player_Throw = m_Player.FindAction("Throw", throwIfNotFound: true);
+        m_Player_ThrowObject = m_Player.FindAction("ThrowObject", throwIfNotFound: true);
         // Analize
         m_Analize = asset.FindActionMap("Analize", throwIfNotFound: true);
         m_Analize_Rotate = m_Analize.FindAction("Rotate", throwIfNotFound: true);
@@ -304,14 +304,14 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Interact;
-    private readonly InputAction m_Player_Throw;
+    private readonly InputAction m_Player_ThrowObject;
     public struct PlayerActions
     {
         private @ThirdPersonActionsAssets m_Wrapper;
         public PlayerActions(@ThirdPersonActionsAssets wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
-        public InputAction @Throw => m_Wrapper.m_Player_Throw;
+        public InputAction @ThrowObject => m_Wrapper.m_Player_ThrowObject;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -327,9 +327,9 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
-                @Throw.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
-                @Throw.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
-                @Throw.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
+                @ThrowObject.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowObject;
+                @ThrowObject.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowObject;
+                @ThrowObject.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowObject;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -340,9 +340,9 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
-                @Throw.started += instance.OnThrow;
-                @Throw.performed += instance.OnThrow;
-                @Throw.canceled += instance.OnThrow;
+                @ThrowObject.started += instance.OnThrowObject;
+                @ThrowObject.performed += instance.OnThrowObject;
+                @ThrowObject.canceled += instance.OnThrowObject;
             }
         }
     }
@@ -417,7 +417,7 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
     {
         void OnMove(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
-        void OnThrow(InputAction.CallbackContext context);
+        void OnThrowObject(InputAction.CallbackContext context);
     }
     public interface IAnalizeActions
     {
