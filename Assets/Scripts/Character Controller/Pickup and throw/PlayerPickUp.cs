@@ -2,42 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 
 public class PlayerPickUp : MonoBehaviour
 {
-    private ThirdPersonActionsAssets playerActionsAssets;
-    public InputAction interact;
-    public InputAction throwObject;
-    public ObjectPickUp objectPickUp;
-    public Rigidbody rb;
-    public BoxCollider bcoll;
-    public Transform player, objectpickupContainer, mainCamera;
+    //Mechanic area
 
-    public float pickUpRange;
+    public ObjectPickUp objectPickUp;
+    public Transform objectpickupContainer;
+
+
     public float dropForwardForce, dropUpwardForce;
 
     public bool onHand;
     public bool HandsFull;
 
+    //Input area
+
+    private ThirdPersonActionsAssets playerActionsAssets;
+    private InputAction interact;
+    ThirdPersonController controller;
+
     private void Awake()
     {
         playerActionsAssets = new ThirdPersonActionsAssets();
+        controller = GetComponent<ThirdPersonController>();
     }
-   
 
-    private void Start()
-    {
-        if (!onHand)
-        {
-            objectPickUp.enabled = false;
-            rb.isKinematic = false;
-            bcoll.isTrigger = false;
-        }
-    }
     private void OnEnable()
     {
         interact = playerActionsAssets.Player.Interact;
-        throwObject = playerActionsAssets.Player.Throw;
         playerActionsAssets.Player.Enable();
     }
 
@@ -48,61 +42,43 @@ public class PlayerPickUp : MonoBehaviour
 
     private void Update()
     {
-
-        Vector3 distanceToPlayer = player.position - transform.position;
-
-        if (!onHand && distanceToPlayer.magnitude <= pickUpRange && interact.triggered && !HandsFull)
-        {
-            PickUp();
-        }
-
-        if ( throwObject.triggered && onHand)
+        if (onHand && playerActionsAssets.Player.ThrowObject.triggered)
         {
             Drop();
         }
-
-
     }
 
-    void PickUp()
+    public void PickUp(GameObject target)
     {
-
         onHand = true;
         HandsFull = true;
 
-        transform.SetParent(objectpickupContainer);
-        transform.localPosition = Vector3.zero;
-        transform.rotation = Quaternion.Euler(Vector3.zero);
+        objectPickUp = target.GetComponent<ObjectPickUp>();
 
-        rb.isKinematic = true;
-        bcoll.isTrigger = true;
+        objectPickUp.transform.SetParent(objectpickupContainer);
+        objectPickUp.transform.localPosition = Vector3.zero;
+        objectPickUp.transform.rotation = Quaternion.Euler(Vector3.zero);
 
+        objectPickUp.rb.isKinematic = true;
+        objectPickUp.bcoll.isTrigger = true;
         objectPickUp.enabled = true;
-
-
     }
 
-    void Drop()
+    public void Drop()
     {
-
         onHand = false;
         HandsFull = false;
 
-        transform.SetParent(null);
-        rb.isKinematic = false;
+        objectPickUp.transform.SetParent(null);
 
-        rb.velocity = player.GetComponent<Rigidbody>().velocity;
-        rb.AddForce(player.forward * dropForwardForce, ForceMode.Impulse);
-        rb.AddForce(player.up * dropUpwardForce, ForceMode.Impulse);
-
-       
-        bcoll.isTrigger = false;
-
+        objectPickUp.bcoll.isTrigger = false;
+        objectPickUp.rb.isKinematic = false;
         objectPickUp.enabled = false;
 
+        objectPickUp.rb.velocity = transform.GetComponent<Rigidbody>().velocity;
+        objectPickUp.rb.AddForce(transform.forward * dropForwardForce, ForceMode.Impulse);
+        objectPickUp.rb.AddForce(transform.up * dropUpwardForce, ForceMode.Impulse);
+
+        objectPickUp = null;
     }
-
-    
-
-
 }

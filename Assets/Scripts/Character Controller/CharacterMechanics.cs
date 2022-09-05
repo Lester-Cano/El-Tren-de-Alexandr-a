@@ -2,30 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR;
 
 public class CharacterMechanics : MonoBehaviour
 {
     //Mechanics area
-    [SerializeField] private CapsuleCollider charCollider;
-    private bool isInteracting, analizable, pickable, talkable;
+    public bool isInteracting, analizable, pickable, talkable;
 
     //Mechanics scripts
     private Analize analize;
     private Talk talk;
+    private PlayerPickUp playerPickUp;
 
     //Input area
     private ThirdPersonActionsAssets playerActionsAssets;
     private InputAction interact;
 
     //Private for Analize Mechanic
-    private GameObject objectToAnalize;
+    private GameObject objectToInteractWith;
 
     private void Awake()
     {
-        charCollider = GetComponentInParent<CapsuleCollider>();
         playerActionsAssets = new ThirdPersonActionsAssets();
         analize = GetComponentInParent<Analize>();
         talk = GetComponent<Talk>();
+        playerPickUp = GetComponent<PlayerPickUp>();
     }
 
     public void OnEnable()
@@ -45,18 +46,21 @@ public class CharacterMechanics : MonoBehaviour
         {
             if (analizable)
             {
-                analize.GoToAnalize(objectToAnalize);
+                analize.GoToAnalize(objectToInteractWith);
 
                 StartCoroutine(analize.AllanBothering());
 
             }
             else if (pickable)
             {
-
+                if (!playerPickUp.onHand && !playerPickUp.HandsFull)
+                {
+                    playerPickUp.PickUp(objectToInteractWith);
+                }
             }
             else if (talkable)
             {
-                talk.TalkToNPC(objectToAnalize);
+                talk.TalkToNPC(objectToInteractWith);
             }
         }
     }
@@ -68,19 +72,21 @@ public class CharacterMechanics : MonoBehaviour
             isInteracting = true;
             analizable = true;
 
-            objectToAnalize = other.gameObject;
+            objectToInteractWith = other.gameObject;
         }
         else if (other.gameObject.CompareTag("Pickable"))
         {
             isInteracting = true;
             pickable = true;
+
+            objectToInteractWith = other.gameObject;
         }
         else if (other.gameObject.CompareTag("Talkable"))
         {
             isInteracting = true;
             talkable = true;
 
-            objectToAnalize = other.gameObject;
+            objectToInteractWith = other.gameObject;
         }
     }
 
