@@ -8,6 +8,7 @@ TagManager:
   - Pickable
   - Pushable
   - Talkable
+  - Allan
   layers:
   - Default
   - TransparentFX

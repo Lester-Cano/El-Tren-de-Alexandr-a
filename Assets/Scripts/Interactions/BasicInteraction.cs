@@ -19,7 +19,7 @@ public class BasicInteraction : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5.0f) && hit.transform.tag == "Talkable")
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5.0f) && hit.transform.tag == "Allan")
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.blue); Debug.Log("Hit");
             iText.text = "Presiona 'E' para hablar"; talk.Enable();
