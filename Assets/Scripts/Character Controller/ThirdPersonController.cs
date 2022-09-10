@@ -26,7 +26,7 @@ public class ThirdPersonController : MonoBehaviour
     //variable to count the time when the player is not moving
 
     float tweenTimer = 0;
-    public float tweenLimit =20f;
+    [SerializeField] public float tweenLimit;
     bool isFadded;
 
     private void Awake()
@@ -50,12 +50,12 @@ public class ThirdPersonController : MonoBehaviour
     {
         // check if the persons is moving to fade the minimap
 
-        if(move.ReadValue<Vector2>().x ==0 && move.ReadValue<Vector2>().y ==0 )
+        if (move.ReadValue<Vector2>().x ==0 && move.ReadValue<Vector2>().y ==0)
         {
+
             tweenTimer += Time.deltaTime;
             if (tweenTimer >= tweenLimit)
             {
-                Debug.Log("Se hizo un fade out");
                 if (onNotmoving != null)
                 {
                     onNotmoving(true);
@@ -70,7 +70,6 @@ public class ThirdPersonController : MonoBehaviour
         {
             if (isFadded)
             {
-                Debug.Log("Se hizo un fade in");
                 if (onNotmoving != null)
                 {
                     onNotmoving(false);
@@ -81,7 +80,6 @@ public class ThirdPersonController : MonoBehaviour
             tweenTimer = 0;
         }
 
-        //
         forceDirection += move.ReadValue<Vector2>().x * Vector3.right * movementForce;
         forceDirection += move.ReadValue<Vector2>().y * Vector3.forward * movementForce;
 

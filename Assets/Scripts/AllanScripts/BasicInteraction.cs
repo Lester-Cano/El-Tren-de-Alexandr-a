@@ -24,11 +24,10 @@ public class BasicInteraction : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5.0f) && hit.transform.tag == "Allan")
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.blue); Debug.Log("Hit");
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.blue);
             iText.text = "Presiona 'E' para hablar"; talk.Enable();
             if (talk.enabled && talk.IsPressed()) {
                 ePopUp.SetActive(true);
-                Debug.Log("Abrí el menú");
             }
         }
         else 

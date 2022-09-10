@@ -7,7 +7,7 @@ using UnityEngine.XR;
 
 public class CharacterMechanics : MonoBehaviour
 {
-    //perdon julian
+    //Hud area
     public HUDManager hUDManager;
 
     //Mechanics area
@@ -84,7 +84,7 @@ public class CharacterMechanics : MonoBehaviour
             analizable = true;
             objectToInteractWith = other.gameObject;
 
-            //hUDManager.textFadein();
+            hUDManager.textFadein();
         }
         else if (other.gameObject.CompareTag("Pickable"))
         {
@@ -92,7 +92,8 @@ public class CharacterMechanics : MonoBehaviour
             pickable = true;
 
             objectToInteractWith = other.gameObject;
-            //hUDManager.textFadein();
+
+            hUDManager.textFadein();
         }
         else if (other.gameObject.CompareTag("Talkable"))
         {
@@ -100,7 +101,8 @@ public class CharacterMechanics : MonoBehaviour
             talkable = true;
 
             objectToInteractWith = other.gameObject;
-            //hUDManager.textFadein();
+
+            hUDManager.textFadein();
         }
 
     }
@@ -114,7 +116,7 @@ public class CharacterMechanics : MonoBehaviour
 
         if(other.gameObject.CompareTag("Analizable")|| other.gameObject.CompareTag("Pickable")|| other.gameObject.CompareTag("Talkable"))
         {
-            //hUDManager.textFadeout();
+            hUDManager.textFadeout();
         }
     }
 
