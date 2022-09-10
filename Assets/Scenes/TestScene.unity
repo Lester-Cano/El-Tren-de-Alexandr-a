@@ -4913,7 +4913,7 @@ MonoBehaviour:
   movementForce: 1
   maxSpeed: 5
   playerCamera: {fileID: 963194227}
-  tweenLimit: 5
+  tweenLimit: 1
 --- !u!54 &1522608487
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -50,10 +50,10 @@ public class ThirdPersonController : MonoBehaviour
     {
         // check if the persons is moving to fade the minimap
 
-        if (move.ReadValue<Vector2>().x ==0 && move.ReadValue<Vector2>().y ==0)
+        if (move.ReadValue<Vector2>().x == 0 && move.ReadValue<Vector2>().y == 0)
         {
-
             tweenTimer += Time.deltaTime;
+
             if (tweenTimer >= tweenLimit)
             {
                 if (onNotmoving != null)
@@ -61,12 +61,11 @@ public class ThirdPersonController : MonoBehaviour
                     onNotmoving(true);
                     tweenTimer = 0;
                     isFadded = true;
-                   
                 }
             }
          
         }
-        else
+        else if(move.ReadValue<Vector2>().x != 0 && move.ReadValue<Vector2>().y != 0)
         {
             if (isFadded)
             {
@@ -74,10 +73,9 @@ public class ThirdPersonController : MonoBehaviour
                 {
                     onNotmoving(false);
                     isFadded = false;
-                    
+                    tweenTimer = 0;
                 }
             }
-            tweenTimer = 0;
         }
 
         forceDirection += move.ReadValue<Vector2>().x * Vector3.right * movementForce;
