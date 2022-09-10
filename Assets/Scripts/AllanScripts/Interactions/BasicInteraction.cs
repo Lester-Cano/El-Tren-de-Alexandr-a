@@ -27,10 +27,17 @@ public class BasicInteraction : MonoBehaviour
                 ePopUp.SetActive(true);
                 Debug.Log("Abrí el menú");
             }
-        } else { iText.text = ""; talk.Disable(); ePopUp.SetActive(false); }
+        }
+        else 
+        {
+            iText.text = ""; 
+            talk.Disable(); 
+            ePopUp.SetActive(false); 
+        }
     }
 
-    public void OnButtonBack() {
+    public void OnButtonBack() 
+    {
         ePopUp.SetActive(false); talk.Disable();
     }
 }

@@ -69,6 +69,7 @@ public class Talk : MonoBehaviour
     {
         canvas.SetActive(false);
         text.text = null;
+        count = 0;
     }
 
     public void NextText()
