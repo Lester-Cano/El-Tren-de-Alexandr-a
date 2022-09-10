@@ -35,10 +35,15 @@ public class HUDManager : MonoBehaviour
     }
     public void Panelfadeout()
     {
-        canvasGroup.alpha = 1;
-        rect.transform.localPosition = new Vector3(0, 0, 0);
-        rect.DOAnchorPos(new Vector2(0, -1000), fadeTime, false).SetEase(Ease.InSine);
-        canvasGroup.DOFade(0, fadeTime);
+        if (rect.transform.localPosition == new Vector3(0, 0, 0))
+        {
+            canvasGroup.alpha = 1;
+
+            rect.transform.localPosition = new Vector3(0, 0, 0);
+            rect.DOAnchorPos(new Vector2(0, -1000), fadeTime, false).SetEase(Ease.InSine);
+
+            canvasGroup.DOFade(0, fadeTime);
+        }
     }
     public void textFadein()
     {
