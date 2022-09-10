@@ -9,14 +9,17 @@ public class BasicInteraction : MonoBehaviour
     [SerializeField] GameObject ePopUp;
     public ThirdPersonActionsAssets playerControls;
     private InputAction talk;
+
     private void Awake() {
         playerControls = new ThirdPersonActionsAssets();  
         ePopUp.SetActive(false);
     }
+
     private void OnEnable() {
         talk = playerControls.Player.Interact;
     }
-    void Update()
+
+    private void Update()
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5.0f) && hit.transform.tag == "Allan")

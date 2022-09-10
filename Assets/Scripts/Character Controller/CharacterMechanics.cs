@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR;
@@ -23,6 +24,11 @@ public class CharacterMechanics : MonoBehaviour
 
     //Private for Analize Mechanic
     private GameObject objectToInteractWith;
+
+    //Inventory Area
+
+    public InventoryObject inventory;
+    public GameObject inventoryCanva;
 
     private void Awake()
     {
@@ -51,6 +57,8 @@ public class CharacterMechanics : MonoBehaviour
             {
                 analize.GoToAnalize(objectToInteractWith);
 
+                StartCoroutine(PickUpObject());
+
                 StartCoroutine(analize.AllanBothering());
 
             }
@@ -75,7 +83,8 @@ public class CharacterMechanics : MonoBehaviour
             isInteracting = true;
             analizable = true;
             objectToInteractWith = other.gameObject;
-            hUDManager.textFadein();
+
+            //hUDManager.textFadein();
         }
         else if (other.gameObject.CompareTag("Pickable"))
         {
@@ -83,7 +92,7 @@ public class CharacterMechanics : MonoBehaviour
             pickable = true;
 
             objectToInteractWith = other.gameObject;
-            hUDManager.textFadein();
+            //hUDManager.textFadein();
         }
         else if (other.gameObject.CompareTag("Talkable"))
         {
@@ -91,7 +100,7 @@ public class CharacterMechanics : MonoBehaviour
             talkable = true;
 
             objectToInteractWith = other.gameObject;
-            hUDManager.textFadein();
+            //hUDManager.textFadein();
         }
 
     }
@@ -102,9 +111,32 @@ public class CharacterMechanics : MonoBehaviour
         analizable = false;
         pickable = false;
         talkable = false;
+
         if(other.gameObject.CompareTag("Analizable")|| other.gameObject.CompareTag("Pickable")|| other.gameObject.CompareTag("Talkable"))
         {
-            hUDManager.textFadeout();
+            //hUDManager.textFadeout();
         }
+    }
+
+    private IEnumerator PickUpObject()
+    {
+        var item = objectToInteractWith.GetComponent<Item>();
+        if (item)
+        {
+            inventory.AddItem(item.item, 1);
+            Destroy(objectToInteractWith);
+
+            inventoryCanva.SetActive(true);
+
+            yield return new WaitForSeconds(2f);
+
+
+            inventoryCanva.SetActive(false);
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        inventory.container.Clear();
     }
 }

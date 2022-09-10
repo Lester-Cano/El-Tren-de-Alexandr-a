@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60050b5456e8a154083888e24cdf39f3, type: 3}
   m_Name: Analizable1
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 1132158545757017993, guid: 205ba29f9e09ab0429bc299847efd0e0, type: 3}
   type: 0
   description: Just a test
+  analizable: {fileID: 0}
