@@ -19,6 +19,8 @@ public class Analize : MonoBehaviour
 
     public float rotationSpeed = 0.01f;
 
+    public bool isAnalizing;
+
     //Input area
     private ThirdPersonActionsAssets playerActionsAssets;
     private InputAction interaction;
@@ -63,17 +65,17 @@ public class Analize : MonoBehaviour
             componentBase = analizeCam.GetCinemachineComponent(CinemachineCore.Stage.Body);
         }
 
-        if (playerActionsAssets.Analize.Zoom.ReadValue<float>() != 0)
+        if (playerActionsAssets.Analize.Zoom.ReadValue<float>() != 0 && isAnalizing)
         {
             Zoom();
         }
 
-        if (playerActionsAssets.Analize.Rotate.IsPressed())
+        if (playerActionsAssets.Analize.Rotate.IsPressed() && isAnalizing)
         {
             Rotate();
         }
 
-        if (playerActionsAssets.Analize.ClickObjects.WasPressedThisFrame())
+        if (playerActionsAssets.Analize.ClickObjects.WasPressedThisFrame() && isAnalizing)
         {
             Click();
         }
@@ -94,6 +96,8 @@ public class Analize : MonoBehaviour
 
         characterMechanics.OnDisable();
         controller.OnDisable();
+
+        isAnalizing = true;
     }
 
     public void BackToGame()
@@ -104,9 +108,14 @@ public class Analize : MonoBehaviour
         analizeCam.gameObject.SetActive(false);
         gameCam.gameObject.SetActive(true);
 
-        OnDisable();
+        
         characterMechanics.OnEnable();
         controller.OnEnable();
+
+        isAnalizing = false;
+        characterMechanics.analizable = false;
+
+        OnDisable();
     }
 
     public void Zoom()

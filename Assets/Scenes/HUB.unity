@@ -2616,6 +2616,7 @@ MonoBehaviour:
   movementForce: 1
   maxSpeed: 5
   playerCamera: {fileID: 0}
+  tweenLimit: 20
 --- !u!54 &930850990
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5200,7 +5201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2023928688
 Transform:
   m_ObjectHideFlags: 0
