@@ -108,6 +108,7 @@ public class Analize : MonoBehaviour
         analizeCam.gameObject.SetActive(false);
         gameCam.gameObject.SetActive(true);
 
+        
         characterMechanics.OnEnable();
         controller.OnEnable();
 
