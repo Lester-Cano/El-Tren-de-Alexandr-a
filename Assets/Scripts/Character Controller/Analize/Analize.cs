@@ -108,11 +108,14 @@ public class Analize : MonoBehaviour
         analizeCam.gameObject.SetActive(false);
         gameCam.gameObject.SetActive(true);
 
-        OnDisable();
+        
         characterMechanics.OnEnable();
         controller.OnEnable();
 
         isAnalizing = false;
+        characterMechanics.analizable = false;
+
+        OnDisable();
     }
 
     public void Zoom()
