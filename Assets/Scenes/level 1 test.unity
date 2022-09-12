@@ -11569,11 +11569,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: names.Array.data[0]
-      value: Edgar
+      value: Aviador
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: names.Array.data[1]
-      value: Allan
+      value: Aviador
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: names.Array.data[2]
@@ -11585,15 +11585,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: dialogues.Array.data[0]
-      value: Hola
+      value: "\xA1Oye, t\xFA peque\xF1o mapache! "
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: dialogues.Array.data[1]
-      value: Que mas parce
+      value: "Dios hac\xEDa tiempo no ve\xEDa a nadie \xBFSer\xE1 que te puedo pedir
+        una mano?, como puedes ver estoy intentando reparar este avi\xF3n, pero me
+        faltan algunas piezas. "
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: dialogues.Array.data[2]
-      value: Bien o q
+      value: "Creo que las perd\xED mientras realizaba un aterrizaje forzoso, \xBFPodr\xEDas
+        ir a echar un vistazo y traerme cualquier pieza que veas tirada por ah\xED? "
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
@@ -19163,8 +19166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -282, y: -167.5}
-  m_SizeDelta: {x: 570, y: 125.5}
+  m_AnchoredPosition: {x: 0, y: -175}
+  m_SizeDelta: {x: 1150, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9072216444897286579
 MonoBehaviour:
@@ -19186,7 +19189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
