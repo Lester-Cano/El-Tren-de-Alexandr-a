@@ -10,6 +10,7 @@ TagManager:
   - Allan
   - Clickable
   - PhysicObject
+  - KeyObject
   layers:
   - Default
   - TransparentFX
