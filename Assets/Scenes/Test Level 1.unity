@@ -3769,13 +3769,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270414963}
-  m_LocalRotation: {x: 0.09229593, y: -0.7010574, z: 0.09229593, w: 0.7010574}
-  m_LocalPosition: {x: -9.7, y: 12.1, z: 121.6}
+  m_LocalRotation: {x: 0.21493879, y: -0, z: -0, w: 0.9766276}
+  m_LocalPosition: {x: -27.53, y: 10.41, z: 113.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 15, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.824, y: 0, z: 0}
 --- !u!1 &1276062727
 GameObject:
   m_ObjectHideFlags: 0
@@ -6371,7 +6371,7 @@ PrefabInstance:
     - target: {fileID: 5255267329962145614, guid: ecb7de83ada0f7e4eaf5f8da71b0b730, type: 3}
       propertyPath: playerCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1270414966}
     - target: {fileID: 5255267329962145614, guid: ecb7de83ada0f7e4eaf5f8da71b0b730, type: 3}
       propertyPath: movementForce
       value: 5

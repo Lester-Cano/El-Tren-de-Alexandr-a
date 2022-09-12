@@ -82,6 +82,8 @@ public class ThirdPersonController : MonoBehaviour
         forceDirection += move.ReadValue<Vector2>().x * Vector3.right * movementForce;
         forceDirection += move.ReadValue<Vector2>().y * Vector3.forward * movementForce;
 
+        CalculateDrag();
+
         rb.AddForce(forceDirection, ForceMode.Impulse);
         forceDirection = Vector3.zero;
 
@@ -142,6 +144,18 @@ public class ThirdPersonController : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    void CalculateDrag()
+    {
+        if (move.ReadValue<Vector2>().x > 0f || move.ReadValue<Vector2>().y > 0f || move.ReadValue<Vector2>().x < 0f || move.ReadValue<Vector2>().y < 0f)
+        {
+            rb.drag = 0f;
+        }
+        else
+        {
+            rb.drag = 200;
         }
     }
 
