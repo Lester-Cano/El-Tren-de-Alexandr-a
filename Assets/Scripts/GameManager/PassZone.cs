@@ -9,7 +9,11 @@ public class PassZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        objectToMove = other.gameObject;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            objectToMove = other.gameObject;
+        }
+
         StartCoroutine(Teleport());
     }
 
