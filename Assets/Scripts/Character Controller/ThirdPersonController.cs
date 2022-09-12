@@ -79,6 +79,7 @@ public class ThirdPersonController : MonoBehaviour
             }
         }
 
+        //MOVIMIENTO
         forceDirection += move.ReadValue<Vector2>().x * Vector3.right * movementForce;
         forceDirection += move.ReadValue<Vector2>().y * Vector3.forward * movementForce;
 
