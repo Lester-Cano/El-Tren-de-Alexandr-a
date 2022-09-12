@@ -7,6 +7,7 @@ using UnityEngine.XR;
 
 public class CharacterMechanics : MonoBehaviour
 {
+
     //Hud area
     public HUDManager hUDManager;
 
@@ -53,8 +54,10 @@ public class CharacterMechanics : MonoBehaviour
     {
         if (playerActionsAssets.Player.Interact.triggered && isInteracting)
         {
+            hUDManager.textFadeout();
             if (analizable)
             {
+                hUDManager.Panelfadeout();
                 analize.GoToAnalize(objectToInteractWith);
 
                 StartCoroutine(PickUpObject());

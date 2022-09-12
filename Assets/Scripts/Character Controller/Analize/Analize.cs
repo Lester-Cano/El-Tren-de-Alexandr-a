@@ -4,9 +4,13 @@ using UnityEngine;
 using Cinemachine;
 using UnityEngine.InputSystem;
 using TMPro;
+using MoreMountains.Feedbacks;
 
 public class Analize : MonoBehaviour
 {
+
+    //vigenete effect fedback
+    [SerializeField] MMF_Player mPlayer;
     //Mechanic area
 
     [SerializeField] public CinemachineVirtualCamera gameCam, analizeCam;
@@ -85,7 +89,10 @@ public class Analize : MonoBehaviour
     public void GoToAnalize(GameObject target)
     {
         OnEnable();
-
+        if(mPlayer != null)
+        {
+            mPlayer.PlayFeedbacks();
+        }
         placeholder = Instantiate(target, pivot.transform.position, Quaternion.identity);
         objectToRotate = placeholder;
 
