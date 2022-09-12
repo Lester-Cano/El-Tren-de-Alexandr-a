@@ -65,7 +65,7 @@ public class ThirdPersonController : MonoBehaviour
             }
          
         }
-        else if(move.ReadValue<Vector2>().x != 0 && move.ReadValue<Vector2>().y != 0)
+        else if(move.ReadValue<Vector2>().x != 0 || move.ReadValue<Vector2>().y != 0)
         {
 
             if (isFadded)

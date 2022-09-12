@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using MoreMountains.Feedbacks;
 public class HUDManager : MonoBehaviour
 {
-    public float fadeTime= 1;
+    public float fadeTime = 0.5f;
     public CanvasGroup canvasGroup;
     public CanvasGroup canvasText;
     public RectTransform rect;
@@ -12,7 +13,8 @@ public class HUDManager : MonoBehaviour
     public RectTransform rectImage;
     public bool fadedOut;
     public ThirdPersonController thirdPerson;
-
+    [SerializeField] MMF_Player TextFeedbackPlayer;
+    [SerializeField] MMF_Player MapFeedbackPlayer;
     private void OnEnable()
     {
         thirdPerson.onNotmoving += PanelFade;
@@ -32,13 +34,17 @@ public class HUDManager : MonoBehaviour
         rect.transform.localPosition = new Vector3(0, -100f, 0);
         rect.DOAnchorPos(new Vector2(0f, 0f), fadeTime, false).SetEase(Ease.InOutSine);
         canvasGroup.DOFade(1, fadeTime);
+        MapFeedbackPlayer.PlayFeedbacks();
+
+
+
     }
     public void Panelfadeout()
     {
         if (rect.transform.localPosition == new Vector3(0, 0, 0))
         {
             canvasGroup.alpha = 1;
-
+            MapFeedbackPlayer.PlayFeedbacks();
             rect.transform.localPosition = new Vector3(0, 0, 0);
             rect.DOAnchorPos(new Vector2(0, -1000), fadeTime, false).SetEase(Ease.InSine);
 
@@ -60,10 +66,12 @@ public class HUDManager : MonoBehaviour
         // Delay the whole Sequence by 1 second
         mySequence.PrependInterval(1);
         // Insert a scale tween for the whole duration of the Sequence
-
+            TextFeedbackPlayer.PlayFeedbacks();
+        
     }
     public void textFadeout()
     {
+        TextFeedbackPlayer.StopFeedbacks();
         canvasText.alpha = 1;
         rectText.transform.localPosition = new Vector3(0, 0, 0);
         rectText.DOAnchorPos(new Vector2(0, -1000), fadeTime, false).SetEase(Ease.InSine);
