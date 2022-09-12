@@ -9,7 +9,6 @@ public class Talk : MonoBehaviour
 {
     //Mechanic area
 
-    [SerializeField] public CinemachineVirtualCamera gameCam;
     NPCDialogue dialogue;
     private int count = 0;
 
@@ -23,7 +22,7 @@ public class Talk : MonoBehaviour
     //TMP area
 
     public GameObject textContainer;
-    public TMP_Text text;
+    public TMP_Text text, nameText;
     public GameObject canvas;
 
     private void Awake()
@@ -57,6 +56,7 @@ public class Talk : MonoBehaviour
 
         if(dialogue != null)
         {
+            nameText.text = dialogue.names[0];
             text.text = dialogue.dialogues[0];
         }
         else
@@ -79,6 +79,7 @@ public class Talk : MonoBehaviour
             count++;
             if (count < dialogue.dialogues.Length)
             {
+                nameText.text = dialogue.names[count];
                 text.text = dialogue.dialogues[count];
             }
             else

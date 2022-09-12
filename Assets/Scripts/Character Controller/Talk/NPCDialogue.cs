@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class NPCDialogue: MonoBehaviour
 {
+    public string[] names;
     public string[] dialogues;
 }
