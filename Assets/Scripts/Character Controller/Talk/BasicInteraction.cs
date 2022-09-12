@@ -26,16 +26,18 @@ public class BasicInteraction : MonoBehaviour
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.blue);
             iText.text = "Presiona 'E' para hablar"; talk.Enable();
-            if (talk.enabled && talk.IsPressed()) {
+            if (talk.enabled && talk.IsPressed())
+            {
                 ePopUp.SetActive(true);
             }
         }
-        else 
+        else
         {
-            iText.text = ""; 
-            talk.Disable(); 
-            ePopUp.SetActive(false); 
+            iText.text = "";
+            talk.Disable();
+            ePopUp.SetActive(false);
         }
+        
     }
 
     public void OnButtonBack() 
