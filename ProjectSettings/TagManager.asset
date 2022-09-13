@@ -3,12 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Allan
+  - Z1Back
+  - Z3Next
+  - KeyObject
+  - Z2Next
+  - Z4Next
+  - Z1Next
+  - Analizable
+  - Clickable
+  - Pickable
+  - Talkable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
