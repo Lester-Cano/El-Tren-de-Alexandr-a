@@ -7695,7 +7695,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800509387}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
   m_Name: 
@@ -7739,7 +7739,6 @@ MonoBehaviour:
   - id: 0
   - id: 1
   - id: 2
-  - id: 3
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   references:
@@ -7935,72 +7934,6 @@ MonoBehaviour:
             m_RotationOrder: 4
         RemapZero: {x: 0, y: 0}
         RemapOne: {x: 100, y: 100}
-    00000003:
-      type: {class: MMF_TMPDilate, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks.TextMeshPro}
-      data:
-        Active: 1
-        UniqueID: 1425518655
-        Label: TMP Dilate
-        Channel: 0
-        Chance: 100
-        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
-        Timing:
-          TimescaleMode: 0
-          ExcludeFromHoldingPauses: 0
-          ContributeToTotalDuration: 1
-          InitialDelay: 0
-          CooldownDuration: 0
-          InterruptsOnStop: 1
-          NumberOfRepeats: 0
-          RepeatForever: 0
-          DelayBetweenRepeats: 1
-          MMFeedbacksDirectionCondition: 0
-          PlayDirection: 0
-          ConstantIntensity: 0
-          UseIntensityInterval: 0
-          IntensityIntervalMin: 0
-          IntensityIntervalMax: 0
-          Sequence: {fileID: 0}
-          TrackID: 0
-          Quantized: 0
-          TargetBPM: 120
-        Owner: {fileID: 1800509389}
-        DebugActive: 0
-        TargetTMPText: {fileID: 91288101}
-        RelativeValues: 1
-        Mode: 0
-        Duration: 0.2
-        DilateCurve:
-          MMTweenDefinitionType: 1
-          MMTweenCurve: 28
-          Curve:
-            serializedVersion: 2
-            m_Curve:
-            - serializedVersion: 3
-              time: 0
-              value: 0.5
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 0.2749939
-              value: 0.5599899
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-        RemapZero: 0
-        RemapOne: 1
-        InstantDilate: 0
-        AllowAdditivePlays: 0
 --- !u!1001 &1907797788
 PrefabInstance:
   m_ObjectHideFlags: 0

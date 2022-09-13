@@ -5,10 +5,11 @@ using TMPro;
 using UnityEngine.InputSystem;
 public class BasicInteraction : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI iText;
     [SerializeField] GameObject ePopUp;
     public ThirdPersonActionsAssets playerControls;
     private InputAction talk;
+
+    [SerializeField] HUDManager hUDManager;
 
     private void Awake() {
         playerControls = new ThirdPersonActionsAssets();  
@@ -25,7 +26,7 @@ public class BasicInteraction : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5.0f) && hit.transform.tag == "Allan")
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.blue);
-            iText.text = "Presiona 'E' para hablar"; talk.Enable();
+            //hUDManager.textFadein();
             if (talk.enabled && talk.IsPressed())
             {
                 ePopUp.SetActive(true);
@@ -33,7 +34,7 @@ public class BasicInteraction : MonoBehaviour
         }
         else
         {
-            iText.text = "";
+            //hUDManager.textFadeout();
             talk.Disable();
             ePopUp.SetActive(false);
         }

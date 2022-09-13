@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 883689715143536711}
   - component: {fileID: 883689715143536710}
   - component: {fileID: 883689715143536714}
+  - component: {fileID: 9006949112996717790}
   m_Layer: 0
   m_Name: Analizable
   m_TagString: Analizable
@@ -73,7 +74,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883689715143536705}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.89, z: 0}
+  m_LocalPosition: {x: -6.629869, y: 1, z: -15.367118}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 883689714527798326}
@@ -157,6 +158,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 952492cf1019c8046af82751bc21a4e0, type: 2}
+--- !u!114 &9006949112996717790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883689715143536705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edcdfbf899f3ea54f84ace4bed353fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMaterial: {fileID: 2100000, guid: 4b00781e4c5e51d4ab9c2cb0248a7881, type: 2}
+  outlineScaleFactor: -1.1
+  outlineColor: {r: 1, g: 0.8716189, b: 0.29622638, a: 0}
 --- !u!1 &883689716403751008
 GameObject:
   m_ObjectHideFlags: 0

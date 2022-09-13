@@ -15,6 +15,7 @@ public class PuzzleSolved : MonoBehaviour
     //Interactions Area
     private ThirdPersonActionsAssets playerActionsAssets;
     private bool foundKeyObject;
+    [SerializeField] HUDManager hudManager;
 
     private void OnEnable()
     {
@@ -46,6 +47,7 @@ public class PuzzleSolved : MonoBehaviour
             foundKeyObject = true;
             var holder = other.gameObject.GetComponent<PuzzleKeyCode>();
             puzzleNumber = holder.keyCode;
+            hudManager.textFadein();
         }
     }
 
@@ -54,6 +56,7 @@ public class PuzzleSolved : MonoBehaviour
         if (other.gameObject.CompareTag("KeyObject"))
         {
             foundKeyObject = false;
+            hudManager.textFadeout();
         }
     }
 
