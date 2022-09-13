@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 5924902766495562278}
   - component: {fileID: 5924902766495562277}
   - component: {fileID: 5924902766495562281}
+  - component: {fileID: 2692150387812662289}
   m_Layer: 0
   m_Name: Talkable
   m_TagString: Talkable
@@ -109,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5924902766495562276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.92, y: 1.89, z: -2.64}
+  m_LocalPosition: {x: -9.379026, y: 1.28, z: -11.193602}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5924902767082833534}
@@ -192,12 +193,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adedf3f40db7bc346a1fcccadedb2d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  names:
+  - Aviador
+  - Aviador
+  - Aviador
   dialogues:
-  - Hola
-  - Como estas
-  - mk tan sapo
-  - Holiss
-  - d3qrwfafe
+  - "\xA1Oye, t\xFA peque\xF1o mapache! "
+  - "Dios hac\xEDa tiempo no ve\xEDa a nadie \xBFSer\xE1 que te puedo pedir una mano?,
+    como puedes ver estoy intentando reparar este avi\xF3n, pero me faltan algunas
+    piezas. "
+  - "Creo que las perd\xED mientras realizaba un aterrizaje forzoso, \xBFPodr\xEDas
+    ir a echar un vistazo y traerme cualquier pieza que veas tirada por ah\xED? "
+--- !u!114 &2692150387812662289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5924902766495562276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edcdfbf899f3ea54f84ace4bed353fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMaterial: {fileID: 2100000, guid: 4b00781e4c5e51d4ab9c2cb0248a7881, type: 2}
+  outlineScaleFactor: -1.1
+  outlineColor: {r: 1, g: 0.390566, b: 0.73983324, a: 0}
 --- !u!1 &5924902767082833533
 GameObject:
   m_ObjectHideFlags: 0
