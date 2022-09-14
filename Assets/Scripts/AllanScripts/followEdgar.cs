@@ -30,6 +30,6 @@ public class followEdgar : MonoBehaviour
 
     public void tpToEdgar()
     {
-        myTransform.position = telePos.position + Vector3.up;
+        myTransform.position = telePos.position;
     }
 }
