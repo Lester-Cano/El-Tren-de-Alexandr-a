@@ -9,12 +9,14 @@ public class followEdgar : MonoBehaviour
     Transform myTransform;
     private Vector3 distanceBetween;
     [SerializeField] float distanceForTp;
+   
     [SerializeField] Transform edgar,telePos;
     NavMeshAgent nav;
     void Start()
     {
         nav = GetComponent<NavMeshAgent>();
         myTransform = GetComponent<Transform>();
+
     }
 
     // Update is called once per frame
@@ -22,14 +24,20 @@ public class followEdgar : MonoBehaviour
     {
         nav.SetDestination(edgar.position);
         distanceBetween = edgar.position - myTransform.position;
-        if (distanceBetween.magnitude > distanceForTp)
+      
+    
+        if (distanceBetween.magnitude > distanceForTp || distanceBetween.magnitude < -distanceForTp)
         {
+            
             tpToEdgar();
+            //distanceBetween = 0;
         }
     }
 
     public void tpToEdgar()
     {
         myTransform.position = telePos.position;
+        nav.Warp(telePos.position);
+        
     }
 }

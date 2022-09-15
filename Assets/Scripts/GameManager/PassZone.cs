@@ -12,9 +12,10 @@ public class PassZone : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             objectToMove = other.gameObject;
+            StartCoroutine(Teleport());
         }
 
-        StartCoroutine(Teleport());
+        
     }
 
     private IEnumerator Teleport()
