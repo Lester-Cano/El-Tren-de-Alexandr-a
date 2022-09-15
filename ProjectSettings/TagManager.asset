@@ -15,6 +15,7 @@ TagManager:
   - Clickable
   - Pickable
   - Talkable
+  - Destroyable
   layers:
   - Default
   - TransparentFX
