@@ -18716,35 +18716,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: names.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: names.Array.data[0]
-      value: Poe
+      value: Allan
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: names.Array.data[1]
-      value: Aviador
+      value: Poe
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: names.Array.data[2]
-      value: Aviador
+      value: Poe
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: names.Array.data[3]
+      value: Poe
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: dialogues.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: dialogues.Array.data[0]
-      value: "\xA1Oh, Hola!"
+      value: "\xBFD-d\xF3nde estamos? "
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: dialogues.Array.data[1]
-      value: Que mas parce
+      value: "Esta es la estaci\xF3n Verne, la m\xE1s cercana de su\u2026 Antiguo
+        hogar. Por ahora pueden bajar del tren y calmarse un poco despu\xE9s de lo
+        ocurrido "
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: dialogues.Array.data[2]
-      value: Bien o q
+      value: "Actualmente, es una de nuestras estaciones m\xE1s seguras, pero como
+        pudieron ver, solo es cuesti\xF3n de tiempo para que desaparezca, por si
+        se preguntan por qu\xE9 su estado f\xEDsico es tan\u2026 An\xE1rquico."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: dialogues.Array.data[3]
+      value: "Si desean pueden recorrer el lugar, hay m\xE1s personas en su situaci\xF3n.
+        Pueden dar un vistazo por las bibliotecas o salas de espera. "
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
