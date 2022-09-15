@@ -8835,8 +8835,9 @@ GameObject:
   - component: {fileID: 715384220}
   - component: {fileID: 715384219}
   - component: {fileID: 715384218}
+  - component: {fileID: 715384221}
   m_Layer: 0
-  m_Name: Tren (1)
+  m_Name: Level 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8853,8 +8854,8 @@ Transform:
   m_LocalPosition: {x: 14.92, y: 1.76, z: -0.64}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children: []
-  m_Father: {fileID: 1677239049}
-  m_RootOrder: 10
+  m_Father: {fileID: 1058698734}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &715384218
 BoxCollider:
@@ -8864,7 +8865,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715384216}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -8918,6 +8919,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715384216}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &715384221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715384216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae79174e14a2324db56650403445533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &717385364
 GameObject:
   m_ObjectHideFlags: 0
@@ -11799,6 +11812,7 @@ Transform:
   - {fileID: 1934950594}
   - {fileID: 909237261}
   - {fileID: 152419025}
+  - {fileID: 715384217}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18941,7 +18955,6 @@ Transform:
   - {fileID: 804634322}
   - {fileID: 628149090}
   - {fileID: 779574446}
-  - {fileID: 715384217}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
