@@ -12,4 +12,12 @@ public class ColorChecker : MonoBehaviour
     {
         keyObject.SetActive(false);
     }
+
+    private void Update()
+    {
+        if(actualValue == valueToGet)
+        {
+            keyObject.SetActive(true);
+        }
+    }
 }
