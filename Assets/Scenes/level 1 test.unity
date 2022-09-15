@@ -81853,8 +81853,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adedf3f40db7bc346a1fcccadedb2d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  names: []
-  dialogues: []
+  names:
+  - Allan
+  dialogues:
+  - Vamos Edgar, tenemos que movernos
 --- !u!195 &4373974713860713364
 NavMeshAgent:
   m_ObjectHideFlags: 0

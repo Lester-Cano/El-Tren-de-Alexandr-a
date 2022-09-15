@@ -26,7 +26,7 @@ public class ButtonManager : MonoBehaviour
         optionsP.transform.DOMove(LPosition.gameObject.transform.position, 0.5f);
     }
     public void OnPlayButton() {
-        SceneManager.LoadScene("Object PickUp");
+        SceneManager.LoadScene("Cinematica");
     }
 
     public void OnExitButton() {
