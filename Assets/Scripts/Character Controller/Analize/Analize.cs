@@ -132,6 +132,15 @@ public class Analize : MonoBehaviour
         {
             (componentBase as CinemachineFramingTransposer).m_CameraDistance -= cameraDistance;
         }
+
+        if((componentBase as CinemachineFramingTransposer).m_CameraDistance > 8)
+        {
+            (componentBase as CinemachineFramingTransposer).m_CameraDistance = 7.8f;
+        }
+        else if((componentBase as CinemachineFramingTransposer).m_CameraDistance < 3)
+        {
+            (componentBase as CinemachineFramingTransposer).m_CameraDistance = 3.2f;
+        }
     }
 
     public void Rotate()
