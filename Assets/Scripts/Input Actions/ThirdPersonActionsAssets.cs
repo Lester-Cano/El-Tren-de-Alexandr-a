@@ -161,7 +161,7 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""name"": ""DeltaMouse"",
                     ""type"": ""Value"",
                     ""id"": ""68c13d22-39b2-4d6b-aaf0-409cfcc85aca"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": ""Vector3"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
