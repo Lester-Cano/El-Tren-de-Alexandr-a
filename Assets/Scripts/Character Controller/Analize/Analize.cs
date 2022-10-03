@@ -8,21 +8,19 @@ using MoreMountains.Feedbacks;
 
 public class Analize : MonoBehaviour
 {
-
     //vigenete effect fedback
     [SerializeField] MMF_Player mPlayer;
-    //Mechanic area
 
+    //Mechanic area
     [SerializeField] public CinemachineVirtualCamera gameCam, analizeCam;
-    [SerializeField] public Camera mainCam;
+    private Camera mainCam;
     CinemachineComponentBase componentBase;
     float cameraDistance;
-    [SerializeField] float sensitivity = 10f;
+    [SerializeField] float sensitivity;
     public GameObject objectToRotate, pivot, canvas;
     private GameObject placeholder;
 
-    public float rotationSpeed = 0.01f;
-
+    public float rotationSpeed;
     public bool isAnalizing;
 
     //Input area
@@ -33,12 +31,13 @@ public class Analize : MonoBehaviour
     ThirdPersonController controller;
 
     //TMP area
-
     public GameObject textContainer;
     public TMP_Text allanText;
 
     private void Awake()
     {
+        mainCam = FindObjectOfType<Camera>();
+
         analizeCam.gameObject.SetActive(false);
         playerActionsAssets = new ThirdPersonActionsAssets();
         characterMechanics = GetComponent<CharacterMechanics>();

@@ -9,9 +9,10 @@ public class CharacterMechanics : MonoBehaviour
 {
 
     //Hud area
-    public HUDManager hUDManager;
+    private HUDManager hUDManager;
 
     //Mechanics area
+    [HideInInspector]
     public bool isInteracting, analizable, pickable, talkable;
 
     //Mechanics scripts
@@ -35,8 +36,10 @@ public class CharacterMechanics : MonoBehaviour
     {
         playerActionsAssets = new ThirdPersonActionsAssets();
         analize = GetComponentInParent<Analize>();
-        talk = GetComponent<Talk>();
-        playerPickUp = GetComponent<PlayerPickUp>();
+        talk = GetComponentInParent<Talk>();
+        playerPickUp = GetComponentInParent<PlayerPickUp>();
+
+        hUDManager = FindObjectOfType<HUDManager>();
     }
 
     public void OnEnable()

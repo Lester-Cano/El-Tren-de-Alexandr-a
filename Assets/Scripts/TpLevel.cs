@@ -10,7 +10,7 @@ public class TpLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("level 1 test");
+            SceneManager.LoadScene("Level1");
         }
     }
 
