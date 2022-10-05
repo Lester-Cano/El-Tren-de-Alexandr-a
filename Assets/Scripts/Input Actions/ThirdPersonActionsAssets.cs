@@ -32,7 +32,7 @@ public partial class @ThirdPersonActionsAssets : IInputActionCollection2, IDispo
                     ""type"": ""Value"",
                     ""id"": ""96c09700-c96d-4ac1-b842-bee5eb68c54a"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""processors"": ""NormalizeVector2"",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
