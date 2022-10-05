@@ -15,8 +15,7 @@ public class ThirdPersonController : MonoBehaviour
     [SerializeField] private float maxSpeed = 5f;
 
     private Vector3 forceDirection = Vector3.zero;
-
-    [SerializeField] private Camera playerCamera;
+    private Camera cam;
 
     //Events to trigger the minimap tween
 
@@ -32,6 +31,7 @@ public class ThirdPersonController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        cam = FindObjectOfType<Camera>();
         playerActionsAssets = new ThirdPersonActionsAssets();
     }
 

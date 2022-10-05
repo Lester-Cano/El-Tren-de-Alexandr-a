@@ -8,21 +8,19 @@ using MoreMountains.Feedbacks;
 
 public class Analize : MonoBehaviour
 {
-
     //vigenete effect fedback
     [SerializeField] MMF_Player mPlayer;
-    //Mechanic area
 
+    //Mechanic area
     [SerializeField] public CinemachineVirtualCamera gameCam, analizeCam;
-    [SerializeField] public Camera mainCam;
+    private Camera mainCam;
     CinemachineComponentBase componentBase;
     float cameraDistance;
-    [SerializeField] float sensitivity = 10f;
+    [SerializeField] float sensitivity;
     public GameObject objectToRotate, pivot, canvas;
     private GameObject placeholder;
 
-    public float rotationSpeed = 0.01f;
-
+    public float rotationSpeed;
     public bool isAnalizing;
 
     //Input area
@@ -33,12 +31,13 @@ public class Analize : MonoBehaviour
     ThirdPersonController controller;
 
     //TMP area
-
     public GameObject textContainer;
     public TMP_Text allanText;
 
     private void Awake()
     {
+        mainCam = FindObjectOfType<Camera>();
+
         analizeCam.gameObject.SetActive(false);
         playerActionsAssets = new ThirdPersonActionsAssets();
         characterMechanics = GetComponent<CharacterMechanics>();
@@ -133,14 +132,31 @@ public class Analize : MonoBehaviour
         {
             (componentBase as CinemachineFramingTransposer).m_CameraDistance -= cameraDistance;
         }
+
+        if((componentBase as CinemachineFramingTransposer).m_CameraDistance > 8)
+        {
+            (componentBase as CinemachineFramingTransposer).m_CameraDistance = 7.8f;
+        }
+        else if((componentBase as CinemachineFramingTransposer).m_CameraDistance < 3)
+        {
+            (componentBase as CinemachineFramingTransposer).m_CameraDistance = 3.2f;
+        }
     }
 
     public void Rotate()
     {
-        Vector2 deltaAxisRotation = playerActionsAssets.Analize.DeltaMouse.ReadValue<Vector2>() * rotationSpeed;
+        Vector2 rotationAngle = playerActionsAssets.Analize.DeltaMouse.ReadValue<Vector2>() * rotationSpeed;
 
-        var finalRotation = Quaternion.Euler(deltaAxisRotation.x, 0, 0) * Quaternion.Euler(0, 0, deltaAxisRotation.y);
-        objectToRotate.transform.localRotation *= finalRotation;
+        Vector3 globalRightIntoLocalSpace = transform.InverseTransformDirection(Vector3.forward);
+        Vector3 globalUpIntoLocalSpace = transform.InverseTransformDirection(Vector3.up);
+
+        Quaternion pitchRotation = Quaternion.AngleAxis(rotationAngle.y, globalRightIntoLocalSpace);
+        Quaternion yawRotation = Quaternion.AngleAxis(rotationAngle.x, globalUpIntoLocalSpace);
+
+        pitchRotation.z = 0;
+        yawRotation.z = 0;
+
+        objectToRotate.transform.localRotation *= pitchRotation * yawRotation;
     }
 
     public void Click()

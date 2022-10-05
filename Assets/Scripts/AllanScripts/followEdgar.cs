@@ -5,22 +5,21 @@ using UnityEngine.AI;
 
 public class followEdgar : MonoBehaviour
 {
-    // Start is called before the first frame updat
     Transform myTransform;
     private Vector3 distanceBetween;
     [SerializeField] float distanceForTp;
-   
-    [SerializeField] Transform edgar,telePos;
+    private Transform edgar, telePos;
     NavMeshAgent nav;
-    void Start()
+
+    private void Awake()
     {
+        edgar = GameObject.FindGameObjectWithTag("Player").transform;
+        telePos = GameObject.FindGameObjectWithTag("Respawn").transform;
         nav = GetComponent<NavMeshAgent>();
         myTransform = GetComponent<Transform>();
-
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         nav.SetDestination(edgar.position);
         distanceBetween = edgar.position - myTransform.position;
@@ -28,16 +27,13 @@ public class followEdgar : MonoBehaviour
     
         if (distanceBetween.magnitude > distanceForTp || distanceBetween.magnitude < -distanceForTp)
         {
-            
             tpToEdgar();
-            //distanceBetween = 0;
         }
     }
 
-    public void tpToEdgar()
+    private void tpToEdgar()
     {
         myTransform.position = telePos.position;
         nav.Warp(telePos.position);
-        
     }
 }
