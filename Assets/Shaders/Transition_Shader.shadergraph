@@ -395,8 +395,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -692.0000610351563,
-            "y": 504.9999694824219,
+            "x": -663.9999389648438,
+            "y": 505.0,
             "width": 208.0,
             "height": 437.0000305175781
         }
@@ -492,7 +492,7 @@
     },
     "m_Name": "Mask",
     "m_DefaultReferenceName": "Texture2D_437348f0b3c4463f95a27e429c891954",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "tal",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
@@ -693,10 +693,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -882.0001220703125,
-            "y": 504.9999694824219,
-            "width": 113.00000762939453,
-            "height": 34.000003814697269
+            "x": -878.0,
+            "y": 544.0,
+            "width": 113.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -898,10 +898,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1134.0001220703125,
-            "y": 317.0000305175781,
-            "width": 168.00001525878907,
-            "height": 34.000003814697269
+            "x": -1131.9998779296875,
+            "y": 317.0,
+            "width": 168.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
