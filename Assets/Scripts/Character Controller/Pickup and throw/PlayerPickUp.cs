@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
+using MoreMountains.Feedbacks;
 
 public class PlayerPickUp : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class PlayerPickUp : MonoBehaviour
 
 
     public float dropForwardForce, dropUpwardForce;
-
+    [SerializeField] MMF_Player mmPlayer;
     public bool onHand;
     public bool HandsFull;
 
@@ -54,7 +55,7 @@ public class PlayerPickUp : MonoBehaviour
         HandsFull = true;
 
         objectPickUp = target.GetComponent<ObjectPickUp>();
-
+        mmPlayer.PlayFeedbacks();
         objectPickUp.transform.SetParent(objectpickupContainer);
         objectPickUp.transform.localPosition = Vector3.zero;
         objectPickUp.transform.rotation = Quaternion.Euler(Vector3.zero);
