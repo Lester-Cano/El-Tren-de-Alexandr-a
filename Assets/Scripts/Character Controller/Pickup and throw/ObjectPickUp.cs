@@ -16,11 +16,10 @@ public class ObjectPickUp : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") && Time.realtimeSinceStartup >=5)
         {
             Debug.Log("tal");
             MMF_Player.PlayFeedbacks();
-            var mmfPar = MMF_Player.FindObjectOfType<MMFeedbackParticlesInstantiation>();
         }
     }
 }
