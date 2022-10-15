@@ -25,6 +25,13 @@ public class Talk : MonoBehaviour
     public TMP_Text text, nameText;
     public GameObject canvas;
 
+    //Letter Writer Area
+
+    [SerializeField] private float textSpeed;
+    private string currentText ="";
+    private bool writing;
+    private float initialTextSpeed;
+    [SerializeField] FeedbackTalk feedbackTalk;
     private void Awake()
     {
         playerActionsAssets = new ThirdPersonActionsAssets();
@@ -35,6 +42,7 @@ public class Talk : MonoBehaviour
     private void Start()
     {
         OnDisable();
+        initialTextSpeed = textSpeed;
     }
 
     private void OnEnable()
@@ -51,13 +59,13 @@ public class Talk : MonoBehaviour
     public void TalkToNPC(GameObject target)
     {
         canvas.SetActive(true);
-
         dialogue = target.GetComponent<NPCDialogue>();
 
-        if(dialogue != null)
+        if(dialogue != null  )
         {
             nameText.text = dialogue.names[0];
-            text.text = dialogue.dialogues[0];
+            if(!writing) StartCoroutine("WriteText");
+
         }
         else
         {
@@ -74,22 +82,46 @@ public class Talk : MonoBehaviour
 
     public void NextText()
     {
-        if (dialogue != null)
+        if (writing)
         {
+            textSpeed = 0;
+        }
+        else if (dialogue != null )
+        {
+            feedbackTalk.StopTween();
+            textSpeed = initialTextSpeed;
             count++;
             if (count < dialogue.dialogues.Length)
             {
                 nameText.text = dialogue.names[count];
-                text.text = dialogue.dialogues[count];
+                writing = true;
+               StartCoroutine("WriteText");
             }
             else
             {
                 StopTalking();
             }
         }
-        else if(dialogue == null)
+        else if (dialogue == null)
         {
             StopTalking();
+        }
+    }
+    IEnumerator WriteText()
+    {
+        feedbackTalk.StopTween();
+        writing = true;
+        for (int i = 0; i < dialogue.dialogues[count].Length; i++)
+        {
+            currentText = dialogue.dialogues[count].Substring(0, i);
+            text.text = currentText;
+            if(i+1== dialogue.dialogues[count].Length)
+            {
+                writing = false;
+                feedbackTalk.TweenArrow();
+            }
+            yield return new WaitForSeconds(textSpeed);
+
         }
     }
 }

@@ -56318,7 +56318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562280, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.45
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562280, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -56326,7 +56326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562280, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 120.329
+      value: 13.3
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562280, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -78303,6 +78303,7 @@ MonoBehaviour:
   text: {fileID: 3815184006128855892}
   nameText: {fileID: 2036861241}
   canvas: {fileID: 3815184005341890253}
+  textSpeed: 0.03
 --- !u!114 &4373974712367278259
 MonoBehaviour:
   m_ObjectHideFlags: 0
