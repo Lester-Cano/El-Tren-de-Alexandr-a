@@ -12,22 +12,26 @@ public class HUDManager : MonoBehaviour
     public RectTransform rectText;
     public RectTransform rectImage;
     public bool fadedOut;
-    public ThirdPersonController thirdPerson;
+    public MovementController movController;
     [SerializeField] MMF_Player TextFeedbackPlayer;
     [SerializeField] MMF_Player MapFeedbackPlayer;
+
     private void OnEnable()
     {
-        thirdPerson.onNotmoving += PanelFade;
+        movController.onNotmoving += PanelFade;
     }
+
     private void OnDisable()
     {
-        thirdPerson.onNotmoving -= PanelFade;
+        movController.onNotmoving -= PanelFade;
     }
+
     private void PanelFade (bool state)
     {
         if (state) Panelfadeout();
         else PanelfadeIn();
     }
+
     private void PanelfadeIn ()
     {
         canvasGroup.alpha = 0;
@@ -39,6 +43,7 @@ public class HUDManager : MonoBehaviour
 
 
     }
+
     public void Panelfadeout()
     {
         if (rect.transform.localPosition == new Vector3(0, 0, 0))

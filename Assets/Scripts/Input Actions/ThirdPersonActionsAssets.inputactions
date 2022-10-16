@@ -102,6 +102,17 @@
                 },
                 {
                     "name": "",
+                    "id": "0c7816d0-41d1-455a-bff6-8db4cc934704",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8171d06d-502c-44a4-bb08-b9e01d65e863",
                     "path": "<Keyboard>/t",
                     "interactions": "Press",

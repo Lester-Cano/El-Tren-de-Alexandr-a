@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3273111366930307641}
   - component: {fileID: 4228309212482897598}
   - component: {fileID: 4228309212482897599}
+  - component: {fileID: 1933109947776197231}
   - component: {fileID: 3921668815028698095}
   m_Layer: 0
   m_Name: Edgar NIS
@@ -118,6 +119,20 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: -0.0005, z: 0.007}
+--- !u!136 &1933109947776197231
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3921668815028698092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.010401509
+  m_Height: 0.015100875
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.0035704598, z: 0.0075923605}
 --- !u!114 &3921668815028698095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,3 +147,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   rotationPerFrame: 1
+  tweenLimit: 0

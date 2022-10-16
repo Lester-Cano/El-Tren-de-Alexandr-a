@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,15 +16,72 @@ public class MovementController : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float rotationPerFrame;
 
+    //Events to trigger the minimap tween
+
+    public delegate void OnNotmoving(bool state);
+    public event OnNotmoving onNotmoving;
+
+    //variable to count the time when the player is not moving
+
+    float tweenTimer = 0;
+    [SerializeField] public float tweenLimit;
+    bool isFadded;
+
     void Awake()
     {
-
         TPInputActions = new ThirdPersonActionsAssets();
         characterController = GetComponent<CharacterController>();
 
         TPInputActions.Player.Move.started += OnMovementInput;
         TPInputActions.Player.Move.canceled += OnMovementInput;
         TPInputActions.Player.Move.performed += OnMovementInput;
+
+    }
+
+    public void OnEnable()
+    {
+        TPInputActions.Player.Enable();
+    }
+
+    public void OnDisable()
+    {
+        TPInputActions.Player.Disable();
+    }
+
+    void Update()
+    {
+        HandleRotation();
+        HandleGravity();
+        characterController.Move(currentMovement * Time.deltaTime *speed);
+
+        if (!movementPressed)
+        {
+            tweenTimer += Time.deltaTime;
+
+            if (tweenTimer >= tweenLimit)
+            {
+                if (onNotmoving != null)
+                {
+                    onNotmoving(true);
+                    tweenTimer = 0;
+                    isFadded = true;
+                }
+            }
+
+        }
+        else if (movementPressed)
+        {
+
+            if (isFadded)
+            {
+                if (onNotmoving != null)
+                {
+                    onNotmoving(false);
+                    isFadded = false;
+                    tweenTimer = 0;
+                }
+            }
+        }
 
     }
 
@@ -40,7 +98,7 @@ public class MovementController : MonoBehaviour
         Vector3 positionToLookAt;
 
         positionToLookAt.x = currentMovement.x;
-        positionToLookAt.y = 0.0f;
+        positionToLookAt.y = 90f;
         positionToLookAt.z = currentMovement.z;
 
         Quaternion currentRotation = transform.rotation;
@@ -64,24 +122,5 @@ public class MovementController : MonoBehaviour
             float gravity = -9.8f;
             currentMovement.y = gravity;
         }
-    }
-
-    void OnEnable()
-    {
-        TPInputActions.Player.Enable();
-    }
-
-    void OnDisable()
-    {
-        TPInputActions.Player.Disable();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        HandleRotation();
-        HandleGravity();
-        characterController.Move(currentMovement * Time.deltaTime *speed);
-        
     }
 }
