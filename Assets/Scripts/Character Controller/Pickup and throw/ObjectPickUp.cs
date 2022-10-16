@@ -18,7 +18,6 @@ public class ObjectPickUp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground") && Time.realtimeSinceStartup >=5)
         {
-            Debug.Log("tal");
             MMF_Player.PlayFeedbacks();
         }
     }

@@ -23,8 +23,9 @@ public class BasicInteraction : MonoBehaviour
     private void Update()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5.0f) && hit.transform.tag == "Allan")
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 20.0f) && hit.transform.tag == "Allan")
         {
+            Debug.Log("Hit Allan");
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.blue);
             talk.Enable();
             //hUDManager.textFadein();
