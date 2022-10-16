@@ -73144,14 +73144,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6543699, g: 0.8018868, b: 0.76481307, a: 1}
+  m_Color: {r: 0.6543699, g: 0.8018868, b: 0.76481307, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 639cbb10293fb1647ba52fe689577d94, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -75155,7 +75155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PRESS
+  m_text: PRESS CLICK
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -75244,7 +75244,7 @@ GameObject:
   - component: {fileID: 460717536095515817}
   - component: {fileID: 460717536095515816}
   m_Layer: 5
-  m_Name: Press E
+  m_Name: Press Click
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75267,7 +75267,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 35, y: -412}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 360.1, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &460717536101598116
 RectTransform:
