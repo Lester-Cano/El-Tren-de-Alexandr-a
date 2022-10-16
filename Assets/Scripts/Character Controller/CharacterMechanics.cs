@@ -25,7 +25,7 @@ public class CharacterMechanics : MonoBehaviour
     private InputAction interact;
 
     //Private for Analize Mechanic
-    private GameObject objectToInteractWith;
+    public GameObject objectToInteractWith;
 
     //Inventory Area
 

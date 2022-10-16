@@ -12,7 +12,8 @@ public class Analize : MonoBehaviour
     [SerializeField] MMF_Player mPlayer;
 
     //Mechanic area
-    [SerializeField] public CinemachineVirtualCamera gameCam, analizeCam;
+    [SerializeField] public CinemachineVirtualCamera analizeCam;
+    [SerializeField] public CinemachineFreeLook gameCam;
     private Camera mainCam;
     CinemachineComponentBase componentBase;
     float cameraDistance;
@@ -28,7 +29,7 @@ public class Analize : MonoBehaviour
     private InputAction interaction;
 
     CharacterMechanics characterMechanics;
-    ThirdPersonController controller;
+    MovementController controller;
 
     //TMP area
     public GameObject textContainer;
@@ -40,8 +41,8 @@ public class Analize : MonoBehaviour
 
         analizeCam.gameObject.SetActive(false);
         playerActionsAssets = new ThirdPersonActionsAssets();
-        characterMechanics = GetComponent<CharacterMechanics>();
-        controller = GetComponent<ThirdPersonController>();
+        characterMechanics = GetComponentInParent<CharacterMechanics>();
+        controller = GetComponentInParent<MovementController>();
 
         placeholder = new GameObject();
     }
@@ -88,10 +89,12 @@ public class Analize : MonoBehaviour
     public void GoToAnalize(GameObject target)
     {
         OnEnable();
+
         if(mPlayer != null)
         {
             mPlayer.PlayFeedbacks();
         }
+
         placeholder = Instantiate(target, pivot.transform.position, Quaternion.identity);
         objectToRotate = placeholder;
 
