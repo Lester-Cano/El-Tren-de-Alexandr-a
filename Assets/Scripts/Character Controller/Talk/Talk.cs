@@ -58,6 +58,8 @@ public class Talk : MonoBehaviour
 
     public void TalkToNPC(GameObject target)
     {
+        Cursor.lockState = CursorLockMode.None;
+
         canvas.SetActive(true);
         dialogue = target.GetComponent<NPCDialogue>();
 
@@ -75,6 +77,8 @@ public class Talk : MonoBehaviour
 
     public void StopTalking()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+
         canvas.SetActive(false);
         text.text = null;
         count = 0;

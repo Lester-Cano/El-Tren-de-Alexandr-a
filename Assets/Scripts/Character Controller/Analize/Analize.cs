@@ -90,7 +90,9 @@ public class Analize : MonoBehaviour
     {
         OnEnable();
 
-        if(mPlayer != null)
+        Cursor.lockState = CursorLockMode.None;
+
+        if (mPlayer != null)
         {
             mPlayer.PlayFeedbacks();
         }
@@ -111,6 +113,8 @@ public class Analize : MonoBehaviour
 
     public void BackToGame()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+
         objectToRotate = null;
         Object.Destroy(placeholder);
 

@@ -31,6 +31,7 @@ public class BasicInteraction : MonoBehaviour
             //hUDManager.textFadein();
             if (talk.enabled && talk.IsPressed())
             {
+                Cursor.lockState = CursorLockMode.None;
                 ePopUp.SetActive(true);
             }
         }
@@ -39,6 +40,7 @@ public class BasicInteraction : MonoBehaviour
             //hUDManager.textFadeout();
             talk.Disable();
             ePopUp.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
         }
         
     }
