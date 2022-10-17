@@ -9,7 +9,7 @@ public class MovementController : MonoBehaviour
 
     ThirdPersonActionsAssets TPInputActions;
     CharacterController characterController;
-
+    [SerializeField] public AudioSource walkEdgar;
     Vector2 currentMovementInput;
     Vector3 currentMovement;
     bool movementPressed;
@@ -31,7 +31,7 @@ public class MovementController : MonoBehaviour
     {
         TPInputActions = new ThirdPersonActionsAssets();
         characterController = GetComponent<CharacterController>();
-
+        walkEdgar = GetComponent<AudioSource>();
         TPInputActions.Player.Move.started += OnMovementInput;
         TPInputActions.Player.Move.canceled += OnMovementInput;
         TPInputActions.Player.Move.performed += OnMovementInput;
@@ -56,6 +56,7 @@ public class MovementController : MonoBehaviour
 
         if (!movementPressed)
         {
+            walkEdgar.enabled = false;
             tweenTimer += Time.deltaTime;
 
             if (tweenTimer >= tweenLimit)
@@ -71,6 +72,7 @@ public class MovementController : MonoBehaviour
         }
         else if (movementPressed)
         {
+            walkEdgar.enabled = true;
 
             if (isFadded)
             {
@@ -86,7 +88,7 @@ public class MovementController : MonoBehaviour
     }
 
     void OnMovementInput(InputAction.CallbackContext context)
-    {
+    {       
         currentMovementInput = context.ReadValue<Vector2>();
         currentMovement.x = currentMovementInput.x;
         currentMovement.z = currentMovementInput.y;

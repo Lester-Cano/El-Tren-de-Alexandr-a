@@ -541,6 +541,8 @@ MonoBehaviour:
   pos: {fileID: 1072532608}
   offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
+  SFX: {fileID: 0}
+  TransitionSFX: {fileID: 0}
   ease: 0
 --- !u!65 &59568640
 BoxCollider:
@@ -1140,6 +1142,8 @@ MonoBehaviour:
   pos: {fileID: 909237256}
   offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
+  SFX: {fileID: 0}
+  TransitionSFX: {fileID: 0}
   ease: 0
 --- !u!65 &152419027
 BoxCollider:
@@ -1238,6 +1242,8 @@ MonoBehaviour:
   pos: {fileID: 940866734}
   offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
+  SFX: {fileID: 0}
+  TransitionSFX: {fileID: 0}
   ease: 0
 --- !u!65 &157635880
 BoxCollider:
@@ -8878,6 +8884,8 @@ MonoBehaviour:
   pos: {fileID: 1100469449}
   offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
+  SFX: {fileID: 0}
+  TransitionSFX: {fileID: 0}
   ease: 0
 --- !u!65 &631464882
 BoxCollider:
@@ -9499,6 +9507,8 @@ MonoBehaviour:
   pos: {fileID: 1479124741}
   offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
+  SFX: {fileID: 0}
+  TransitionSFX: {fileID: 0}
   ease: 0
 --- !u!65 &718767109
 BoxCollider:
@@ -10251,6 +10261,8 @@ MonoBehaviour:
   pos: {fileID: 1934950593}
   offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
+  SFX: {fileID: 0}
+  TransitionSFX: {fileID: 0}
   ease: 0
 --- !u!65 &833876114
 BoxCollider:
@@ -10762,6 +10774,7 @@ MonoBehaviour:
   - Hola
   - Necesitas algo?
   NPCImages: []
+  TalkClip: {fileID: 0}
 --- !u!114 &845227281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11415,6 +11428,8 @@ MonoBehaviour:
   pos: {fileID: 152419024}
   offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
+  SFX: {fileID: 0}
+  TransitionSFX: {fileID: 0}
   ease: 0
 --- !u!65 &909237258
 BoxCollider:
@@ -11636,6 +11651,8 @@ MonoBehaviour:
   pos: {fileID: 157635878}
   offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
+  SFX: {fileID: 0}
+  TransitionSFX: {fileID: 0}
   ease: 0
 --- !u!65 &940866737
 BoxCollider:
@@ -12206,6 +12223,8 @@ MonoBehaviour:
   pos: {fileID: 59568637}
   offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
+  SFX: {fileID: 0}
+  TransitionSFX: {fileID: 0}
   ease: 0
 --- !u!65 &1072532610
 BoxCollider:
@@ -12510,6 +12529,8 @@ MonoBehaviour:
   pos: {fileID: 631464880}
   offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
+  SFX: {fileID: 0}
+  TransitionSFX: {fileID: 0}
   ease: 0
 --- !u!65 &1100469452
 BoxCollider:
@@ -18595,6 +18616,8 @@ MonoBehaviour:
   pos: {fileID: 718767106}
   offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
+  SFX: {fileID: 0}
+  TransitionSFX: {fileID: 0}
   ease: 0
 --- !u!65 &1479124743
 BoxCollider:
@@ -21078,6 +21101,8 @@ MonoBehaviour:
   pos: {fileID: 833876112}
   offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
+  SFX: {fileID: 0}
+  TransitionSFX: {fileID: 0}
   ease: 0
 --- !u!65 &1934950596
 BoxCollider:
