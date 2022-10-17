@@ -649,7 +649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14508839}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -21.1, y: 0, z: 62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4595100777320470153}
@@ -33873,7 +33873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPickUp: {fileID: 0}
-  objectpickupContainer: {fileID: 0}
+  objectpickupContainer: {fileID: 4373974712205673806}
   dropForwardForce: 20
   dropUpwardForce: 20
   mmPlayer: {fileID: 158687294}
@@ -44252,7 +44252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223243834}
   m_LocalRotation: {x: -0.8870108, y: -0, z: -0, w: 0.4617487}
-  m_LocalPosition: {x: 0, y: 0.15592766, z: 11.966135}
+  m_LocalPosition: {x: -21.1, y: 35.717667, z: 62.753567}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 849887367}
@@ -64544,7 +64544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820881379}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.15592778, z: 1.9661341}
+  m_LocalPosition: {x: -21.1, y: 35.717663, z: 52.753567}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 360774492}
@@ -68634,7 +68634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965112139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.73, z: 1.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4406562979897337723}
@@ -77800,6 +77800,7 @@ GameObject:
   - component: {fileID: 917457161}
   - component: {fileID: 3921668815248342467}
   - component: {fileID: 3921668815248342469}
+  - component: {fileID: 3921668815248342466}
   m_Layer: 0
   m_Name: Edgar NIS
   m_TagString: Player
@@ -77807,6 +77808,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &3921668815248342466
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3921668815248342465}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &3921668815248342467
 AudioSource:
   m_ObjectHideFlags: 0
@@ -78001,7 +78018,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4373974712205673805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.72, z: 1.977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4406562979897337723}
