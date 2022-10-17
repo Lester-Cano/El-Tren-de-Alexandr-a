@@ -9039,6 +9039,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 410572453}
+        m_TargetAssemblyTypeName: ButtonsAudio, Assembly-CSharp
+        m_MethodName: OnSecondaryButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &401115486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21640,7 +21652,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 410572453}
         m_TargetAssemblyTypeName: ButtonsAudio, Assembly-CSharp
-        m_MethodName: OnSecondaryButtonsAllan
+        m_MethodName: OnSecondaryButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30822,6 +30834,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ePopUp: {fileID: 460717536165616304}
   hUDManager: {fileID: 460717535177075294}
+  TalkClip:
+  - {fileID: 8300000, guid: e9774842d5354194c9308b84c61ac0ca, type: 3}
+  - {fileID: 8300000, guid: 52ae169773e1db84da778a820b653559, type: 3}
   interactButton: {fileID: 2044661141}
 --- !u!1001 &1209311635
 PrefabInstance:
@@ -31298,7 +31313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223243834}
   m_LocalRotation: {x: -0.8870108, y: -0, z: -0, w: 0.4617487}
-  m_LocalPosition: {x: 2.38, y: -7.013777, z: 1.7267332}
+  m_LocalPosition: {x: 2, y: -8.447718, z: -0.32114697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 849887367}
@@ -39118,7 +39133,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 410572453}
         m_TargetAssemblyTypeName: ButtonsAudio, Assembly-CSharp
-        m_MethodName: OnSecondaryButtonsAllan
+        m_MethodName: OnSecondaryButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -44673,7 +44688,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820881379}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.38, y: -7.0137773, z: -8.273268}
+  m_LocalPosition: {x: 2, y: -8.447718, z: -10.321146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 360774492}
@@ -49806,7 +49821,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 410572453}
         m_TargetAssemblyTypeName: ButtonsAudio, Assembly-CSharp
-        m_MethodName: OnMainButtonsAllan
+        m_MethodName: OnMainButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52674,7 +52689,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 410572453}
         m_TargetAssemblyTypeName: ButtonsAudio, Assembly-CSharp
-        m_MethodName: OnSecondaryButtonsAllan
+        m_MethodName: OnSecondaryButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -53240,9 +53255,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 410572453}
         m_TargetAssemblyTypeName: ButtonsAudio, Assembly-CSharp
-        m_MethodName: OnMainButtonsAllan
+        m_MethodName: OnMainButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54040,9 +54067,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 410572453}
         m_TargetAssemblyTypeName: ButtonsAudio, Assembly-CSharp
-        m_MethodName: OnMainButtonsAllan
+        m_MethodName: OnMainButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54667,6 +54706,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 410572453}
+        m_TargetAssemblyTypeName: ButtonsAudio, Assembly-CSharp
+        m_MethodName: OnSecondaryButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &460717535768434831
 GameObject:
   m_ObjectHideFlags: 0
@@ -55048,7 +55099,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 410572453}
         m_TargetAssemblyTypeName: ButtonsAudio, Assembly-CSharp
-        m_MethodName: OnMainButtonsAllan
+        m_MethodName: OnMainButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -58189,7 +58240,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 410572453}
         m_TargetAssemblyTypeName: ButtonsAudio, Assembly-CSharp
-        m_MethodName: OnMainButtonsAllan
+        m_MethodName: OnMainButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -58303,7 +58354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3815184005514399436
 Transform:
   m_ObjectHideFlags: 0
@@ -58426,7 +58477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3815184005743790166
 RectTransform:
   m_ObjectHideFlags: 0
@@ -58566,7 +58617,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 410572453}
         m_TargetAssemblyTypeName: ButtonsAudio, Assembly-CSharp
-        m_MethodName: OnMainButtonsAllan
+        m_MethodName: OnMainButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -58617,8 +58668,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7f089dca31a708442a6120d6308e598b, type: 2}
+  m_sharedMaterial: {fileID: -3738559296396466932, guid: 7f089dca31a708442a6120d6308e598b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -58648,7 +58699,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -58990,7 +59041,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4373974711967149003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.38, y: 0, z: -12.5}
+  m_LocalPosition: {x: 2, y: 0, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4406562979897337723}
