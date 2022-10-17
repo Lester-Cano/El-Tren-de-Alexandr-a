@@ -109,7 +109,8 @@ public class CharacterMechanics : MonoBehaviour
         {
             hUDManager.textFadeout();
         }
-        if (other.gameObject.CompareTag("Talkable")) {
+        if (other.gameObject.CompareTag("Talkable")) 
+        {
             talk.StopTalking();
         }
 
