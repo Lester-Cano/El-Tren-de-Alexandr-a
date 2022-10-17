@@ -12,8 +12,7 @@ public class Analize : MonoBehaviour
     [SerializeField] MMF_Player mPlayer;
 
     //Mechanic area
-    [SerializeField] public CinemachineVirtualCamera analizeCam;
-    [SerializeField] public CinemachineFreeLook gameCam;
+    [SerializeField] public CinemachineVirtualCamera analizeCam, gameCam;
     private Camera mainCam;
     CinemachineComponentBase componentBase;
     float cameraDistance;
@@ -124,6 +123,8 @@ public class Analize : MonoBehaviour
         isAnalizing = false;
         characterMechanics.analizable = false;
 
+        Cursor.lockState = CursorLockMode.Locked;
+
         OnDisable();
     }
 
@@ -155,6 +156,9 @@ public class Analize : MonoBehaviour
 
         Quaternion pitchRotation = Quaternion.AngleAxis(rotationAngle.y, globalRightIntoLocalSpace);
         Quaternion yawRotation = Quaternion.AngleAxis(rotationAngle.x, globalUpIntoLocalSpace);
+
+        //Debug.Log(pitchRotation);
+        Debug.Log(yawRotation);
 
         pitchRotation.z = 0;
         yawRotation.z = 0;
