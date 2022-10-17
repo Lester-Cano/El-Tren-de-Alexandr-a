@@ -15,4 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 319623567292686424, guid: 898bc93e7ca6460449da37e7490d9587, type: 3}
   type: 0
   description: Just a test
-  analizable: {fileID: 0}
+  analizable: {fileID: 8889419820767563353, guid: 29c7349905782b946b1cc0ea6e391378, type: 3}
