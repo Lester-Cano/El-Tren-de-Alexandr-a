@@ -60,8 +60,9 @@ public class Talk : MonoBehaviour
     {
         canvas.SetActive(true);
         dialogue = target.GetComponent<NPCDialogue>();
+        dialogue.OnTalkNPC();
 
-        if(dialogue != null  )
+        if (dialogue != null  )
         {
             nameText.text = dialogue.names[0];
             if(!writing) StartCoroutine("WriteText");

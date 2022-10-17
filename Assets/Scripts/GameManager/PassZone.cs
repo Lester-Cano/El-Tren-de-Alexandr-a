@@ -11,6 +11,8 @@ public class PassZone : MonoBehaviour
     [SerializeField] Vector3 offsetPostion = new Vector3 (0,0,3);
     // transition variables
     [SerializeField] Material transitionMaterial;
+    [SerializeField] AudioSource SFX;
+    [SerializeField] AudioClip TransitionSFX;
     [SerializeField] private Ease ease;
     float transitionValue;
     Sequence tranSequence;
@@ -27,6 +29,7 @@ public class PassZone : MonoBehaviour
         {
             objectToMove = other.gameObject;
             Invoke("StartCorrutineDelay", 1.5f);
+            SFX.PlayOneShot(TransitionSFX);
             tranSequence.Append(transitionMaterial.DOFloat(1f, "_transitionAmount", 1.5f).SetEase(ease));
             tranSequence.Append(transitionMaterial.DOFloat(0f, "_transitionAmount", 1.5f).SetEase(ease).SetDelay(2));
         }
