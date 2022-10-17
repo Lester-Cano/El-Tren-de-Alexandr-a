@@ -11,9 +11,15 @@ public class BasicInteraction : MonoBehaviour
 
     [SerializeField] HUDManager hUDManager;
 
+    //Canva
+
+    public GameObject interactButton;
+    public int counter;
+
     private void Awake() {
         playerControls = new ThirdPersonActionsAssets();  
         ePopUp.SetActive(false);
+        interactButton.SetActive(false);
     }
 
     private void OnEnable() {
@@ -25,22 +31,28 @@ public class BasicInteraction : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 20.0f) && hit.transform.tag == "Allan")
         {
-            Debug.Log("Hit Allan");
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.blue);
             talk.Enable();
+
+            Cursor.lockState = CursorLockMode.None;
+            interactButton.gameObject.SetActive(true);
+
+            counter = 0;
+
             //hUDManager.textFadein();
-            if (talk.enabled && talk.IsPressed())
-            {
-                Cursor.lockState = CursorLockMode.None;
-                ePopUp.SetActive(true);
-            }
         }
         else
         {
             //hUDManager.textFadeout();
             talk.Disable();
             ePopUp.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
+            interactButton.gameObject.SetActive(false);
+
+            if(counter == 0)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                counter++;
+            }
         }
         
     }
@@ -48,5 +60,13 @@ public class BasicInteraction : MonoBehaviour
     public void OnButtonBack() 
     {
         ePopUp.SetActive(false); talk.Disable();
+    }
+
+    public void TalkToAllan()
+    {
+        if (talk.enabled)
+        {
+            ePopUp.SetActive(true);
+        }
     }
 }

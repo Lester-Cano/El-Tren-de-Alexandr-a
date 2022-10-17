@@ -32,6 +32,10 @@ public class CharacterMechanics : MonoBehaviour
     public InventoryObject inventory;
     public GameObject inventoryCanva;
 
+    //Canva
+
+    public GameObject interactButton;
+
     private void Awake()
     {
         playerActionsAssets = new ThirdPersonActionsAssets();
@@ -40,6 +44,8 @@ public class CharacterMechanics : MonoBehaviour
         playerPickUp = GetComponentInParent<PlayerPickUp>();
 
         hUDManager = FindObjectOfType<HUDManager>();
+
+        interactButton.gameObject.SetActive(false);
     }
 
     public void OnEnable()
@@ -53,9 +59,88 @@ public class CharacterMechanics : MonoBehaviour
         playerActionsAssets.Player.Interact.Disable();
     }
 
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (playerActionsAssets.Player.Interact.triggered && isInteracting)
+        if (other.gameObject.CompareTag("Analizable"))
+        {
+            isInteracting = true;
+            analizable = true;
+            objectToInteractWith = other.gameObject;
+
+            //hUDManager.textFadein();
+            interactButton.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else if (other.gameObject.CompareTag("Pickable"))
+        {
+            isInteracting = true;
+            pickable = true;
+
+            objectToInteractWith = other.gameObject;
+
+            //hUDManager.textFadein();
+            interactButton.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else if (other.gameObject.CompareTag("Talkable"))
+        {
+            isInteracting = true;
+            talkable = true;
+
+            objectToInteractWith = other.gameObject;
+
+            //hUDManager.textFadein();
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            interactButton.SetActive(true);
+        }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        isInteracting = false;
+        analizable = false;
+        pickable = false;
+        talkable = false;
+
+        if(other.gameObject.CompareTag("Analizable")|| other.gameObject.CompareTag("Pickable")|| other.gameObject.CompareTag("Talkable"))
+        {
+            hUDManager.textFadeout();
+        }
+        if (other.gameObject.CompareTag("Talkable")) {
+            talk.StopTalking();
+        }
+
+        interactButton.gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private IEnumerator PickUpObject()
+    {
+        var item = objectToInteractWith.GetComponent<Item>();
+        if (item)
+        {
+            inventory.AddItem(item.item, 1);
+            Destroy(objectToInteractWith);
+
+            inventoryCanva.SetActive(true);
+
+            yield return new WaitForSeconds(2f);
+
+
+            inventoryCanva.SetActive(false);
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        inventory.container.Clear();
+    }
+
+    public void SendToMechanic()
+    {
+        if (isInteracting)
         {
             hUDManager.textFadeout();
             if (analizable)
@@ -80,74 +165,5 @@ public class CharacterMechanics : MonoBehaviour
                 talk.TalkToNPC(objectToInteractWith);
             }
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Analizable"))
-        {
-            isInteracting = true;
-            analizable = true;
-            objectToInteractWith = other.gameObject;
-
-            hUDManager.textFadein();
-        }
-        else if (other.gameObject.CompareTag("Pickable"))
-        {
-            isInteracting = true;
-            pickable = true;
-
-            objectToInteractWith = other.gameObject;
-
-            hUDManager.textFadein();
-        }
-        else if (other.gameObject.CompareTag("Talkable"))
-        {
-            isInteracting = true;
-            talkable = true;
-
-            objectToInteractWith = other.gameObject;
-
-            hUDManager.textFadein();
-        }
-
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        isInteracting = false;
-        analizable = false;
-        pickable = false;
-        talkable = false;
-
-        if(other.gameObject.CompareTag("Analizable")|| other.gameObject.CompareTag("Pickable")|| other.gameObject.CompareTag("Talkable"))
-        {
-            hUDManager.textFadeout();
-        }
-        if (other.gameObject.CompareTag("Talkable")) {
-            talk.StopTalking();
-        }
-    }
-
-    private IEnumerator PickUpObject()
-    {
-        var item = objectToInteractWith.GetComponent<Item>();
-        if (item)
-        {
-            inventory.AddItem(item.item, 1);
-            Destroy(objectToInteractWith);
-
-            inventoryCanva.SetActive(true);
-
-            yield return new WaitForSeconds(2f);
-
-
-            inventoryCanva.SetActive(false);
-        }
-    }
-
-    private void OnApplicationQuit()
-    {
-        inventory.container.Clear();
     }
 }
