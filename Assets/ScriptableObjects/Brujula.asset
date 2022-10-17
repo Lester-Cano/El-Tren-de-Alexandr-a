@@ -15,4 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 1132158545757017993, guid: 205ba29f9e09ab0429bc299847efd0e0, type: 3}
   type: 0
   description: Brujula con algunas direcciones marcadas
-  analizable: {fileID: 0}
+  analizable: {fileID: 8889419820767563353, guid: 29c7349905782b946b1cc0ea6e391378, type: 3}

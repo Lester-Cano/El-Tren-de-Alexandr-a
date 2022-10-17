@@ -46,6 +46,8 @@ public class CharacterMechanics : MonoBehaviour
         hUDManager = FindObjectOfType<HUDManager>();
 
         interactButton.gameObject.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void OnEnable()
@@ -91,7 +93,6 @@ public class CharacterMechanics : MonoBehaviour
 
             //hUDManager.textFadein();
             Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
             interactButton.SetActive(true);
         }
 
@@ -108,7 +109,8 @@ public class CharacterMechanics : MonoBehaviour
         {
             hUDManager.textFadeout();
         }
-        if (other.gameObject.CompareTag("Talkable")) {
+        if (other.gameObject.CompareTag("Talkable")) 
+        {
             talk.StopTalking();
         }
 

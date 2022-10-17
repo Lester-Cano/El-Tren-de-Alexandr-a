@@ -12,7 +12,7 @@ public class HUDManager : MonoBehaviour
     public RectTransform rectText;
     public RectTransform rectImage;
     public bool fadedOut;
-    public AgentMovement movController;
+    public MovementController movController;
     [SerializeField] MMF_Player TextFeedbackPlayer;
     [SerializeField] MMF_Player MapFeedbackPlayer;
 

@@ -12,8 +12,7 @@ public class Analize : MonoBehaviour
     [SerializeField] MMF_Player mPlayer;
 
     //Mechanic area
-    [SerializeField] public CinemachineVirtualCamera analizeCam;
-    [SerializeField] public CinemachineFreeLook gameCam;
+    [SerializeField] public CinemachineVirtualCamera analizeCam, gameCam;
     private Camera mainCam;
     CinemachineComponentBase componentBase;
     float cameraDistance;
@@ -26,7 +25,6 @@ public class Analize : MonoBehaviour
 
     //Input area
     private ThirdPersonActionsAssets playerActionsAssets;
-    private InputAction interaction;
 
     CharacterMechanics characterMechanics;
     MovementController controller;
@@ -53,7 +51,6 @@ public class Analize : MonoBehaviour
 
     private void OnEnable()
     {
-        interaction = playerActionsAssets.Player.Interact;
         playerActionsAssets.Analize.Enable();
     }
 
@@ -78,12 +75,6 @@ public class Analize : MonoBehaviour
         {
             Rotate();
         }
-
-        if (playerActionsAssets.Analize.ClickObjects.WasPressedThisFrame() && isAnalizing)
-        {
-            Click();
-        }
-
     }
 
     public void GoToAnalize(GameObject target)
@@ -96,6 +87,31 @@ public class Analize : MonoBehaviour
         }
 
         placeholder = Instantiate(target, pivot.transform.position, Quaternion.identity);
+        objectToRotate = placeholder;
+
+        gameCam.gameObject.SetActive(false);
+        analizeCam.gameObject.SetActive(true);
+
+        canvas.SetActive(true);
+
+        characterMechanics.OnDisable();
+        controller.OnDisable();
+
+        isAnalizing = true;
+    }
+
+    public void GoToAnalizeWithObject(GameObject target)
+    {
+        OnEnable();
+
+        if (mPlayer != null)
+        {
+            mPlayer.PlayFeedbacks();
+        }
+
+        GameObject objectToAnalize = GameObject.Find(target.name);
+
+        placeholder = Instantiate(objectToAnalize, pivot.transform.position, Quaternion.identity);
         objectToRotate = placeholder;
 
         gameCam.gameObject.SetActive(false);
@@ -123,6 +139,8 @@ public class Analize : MonoBehaviour
 
         isAnalizing = false;
         characterMechanics.analizable = false;
+
+        Cursor.lockState = CursorLockMode.Locked;
 
         OnDisable();
     }
@@ -160,23 +178,6 @@ public class Analize : MonoBehaviour
         yawRotation.z = 0;
 
         objectToRotate.transform.localRotation *= pitchRotation * yawRotation;
-    }
-
-    public void Click()
-    {
-        RaycastHit hit;
-        Ray ray = mainCam.ScreenPointToRay(playerActionsAssets.Analize.DeltaMouse.ReadValue<Vector2>());
-
-        if (Physics.Raycast(ray, out hit, 100f))
-        {
-            if (hit.transform != null)
-            {
-                if (hit.transform.gameObject.CompareTag("Clickable"))
-                {
-                    Debug.Log("Pista encontrada");
-                }
-            }
-        }
     }
 
     public IEnumerator AllanBothering()
