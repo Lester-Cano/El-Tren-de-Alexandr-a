@@ -8,10 +8,10 @@ public class ButtonsAudio : MonoBehaviour
     [SerializeField] AudioSource AudioSFX;
     [SerializeField] AudioClip buttonMain, buttonSecond;
 
-    public void OnMainButtonsAllan() {
+    public void OnMainButtons() {
         AudioSFX.PlayOneShot(buttonMain);
     }
-    public void OnSecondaryButtonsAllan() {
+    public void OnSecondaryButtons() {
         AudioSFX.PlayOneShot(buttonSecond);
     }
     

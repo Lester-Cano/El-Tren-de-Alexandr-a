@@ -8,8 +8,9 @@ public class BasicInteraction : MonoBehaviour
     [SerializeField] GameObject ePopUp;
     public ThirdPersonActionsAssets playerControls;
     private InputAction talk;
-
     [SerializeField] HUDManager hUDManager;
+    private SFXManager SFX;
+    [SerializeField] AudioClip[] TalkClip;
 
     //Canva
 
@@ -20,7 +21,7 @@ public class BasicInteraction : MonoBehaviour
         playerControls = new ThirdPersonActionsAssets();  
         ePopUp.SetActive(false);
         interactButton.SetActive(false);
-
+        SFX = FindObjectOfType<SFXManager>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -66,7 +67,10 @@ public class BasicInteraction : MonoBehaviour
     {
         if (talk.enabled)
         {
-            ePopUp.SetActive(true);
+            ePopUp.SetActive(true); OnTalkAllan();
         }
+    }
+    public void OnTalkAllan(){
+        SFX.SFXSource.PlayOneShot(TalkClip[Random.Range(0,2)]);
     }
 }
