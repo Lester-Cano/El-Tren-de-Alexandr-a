@@ -77771,7 +77771,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 917457161}
         m_TargetAssemblyTypeName: Analize, Assembly-CSharp
         m_MethodName: BackToGame
         m_Mode: 1
