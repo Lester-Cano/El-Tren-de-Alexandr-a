@@ -16,6 +16,7 @@ public class PassZone : MonoBehaviour
     [SerializeField] private Ease ease;
     float transitionValue;
     Sequence tranSequence;
+
     private void Start()
     {
         ease = Ease.InOutSine;
@@ -23,6 +24,7 @@ public class PassZone : MonoBehaviour
         transitionMaterial.SetFloat("_transitionAmount", 0);
         tranSequence = DOTween.Sequence();
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player") && !tranSequence.IsPlaying())
@@ -40,8 +42,13 @@ public class PassZone : MonoBehaviour
         if (objectToMove != null)
         {
             pos.SetActive(false);
-            objectToMove.transform.position = pos.transform.position+offsetPostion;
-            yield return new WaitForSeconds(2f);
+
+            objectToMove.transform.position = pos.transform.position + offsetPostion;
+
+            Debug.Log("Teleporting");
+
+            yield return new WaitForSeconds(5f);
+
             pos.SetActive(true);
         }
     }
