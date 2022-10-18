@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: b5633a27742871b42beb9ceb27b4e344, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: f1a8174c82901a840b93cf101f1fe00e, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4426216
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8102,7 +8102,7 @@ MonoBehaviour:
           TargetBPM: 120
         Owner: {fileID: 1322208928}
         DebugActive: 0
-        TargetTMPText: {fileID: 0}
+        TargetTMPText: {fileID: 793983132}
         RelativeValues: 1
         Mode: 0
         Duration: 0.15
@@ -8223,7 +8223,7 @@ MonoBehaviour:
         AllowAdditivePlays: 0
         DisableOnStop: 0
         OnlyPlayIfTargetIsActive: 0
-        TargetRectTransform: {fileID: 0}
+        TargetRectTransform: {fileID: 233980649}
         SpeedCurve:
           MMTweenDefinitionType: 1
           MMTweenCurve: 3
@@ -10243,7 +10243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -281.99994, y: -51.55}
+  m_AnchoredPosition: {x: -281.99994, y: -17}
   m_SizeDelta: {x: 570, y: 125.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1664458589
@@ -10301,15 +10301,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 17
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -16443,7 +16443,7 @@ MonoBehaviour:
           TargetBPM: 120
         Owner: {fileID: 1852836088}
         DebugActive: 0
-        TargetTMPText: {fileID: 0}
+        TargetTMPText: {fileID: 1407185265}
         RelativeValues: 1
         Mode: 0
         Duration: 0.25
@@ -16564,7 +16564,7 @@ MonoBehaviour:
         AllowAdditivePlays: 0
         DisableOnStop: 0
         OnlyPlayIfTargetIsActive: 0
-        TargetRectTransform: {fileID: 0}
+        TargetRectTransform: {fileID: 1846659252}
         SpeedCurve:
           MMTweenDefinitionType: 1
           MMTweenCurve: 3
