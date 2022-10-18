@@ -47,7 +47,7 @@ public class PassZone : MonoBehaviour
 
     private IEnumerator Teleport()
     {
-        if (objectToMove != null && teleporting)
+        if (objectToMove != null && teleporting && pos != null)
         {
             teleporting = false;
 
