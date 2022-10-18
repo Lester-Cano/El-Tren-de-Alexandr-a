@@ -56,6 +56,7 @@ public class HUDManager : MonoBehaviour
             canvasGroup.DOFade(0, fadeTime);
         }
     }
+
     public void textFadein()
     {
         // Grab a free Sequence to use

@@ -17,6 +17,9 @@ public class PassZone : MonoBehaviour
     float transitionValue;
     Sequence tranSequence;
 
+    private bool teleporting;
+    private CharacterController characterController;
+
     private void Start()
     {
         ease = Ease.InOutSine;
@@ -29,7 +32,12 @@ public class PassZone : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && !tranSequence.IsPlaying())
         {
+            teleporting = true;
+
             objectToMove = other.gameObject;
+            characterController = other.GetComponent<CharacterController>();
+            characterController.enabled = false;
+
             Invoke("StartCorrutineDelay", 1.5f);
             SFX.PlayOneShot(TransitionSFX);
             tranSequence.Append(transitionMaterial.DOFloat(1f, "_transitionAmount", 1.5f).SetEase(ease));
@@ -39,17 +47,24 @@ public class PassZone : MonoBehaviour
 
     private IEnumerator Teleport()
     {
-        if (objectToMove != null)
+        if (objectToMove != null && teleporting)
         {
+            teleporting = false;
+
             pos.SetActive(false);
 
             objectToMove.transform.position = pos.transform.position + offsetPostion;
 
             Debug.Log("Teleporting");
 
-            yield return new WaitForSeconds(5f);
+            characterController.enabled = true;
+            characterController = null;
+
+            yield return new WaitForSeconds(2f);
 
             pos.SetActive(true);
+
+            teleporting = true;
         }
     }
     private void StartCorrutineDelay()
