@@ -47,7 +47,7 @@ public class PuzzleSolved : MonoBehaviour
             foundKeyObject = true;
             var holder = other.gameObject.GetComponent<PuzzleKeyCode>();
             puzzleNumber = holder.keyCode;
-            hudManager.textFadein();
+            hudManager.InteractTextFadeIn();
         }
     }
 
@@ -56,7 +56,7 @@ public class PuzzleSolved : MonoBehaviour
         if (other.gameObject.CompareTag("KeyObject"))
         {
             foundKeyObject = false;
-            hudManager.textFadeout();
+            hudManager.InteractTextFadeOut();
         }
     }
 
