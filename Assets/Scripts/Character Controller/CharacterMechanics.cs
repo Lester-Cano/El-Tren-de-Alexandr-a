@@ -45,7 +45,7 @@ public class CharacterMechanics : MonoBehaviour
 
         hUDManager = FindObjectOfType<HUDManager>();
 
-        interactButton.gameObject.SetActive(false);
+        //interactButton.gameObject.SetActive(false);
 
         Cursor.lockState = CursorLockMode.None;
     }
@@ -69,8 +69,8 @@ public class CharacterMechanics : MonoBehaviour
             analizable = true;
             objectToInteractWith = other.gameObject;
 
-            //hUDManager.textFadein();
-            interactButton.SetActive(true);
+            hUDManager.InteractTextFadeIn();
+            //interactButton.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
         }
         else if (other.gameObject.CompareTag("Pickable"))
@@ -80,8 +80,8 @@ public class CharacterMechanics : MonoBehaviour
 
             objectToInteractWith = other.gameObject;
 
-            //hUDManager.textFadein();
-            interactButton.SetActive(true);
+            hUDManager.InteractTextFadeIn();
+            //interactButton.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
         }
         else if (other.gameObject.CompareTag("Talkable"))
@@ -91,9 +91,9 @@ public class CharacterMechanics : MonoBehaviour
 
             objectToInteractWith = other.gameObject;
 
-            //hUDManager.textFadein();
+            hUDManager.InteractTextFadeIn();
             Cursor.lockState = CursorLockMode.None;
-            interactButton.SetActive(true);
+            //interactButton.SetActive(true);
         }
 
     }
@@ -107,14 +107,14 @@ public class CharacterMechanics : MonoBehaviour
 
         if(other.gameObject.CompareTag("Analizable")|| other.gameObject.CompareTag("Pickable")|| other.gameObject.CompareTag("Talkable"))
         {
-            hUDManager.textFadeout();
+            hUDManager.InteractTextFadeOut();
         }
         if (other.gameObject.CompareTag("Talkable")) 
         {
             talk.StopTalking();
         }
 
-        interactButton.gameObject.SetActive(false);
+        //interactButton.gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -144,10 +144,10 @@ public class CharacterMechanics : MonoBehaviour
     {
         if (isInteracting)
         {
-            hUDManager.textFadeout();
+            hUDManager.InteractTextFadeOut();
             if (analizable)
             {
-                hUDManager.Panelfadeout();
+                hUDManager.InteractTextFadeOut();
                 analize.GoToAnalize(objectToInteractWith);
 
                 StartCoroutine(PickUpObject());

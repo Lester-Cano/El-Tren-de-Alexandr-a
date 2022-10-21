@@ -6,15 +6,23 @@ using MoreMountains.Feedbacks;
 public class HUDManager : MonoBehaviour
 {
     public float fadeTime = 0.5f;
-    public CanvasGroup canvasGroup;
-    public CanvasGroup canvasText;
-    public RectTransform rect;
-    public RectTransform rectText;
-    public RectTransform rectImage;
+    //Interact Variables
+    public RectTransform interactRect;
+    public CanvasGroup interactCanvasGroup;
+    [SerializeField] MMF_Player InteractFeedBackPlayer;
+    //MiniMap Variables
+    public CanvasGroup miniMapGroup;
+    public RectTransform miniMapRect;
+    [SerializeField] MMF_Player MapFeedbackPlayer;
+    //Talk Mechanic Variables
+    public RectTransform talkRect;
+    public CanvasGroup talkCanvasGroup;
+    [SerializeField] MMF_Player TalkFeedBackPlayer;
+
     public bool fadedOut;
     public MovementController movController;
-    [SerializeField] MMF_Player TextFeedbackPlayer;
-    [SerializeField] MMF_Player MapFeedbackPlayer;
+
+
 
     private void OnEnable()
     {
@@ -28,60 +36,54 @@ public class HUDManager : MonoBehaviour
 
     private void PanelFade (bool state)
     {
-        if (state) Panelfadeout();
-        else PanelfadeIn();
+        if (state) MiniMapFadeout();
+        else MiniMapFadeIn();
     }
 
-    private void PanelfadeIn ()
+    private void MiniMapFadeIn ()
     {
-        canvasGroup.alpha = 0;
-        rect.transform.localPosition = new Vector3(0, -100f, 0);
-        rect.DOAnchorPos(new Vector2(0f, 0f), fadeTime, false).SetEase(Ease.InOutSine);
-        canvasGroup.DOFade(1, fadeTime);
+        miniMapGroup.alpha = 0;
+        miniMapRect.transform.localPosition = new Vector3(0, -100f, 0);
+        miniMapRect.DOAnchorPos(new Vector2(0f, 0f), 1, false).SetEase(Ease.InOutSine);
+        miniMapGroup.DOFade(1, 1);
         MapFeedbackPlayer.PlayFeedbacks();
-
-
-
     }
-
-    public void Panelfadeout()
+    public void MiniMapFadeout()
     {
-        if (rect.transform.localPosition == new Vector3(0, 0, 0))
+        if (miniMapRect.transform.localPosition == new Vector3(0, 0, 0))
         {
-            canvasGroup.alpha = 1;
+            miniMapGroup.alpha = 1;
             MapFeedbackPlayer.PlayFeedbacks();
-            rect.transform.localPosition = new Vector3(0, 0, 0);
-            rect.DOAnchorPos(new Vector2(0, -1000), fadeTime, false).SetEase(Ease.InSine);
+            miniMapRect.transform.localPosition = new Vector3(0, 0, 0);
+            miniMapRect.DOAnchorPos(new Vector2(0, -1000), 1, false).SetEase(Ease.InSine);
 
-            canvasGroup.DOFade(0, fadeTime);
+            miniMapGroup.DOFade(0, 1);
         }
     }
 
-    public void textFadein()
+    public void InteractTextFadeIn()
     {
-        // Grab a free Sequence to use
-        Sequence mySequence = DOTween.Sequence();
-        // Add a movement tween at the beginning
-        canvasText.alpha = 0;
-        rectText.transform.localPosition = new Vector3(0, -100f, 0);
-        canvasText.DOFade(1, fadeTime);
-        rectText.DOAnchorPos(new Vector2(0f, 0f), fadeTime, false).SetEase(Ease.InOutSine);
-
-        // Add a rotation tween as soon as the previous one is finished
-        mySequence.Append(transform.DORotate(new Vector3(0, 180, 0), 1));
-        // Delay the whole Sequence by 1 second
-        mySequence.PrependInterval(1);
-        // Insert a scale tween for the whole duration of the Sequence
-            TextFeedbackPlayer.PlayFeedbacks();
-        
+        interactCanvasGroup.DOFade(1, fadeTime);
+        interactRect.DOAnchorPos(new Vector2(0, -430f), fadeTime, false).SetEase(Ease.InOutSine);
+        InteractFeedBackPlayer.PlayFeedbacks();
     }
-    public void textFadeout()
+    public void InteractTextFadeOut()
     {
-        TextFeedbackPlayer.StopFeedbacks();
-        canvasText.alpha = 1;
-        rectText.transform.localPosition = new Vector3(0, 0, 0);
-        rectText.DOAnchorPos(new Vector2(0, -1000), fadeTime, false).SetEase(Ease.InSine);
-        canvasText.DOFade(0, fadeTime);
+        InteractFeedBackPlayer.StopFeedbacks();
+        interactRect.DOAnchorPos(new Vector2(0, -1000), fadeTime, false).SetEase(Ease.InSine);
+        interactCanvasGroup.DOFade(0, fadeTime);
+    }
+    public void TalkTextFadeOut()
+    {
+        TalkFeedBackPlayer.StopFeedbacks();
+        talkRect.DOAnchorPos(new Vector2(0, -1000), fadeTime, false).SetEase(Ease.InSine);
+        talkCanvasGroup.DOFade(0, fadeTime);
+    }
+    public void TalkTextFadeIn()
+    {
+        talkCanvasGroup.DOFade(1, fadeTime);
+        talkRect.DOAnchorPos(new Vector2(0f, -350f), fadeTime, false).SetEase(Ease.InOutSine);
+        TalkFeedBackPlayer.PlayFeedbacks();
     }
     
 }
