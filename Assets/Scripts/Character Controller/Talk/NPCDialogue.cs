@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class NPCDialogue : MonoBehaviour
 {
-    public string[] names;
-    public string[] dialogues;
-    public List<NPCImage> NPCImages;
+    //public string[] names;
+    //public string[] dialogues;
+    //public List<NPCImage> NPCImages;
     private SFXManager SFX;
     [SerializeField] AudioClip TalkClip;
 
@@ -42,11 +42,4 @@ public class NPCDialogue : MonoBehaviour
     {
         currentDialogue = nPCDialogueSections[phase];
     }
-}
-
-public class NPCDialogueSection
-{
-    public string[] names;
-    public string[] dialogues;
-    public List<NPCImage> NPCImages;
 }
