@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class PaperPuzzleManager : MonoBehaviour
 {
+    [Header("Puzzle NUmber")]
+    [SerializeField] public int puzzleNumber;
+
     private PaperPuzzle PaperPuzzle;
     public GameObject obstacle;
+
+    public delegate void PuzzleSolvedEvent(int puzzleNumber);
+    public event PuzzleSolvedEvent OnPuzzleSolved;
 
     private void Awake()
     {
@@ -25,5 +31,6 @@ public class PaperPuzzleManager : MonoBehaviour
     private void AllPapersPicked()
     {
         gameObject.SetActive(false);
+        OnPuzzleSolved?.Invoke(puzzleNumber);
     }
 }
