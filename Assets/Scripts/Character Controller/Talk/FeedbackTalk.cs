@@ -26,7 +26,7 @@ public class FeedbackTalk : MonoBehaviour
         verticalArrow.gameObject.SetActive(false);
         verticalArrow.DOPause();
     }
-    public void fadeImage(Sprite previousSprite, Sprite nextSprite)
+    public void fadeImage( Sprite nextSprite)
     {
         illustrationImage.DOFade(0, 0.25f);
         illustrationImage.sprite = nextSprite;

@@ -15,7 +15,7 @@ public class MovementController : MonoBehaviour
     bool movementPressed;
     [SerializeField] float speed;
     [SerializeField] float rotationPerFrame;
-
+    [SerializeField] Animator animator;
     //Events to trigger the minimap tween
 
     public delegate void OnNotmoving(bool state);
@@ -52,6 +52,7 @@ public class MovementController : MonoBehaviour
     {
         HandleRotation();
         HandleGravity();
+        HandleAnimation();
         characterController.Move(currentMovement * Time.deltaTime *speed);
 
         if (!movementPressed)
@@ -93,6 +94,7 @@ public class MovementController : MonoBehaviour
         currentMovement.x = currentMovementInput.x;
         currentMovement.z = currentMovementInput.y;
         movementPressed = currentMovementInput.x != 0 || currentMovementInput.y != 0;
+
     }
 
     void HandleRotation()
@@ -123,6 +125,19 @@ public class MovementController : MonoBehaviour
         {
             float gravity = -9.8f;
             currentMovement.y = gravity;
+        }
+    }
+    void HandleAnimation()
+    {
+        bool isRunnig = animator.GetBool("isRunning");
+        bool isCarrying = animator.GetBool("isCarrying");
+        if(movementPressed && !isRunnig)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else if(!movementPressed && isRunnig)
+        {
+            animator.SetBool("isRunning", false);
         }
     }
 }
