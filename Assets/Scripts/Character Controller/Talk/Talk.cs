@@ -70,7 +70,7 @@ public class Talk : MonoBehaviour
 
         if (dialogue != null  )
         {
-            nameText.text = dialogue.names[0];
+            nameText.text = dialogue.currentDialogue.names[0];
             if(!writing) StartCoroutine("WriteText");
 
         }
@@ -99,9 +99,9 @@ public class Talk : MonoBehaviour
             feedbackTalk.StopTween();
             textSpeed = initialTextSpeed;
             count++;
-            if (count < dialogue.dialogues.Length)
+            if (count < dialogue.currentDialogue.dialogues.Length)
             {
-                nameText.text = dialogue.names[count];
+                nameText.text = dialogue.currentDialogue.names[count];
                 writing = true;
                StartCoroutine("WriteText");
             }
@@ -117,7 +117,7 @@ public class Talk : MonoBehaviour
     }
     private void FillArrays(NPCDialogue nPCDialogue)
     {
-        nPCImages = nPCDialogue.NPCImages;
+        nPCImages = nPCDialogue.currentDialogue.NPCImages;
         imagePlacements = new int[nPCImages.Count, 2];
         for (int i = 0; i < nPCImages.Count; i++)
         {
@@ -141,17 +141,17 @@ public class Talk : MonoBehaviour
     {
         feedbackTalk.StopTween();
         writing = true;
-        for (int i = 0; i < dialogue.dialogues[count].Length; i++)
+        for (int i = 0; i < dialogue.currentDialogue.dialogues[count].Length; i++)
         {
             if (imagePlacements[count, 1] == i)
             {
-                Debug.Log(" dialogue: "+count+" letter: "+dialogue.dialogues[count][i]);
+                Debug.Log(" dialogue: "+count+" letter: "+dialogue.currentDialogue.dialogues[count][i]);
                 feedbackTalk.fadeImage(nPCImages[imageCounter].illustrarion);
                 imageCounter++;
             }
-            currentText = dialogue.dialogues[count].Substring(0, i);
+            currentText = dialogue.currentDialogue.dialogues[count].Substring(0, i);
             text.text = currentText;
-            if(i+1== dialogue.dialogues[count].Length)
+            if(i+1== dialogue.currentDialogue.dialogues[count].Length)
             {
                 writing = false;
                 feedbackTalk.TweenArrow();
