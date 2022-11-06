@@ -55,8 +55,6 @@ public class PassZone : MonoBehaviour
 
             objectToMove.transform.position = pos.transform.position + offsetPostion;
 
-            Debug.Log("Teleporting");
-
             characterController.enabled = true;
             characterController = null;
 
