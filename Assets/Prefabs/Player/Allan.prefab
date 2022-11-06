@@ -5061,7 +5061,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: a198d4dd1443d944390228cc567f2be1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5217,6 +5217,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Allan_Rigged
       objectReference: {fileID: 0}
+    - target: {fileID: 2074632842906815507, guid: 4bdefe144da097947b6b2a4c95ef22e8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a198d4dd1443d944390228cc567f2be1, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 4bdefe144da097947b6b2a4c95ef22e8, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d17f0cf2de490bf4c82ac6173904e1f0, type: 2}
+    - target: {fileID: 5870276664392763060, guid: 4bdefe144da097947b6b2a4c95ef22e8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a198d4dd1443d944390228cc567f2be1, type: 2}
+    - target: {fileID: 7432125460198089470, guid: 4bdefe144da097947b6b2a4c95ef22e8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a198d4dd1443d944390228cc567f2be1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bdefe144da097947b6b2a4c95ef22e8, type: 3}
 --- !u!4 &6823200196916487581 stripped
