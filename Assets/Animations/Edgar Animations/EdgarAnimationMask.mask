@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EdgarAnimationMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature.Edgar
+    m_Weight: 1
+  - m_Path: Armature.Edgar/L_IK_Pie
+    m_Weight: 0
+  - m_Path: Armature.Edgar/L_IK_Pie/L_DEF_Pie
+    m_Weight: 1
+  - m_Path: Armature.Edgar/L_IK_Pie/L_DEF_Pie/L_DEF_PieDedos
+    m_Weight: 1
+  - m_Path: Armature.Edgar/L_IK_Pie/L_DEF_Pie/L_DEF_PieDedos/L_DEF_PieDedos_end
+    m_Weight: 1
+  - m_Path: Armature.Edgar/L_IK_Rodilla
+    m_Weight: 0
+  - m_Path: Armature.Edgar/L_IK_Rodilla/L_IK_Rodilla_end
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Cadera
+    m_Weight: 0
+  - m_Path: Armature.Edgar/Main/DEF_Cadera/L_DEF_Pierna
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Cadera/L_DEF_Pierna/L_DEF_Antepierna
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Cadera/L_DEF_Pierna/L_DEF_Antepierna/L_DEF_Antepierna_end
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Cadera/R_DEF_Pierna
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Cadera/R_DEF_Pierna/R_DEF_Antepierna
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Cadera/R_DEF_Pierna/R_DEF_Antepierna/R_DEF_Antepierna_end
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Cola_001
+    m_Weight: 0
+  - m_Path: Armature.Edgar/Main/DEF_Cola_001/DEF_Cola_002
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Cola_001/DEF_Cola_002/DEF_Cola_003
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Cola_001/DEF_Cola_002/DEF_Cola_003/DEF_Cola_004
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Cola_001/DEF_Cola_002/DEF_Cola_003/DEF_Cola_004/DEF_Cola_004_end
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001
+    m_Weight: 0
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/DEF_Columna_003
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/DEF_Columna_003/DEF_Cabeza
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/DEF_Columna_003/DEF_Cabeza/DEF_Boina
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/DEF_Columna_003/DEF_Cabeza/DEF_Boina/DEF_Boina_end
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/DEF_Columna_003/DEF_Cabeza/L_DEF_Oreja_001
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/DEF_Columna_003/DEF_Cabeza/L_DEF_Oreja_001/L_DEF_Oreja_002
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/DEF_Columna_003/DEF_Cabeza/L_DEF_Oreja_001/L_DEF_Oreja_002/L_DEF_Oreja_002_end
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/DEF_Columna_003/DEF_Cabeza/R_DEF_Oreja_001
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/DEF_Columna_003/DEF_Cabeza/R_DEF_Oreja_001/R_DEF_Oreja_002
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/DEF_Columna_003/DEF_Cabeza/R_DEF_Oreja_001/R_DEF_Oreja_002/R_DEF_Oreja_002_end
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/L_DEF_Clavicula
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/L_DEF_Clavicula/L_DEF_Brazo
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/L_DEF_Clavicula/L_DEF_Brazo/L_DEF_Antebrazo
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/L_DEF_Clavicula/L_DEF_Brazo/L_DEF_Antebrazo/L_DEF_Mano
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/L_DEF_Clavicula/L_DEF_Brazo/L_DEF_Antebrazo/L_DEF_Mano/L_DEF_ManoDedos_001
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/L_DEF_Clavicula/L_DEF_Brazo/L_DEF_Antebrazo/L_DEF_Mano/L_DEF_ManoDedos_001/L_DEF_ManoDedos_002
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/L_DEF_Clavicula/L_DEF_Brazo/L_DEF_Antebrazo/L_DEF_Mano/L_DEF_ManoDedos_001/L_DEF_ManoDedos_002/L_DEF_ManoDedos_002_end
+    m_Weight: 1
+  - m_Path: "Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/L_DEF_Clavicula/L_DEF_Brazo/L_DEF_Antebrazo/L_DEF_Mano/L_DEF_ManoDedos_001/L_DEF_ManoMe\xF1ique"
+    m_Weight: 1
+  - m_Path: "Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/L_DEF_Clavicula/L_DEF_Brazo/L_DEF_Antebrazo/L_DEF_Mano/L_DEF_ManoDedos_001/L_DEF_ManoMe\xF1ique/L_DEF_ManoMe\xF1ique_end"
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/L_DEF_Clavicula/L_DEF_Brazo/L_DEF_Antebrazo/L_DEF_Mano/L_DEF_ManoPulgar
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/L_DEF_Clavicula/L_DEF_Brazo/L_DEF_Antebrazo/L_DEF_Mano/L_DEF_ManoPulgar/L_DEF_ManoPulgar_end
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/R_DEF_Clavicula
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/R_DEF_Clavicula/R_DEF_Brazo
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/R_DEF_Clavicula/R_DEF_Brazo/R_DEF_Antebrazo
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/R_DEF_Clavicula/R_DEF_Brazo/R_DEF_Antebrazo/R_DEF_Mano
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/R_DEF_Clavicula/R_DEF_Brazo/R_DEF_Antebrazo/R_DEF_Mano/R_DEF_ManoDedos_001
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/R_DEF_Clavicula/R_DEF_Brazo/R_DEF_Antebrazo/R_DEF_Mano/R_DEF_ManoDedos_001/R_DEF_ManoDedos_002
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/R_DEF_Clavicula/R_DEF_Brazo/R_DEF_Antebrazo/R_DEF_Mano/R_DEF_ManoDedos_001/R_DEF_ManoDedos_002/R_DEF_ManoDedos_002_end
+    m_Weight: 1
+  - m_Path: "Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/R_DEF_Clavicula/R_DEF_Brazo/R_DEF_Antebrazo/R_DEF_Mano/R_DEF_ManoDedos_001/R_DEF_ManoMe\xF1ique"
+    m_Weight: 1
+  - m_Path: "Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/R_DEF_Clavicula/R_DEF_Brazo/R_DEF_Antebrazo/R_DEF_Mano/R_DEF_ManoDedos_001/R_DEF_ManoMe\xF1ique/R_DEF_ManoMe\xF1ique_end"
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/R_DEF_Clavicula/R_DEF_Brazo/R_DEF_Antebrazo/R_DEF_Mano/R_DEF_ManoPulgar
+    m_Weight: 1
+  - m_Path: Armature.Edgar/Main/DEF_Columna_001/DEF_Columna_002/R_DEF_Clavicula/R_DEF_Brazo/R_DEF_Antebrazo/R_DEF_Mano/R_DEF_ManoPulgar/R_DEF_ManoPulgar_end
+    m_Weight: 1
+  - m_Path: Armature.Edgar/R_IK_Pie
+    m_Weight: 0
+  - m_Path: Armature.Edgar/R_IK_Pie/R_DEF_Pie
+    m_Weight: 1
+  - m_Path: Armature.Edgar/R_IK_Pie/R_DEF_Pie/R_DEF_PieDedos
+    m_Weight: 1
+  - m_Path: Armature.Edgar/R_IK_Pie/R_DEF_Pie/R_DEF_PieDedos/R_DEF_PieDedos_end
+    m_Weight: 1
+  - m_Path: Armature.Edgar/R_IK_Rodilla
+    m_Weight: 0
+  - m_Path: Armature.Edgar/R_IK_Rodilla/R_IK_Rodilla_end
+    m_Weight: 1
+  - m_Path: CH_Edgar
+    m_Weight: 0
