@@ -7,10 +7,10 @@ public class NPCDialogue : MonoBehaviour
     private SFXManager SFX;
     [SerializeField] AudioClip TalkClip;
 
-    public List<NPCDialogueSection> nPCDialogueSections;
-    public NPCDialogueSection currentDialogue;
+    [SerializeField] public List<NPCDialogueSection> dialogueslist;
+    [SerializeField] public NPCDialogueSection currentDialogue;
 
-    private DialogueManager dialogueManager;
+    public DialogueManager dialogueManager;
 
     private void Awake()
     {
@@ -37,6 +37,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void SetCurrentDialogue(int phase)
     {
-        currentDialogue = nPCDialogueSections[phase];
+        currentDialogue = dialogueslist[phase + 1];
+        Debug.Log("Updated CurrentDialogue");
     }
 }

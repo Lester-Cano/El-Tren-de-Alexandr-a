@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class ColorChecker : MonoBehaviour
 {
-    [SerializeField] GameObject keyObject;
     [SerializeField] int valueToGet;
     public int actualValue;
 
-    private void Start()
-    {
-        keyObject.SetActive(false);
-    }
+    public delegate void ToolsEvents();
+    public event ToolsEvents AllToolsPicked;
 
     private void Update()
     {
         if(actualValue == valueToGet)
         {
-            keyObject.SetActive(true);
+            AllToolsPicked?.Invoke();
         }
     }
 }
