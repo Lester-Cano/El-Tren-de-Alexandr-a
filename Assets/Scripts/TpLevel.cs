@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class TpLevel : MonoBehaviour
 {
-
+    [SerializeField] int levelIndex;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Level1");
+            ChangeSceneByIndex(levelIndex);
         }
     }
-
+    public void ChangeSceneByIndex(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
 }
