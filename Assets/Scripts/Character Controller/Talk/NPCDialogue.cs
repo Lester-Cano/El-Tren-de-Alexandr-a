@@ -7,8 +7,8 @@ public class NPCDialogue : MonoBehaviour
     private SFXManager SFX;
     [SerializeField] AudioClip TalkClip;
 
-    [SerializeField] private List<NPCDialogueSection> dialoguesList;
-    [SerializeField] public NPCDialogueSection currentDialogue;
+    public NPCDialogueSection[] dialoguesList;
+    public NPCDialogueSection currentDialogue;
 
     public DialogueManager dialogueManager;
 
@@ -37,8 +37,8 @@ public class NPCDialogue : MonoBehaviour
 
     public void SetCurrentDialogue(int phase)
     {
-        Debug.Log(phase);
-        Debug.Log(dialoguesList.Count);
+        Debug.Log(phase + "Esta es la fase enviada");
+        Debug.Log(dialoguesList.Length + "Esta es la longitud del arreglo");
         currentDialogue = dialoguesList[phase];
         Debug.Log("Updated CurrentDialogue");
     }

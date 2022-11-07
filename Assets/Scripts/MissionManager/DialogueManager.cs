@@ -15,11 +15,6 @@ public class DialogueManager : MonoBehaviour
         missionManager = FindObjectOfType<MissionManager>();
     }
 
-    private void Start()
-    {
-        OnSetPhase?.Invoke(phaseNumber);
-    }
-
     private void OnEnable()
     {
         missionManager.OnSendConditions += SetPhase;

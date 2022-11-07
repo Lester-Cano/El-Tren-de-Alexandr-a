@@ -157,7 +157,6 @@ public class Talk : MonoBehaviour
                 feedbackTalk.TweenArrow();
             }
             yield return new WaitForSeconds(textSpeed);
-
         }
     }
 }
