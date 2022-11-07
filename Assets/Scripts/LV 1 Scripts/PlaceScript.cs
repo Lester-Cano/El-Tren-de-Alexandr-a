@@ -22,7 +22,7 @@ public class PlaceScript : MonoBehaviour
         {
             characteristic = other.GetComponent<ColorBoxPuzzle>();
             isEqual = correspondigPlace.SequenceEqual(characteristic.characteristics);
-            if (isEqual)
+            if (isEqual && characteristic.pickedUp != true)
             {
                 other.attachedRigidbody.isKinematic = true;
                 other.transform.parent = myTransform;

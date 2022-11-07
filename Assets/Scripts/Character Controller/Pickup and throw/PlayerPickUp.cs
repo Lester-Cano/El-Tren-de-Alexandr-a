@@ -62,6 +62,10 @@ public class PlayerPickUp : MonoBehaviour
         objectPickUp.transform.SetParent(objectpickupContainer);
         objectPickUp.transform.TransformPoint(Vector3.zero);
         objectPickUp.transform.localPosition = PickPoint.localPosition;
+        if (target.GetComponent<ColorBoxPuzzle>() != null)
+        {
+            target.GetComponent<ColorBoxPuzzle>().pickedUp = true;
+        }
         //objectPickUp.transform.DOMove(PickPoint.position, 0.3f).SetDelay(0.1f);
         objectPickUp.transform.rotation = Quaternion.Euler(Vector3.zero);
         objectPickUp.rb.isKinematic = true;
@@ -83,7 +87,12 @@ public class PlayerPickUp : MonoBehaviour
         objectPickUp.rb.velocity = transform.GetComponent<Rigidbody>().velocity;
         objectPickUp.rb.AddForce(transform.forward * dropForwardForce, ForceMode.Impulse);
         objectPickUp.rb.AddForce(-transform.up * dropUpwardForce, ForceMode.Impulse);
+        if (objectPickUp.puzzle != null)
+        {
+            objectPickUp.puzzle.pickedUp = false;
+        }
         objectPickUp = null;
+        
         //handle animation
         //animator.SetBool("throw",true);
     }

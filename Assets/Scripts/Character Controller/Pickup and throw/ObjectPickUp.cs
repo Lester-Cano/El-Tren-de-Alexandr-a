@@ -8,10 +8,17 @@ public class ObjectPickUp : MonoBehaviour
 {
     public Rigidbody rb;
     public BoxCollider bcoll;
+    public ColorBoxPuzzle puzzle;
+    [SerializeField] GameObject mySelf;
     MMF_Player MMF_Player;
     private void Awake()
     {
         MMF_Player = GetComponent<MMF_Player>();
+     
+        if (mySelf.GetComponent<ColorBoxPuzzle>()!= null)
+        {
+            puzzle = GetComponent<ColorBoxPuzzle>();
+        }
     }
 
     public void OnCollisionEnter(Collision collision)

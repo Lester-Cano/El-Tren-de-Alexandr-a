@@ -24,8 +24,9 @@ public class AutoDialogs : MonoBehaviour
         {
             dialoguePlace.GetComponent<TextMeshProUGUI>().text = Dialogues[i];
             yield return new WaitForSeconds(secondsBeforeNextDialgue);
+            alreadySaid = true;
         }
-        alreadySaid = true;
+        
         dialoguePlace.SetActive(false);
     }
 
