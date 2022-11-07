@@ -8,7 +8,6 @@ public class PassZone : MonoBehaviour
 {
     [SerializeField] private GameObject pos;
     private GameObject objectToMove;
-    [SerializeField] Vector3 offsetPostion = new Vector3 (0,0,3);
     // transition variables
     [SerializeField] Material transitionMaterial;
     [SerializeField] AudioSource SFX;
@@ -53,7 +52,7 @@ public class PassZone : MonoBehaviour
 
             pos.SetActive(false);
 
-            objectToMove.transform.position = pos.transform.position + offsetPostion;
+            objectToMove.transform.position = pos.transform.position;
 
             characterController.enabled = true;
             characterController = null;
