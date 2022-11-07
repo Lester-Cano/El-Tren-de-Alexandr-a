@@ -64,7 +64,7 @@ public class HUDManager : MonoBehaviour
     public void InteractTextFadeIn()
     {
         interactCanvasGroup.DOFade(1, fadeTime);
-        interactRect.DOAnchorPos(new Vector2(0, -430f), fadeTime, false).SetEase(Ease.InOutSine);
+        interactRect.DOAnchorPos(new Vector2(0, -350f), fadeTime, false).SetEase(Ease.InOutSine);
         InteractFeedBackPlayer.PlayFeedbacks();
     }
     public void InteractTextFadeOut()
