@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class NPCDialogue : MonoBehaviour
 {
-    //public string[] names;
-    //public string[] dialogues;
-    //public List<NPCImage> NPCImages;
     private SFXManager SFX;
     [SerializeField] AudioClip TalkClip;
 
-    public List<NPCDialogueSection> nPCDialogueSections;
+    public NPCDialogueSection[] dialoguesList;
     public NPCDialogueSection currentDialogue;
 
-    private DialogueManager dialogueManager;
+    public DialogueManager dialogueManager;
 
     private void Awake()
     {
@@ -40,6 +37,9 @@ public class NPCDialogue : MonoBehaviour
 
     public void SetCurrentDialogue(int phase)
     {
-        currentDialogue = nPCDialogueSections[phase];
+        Debug.Log(phase + "Esta es la fase enviada");
+        Debug.Log(dialoguesList.Length + "Esta es la longitud del arreglo");
+        currentDialogue = dialoguesList[phase];
+        Debug.Log("Updated CurrentDialogue");
     }
 }

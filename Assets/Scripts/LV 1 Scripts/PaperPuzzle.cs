@@ -5,7 +5,6 @@ using UnityEngine;
 public class PaperPuzzle : MonoBehaviour
 {
     public delegate void PaperEvents();
-
     public event PaperEvents AllPapersPicked;
 
     private int count;

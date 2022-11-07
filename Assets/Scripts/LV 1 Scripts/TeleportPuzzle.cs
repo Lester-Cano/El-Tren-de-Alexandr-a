@@ -7,6 +7,9 @@ public class TeleportPuzzle : MonoBehaviour
     [SerializeField] GameObject[] Positions;
     private GameObject player;
 
+    public delegate void MazeEvents();
+    public event MazeEvents MazeCompleted;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -25,6 +28,8 @@ public class TeleportPuzzle : MonoBehaviour
         }
         if (other.CompareTag("Z4Next")) {
             player.transform.position = Positions[4].transform.position;
+
+            MazeCompleted?.Invoke();
         }
         else if (other.CompareTag("Z1Back")) {
             player.transform.position = Positions[0].transform.position;

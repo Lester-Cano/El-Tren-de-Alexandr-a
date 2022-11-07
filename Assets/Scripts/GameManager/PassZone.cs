@@ -13,6 +13,7 @@ public class PassZone : MonoBehaviour
     [SerializeField] AudioSource SFX;
     [SerializeField] AudioClip TransitionSFX;
     [SerializeField] private Ease ease;
+    [SerializeField] Vector3 offset;
     float transitionValue;
     Sequence tranSequence;
 
@@ -52,7 +53,7 @@ public class PassZone : MonoBehaviour
 
             pos.SetActive(false);
 
-            objectToMove.transform.position = pos.transform.position;
+            objectToMove.transform.position = pos.transform.position + offset;
 
             characterController.enabled = true;
             characterController = null;
