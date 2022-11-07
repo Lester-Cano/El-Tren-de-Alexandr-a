@@ -670,11 +670,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 1072532608}
-  offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
   SFX: {fileID: 0}
   TransitionSFX: {fileID: 0}
   ease: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!65 &59568640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1344,11 +1344,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 909237256}
-  offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
   SFX: {fileID: 0}
   TransitionSFX: {fileID: 0}
   ease: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!65 &152419027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1444,11 +1444,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 940866734}
-  offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
   SFX: {fileID: 0}
   TransitionSFX: {fileID: 0}
   ease: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!65 &157635880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4274,11 +4274,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 1100469449}
-  offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
   SFX: {fileID: 0}
   TransitionSFX: {fileID: 0}
   ease: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!65 &631464882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4587,6 +4587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae79174e14a2324db56650403445533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelIndex: 3
 --- !u!1 &718767106
 GameObject:
   m_ObjectHideFlags: 0
@@ -4634,11 +4635,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 1479124741}
-  offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
   SFX: {fileID: 0}
   TransitionSFX: {fileID: 0}
   ease: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!65 &718767109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5320,11 +5321,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 1934950593}
-  offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
   SFX: {fileID: 0}
   TransitionSFX: {fileID: 0}
   ease: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!65 &833876114
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5619,11 +5620,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 152419024}
-  offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
   SFX: {fileID: 0}
   TransitionSFX: {fileID: 0}
   ease: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!65 &909237258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5757,11 +5758,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 157635878}
-  offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
   SFX: {fileID: 0}
   TransitionSFX: {fileID: 0}
   ease: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!65 &940866737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6349,11 +6350,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 59568637}
-  offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
   SFX: {fileID: 0}
   TransitionSFX: {fileID: 0}
   ease: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!65 &1072532610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6477,11 +6478,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 631464880}
-  offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
   SFX: {fileID: 0}
   TransitionSFX: {fileID: 0}
   ease: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!65 &1100469452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9121,11 +9122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 718767106}
-  offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
   SFX: {fileID: 0}
   TransitionSFX: {fileID: 0}
   ease: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!65 &1479124743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16033,11 +16034,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 833876112}
-  offsetPostion: {x: 0, y: 0, z: 3}
   transitionMaterial: {fileID: 0}
   SFX: {fileID: 0}
   TransitionSFX: {fileID: 0}
   ease: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!65 &1934950596
 BoxCollider:
   m_ObjectHideFlags: 0
