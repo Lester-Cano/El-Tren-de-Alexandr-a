@@ -13,7 +13,7 @@ public class MovementController : MonoBehaviour
     Vector2 currentMovementInput;
     Vector3 currentMovement;
     bool movementPressed;
-    [SerializeField] float speed;
+    public float speed;
     [SerializeField] float rotationPerFrame;
     [SerializeField] Animator animator;
     //Events to trigger the minimap tween
@@ -71,7 +71,7 @@ public class MovementController : MonoBehaviour
             }
 
         }
-        else if (movementPressed)
+        else if (movementPressed && speed >0)
         {
             walkEdgar.enabled = true;
 
@@ -107,7 +107,7 @@ public class MovementController : MonoBehaviour
 
         Quaternion currentRotation = transform.rotation;
 
-        if (movementPressed)
+        if (movementPressed && speed > 0)
         {
             Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
             transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, rotationPerFrame);
@@ -131,11 +131,11 @@ public class MovementController : MonoBehaviour
     {
         bool isRunnig = animator.GetBool("isRunning");
         bool isCarrying = animator.GetBool("isCarrying");
-        if(movementPressed && !isRunnig)
+        if(movementPressed && !isRunnig && speed >0)
         {
             animator.SetBool("isRunning", true);
         }
-        else if(!movementPressed && isRunnig)
+        else if(!movementPressed && isRunnig || speed == 0)
         {
             animator.SetBool("isRunning", false);
         }

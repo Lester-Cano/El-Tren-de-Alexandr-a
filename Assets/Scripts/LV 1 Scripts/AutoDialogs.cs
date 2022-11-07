@@ -9,6 +9,11 @@ public class AutoDialogs : MonoBehaviour
     [SerializeField] int secondsBeforeNextDialgue;
     [SerializeField] bool alreadySaid;
     [SerializeField] GameObject dialoguePlace;
+    MovementController player;
+    private void Awake()
+    {
+        player = FindObjectOfType<MovementController>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")&& !alreadySaid)
@@ -20,12 +25,15 @@ public class AutoDialogs : MonoBehaviour
     IEnumerator StartText()
     {
         dialoguePlace.SetActive(true);
+        player.speed = 0;
+      
         for (int i = 0; i < Dialogues.Length; i++)
         {
             dialoguePlace.GetComponent<TextMeshProUGUI>().text = Dialogues[i];
             yield return new WaitForSeconds(secondsBeforeNextDialgue);
             alreadySaid = true;
         }
+        player.speed = 6;
         
         dialoguePlace.SetActive(false);
     }
