@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
         missionManager.OnSendConditions += SetPhase;
     }
 
-    private void OnDisable()
+    private void OnDisable()  
     {
         missionManager.OnSendConditions -= SetPhase;
     }
