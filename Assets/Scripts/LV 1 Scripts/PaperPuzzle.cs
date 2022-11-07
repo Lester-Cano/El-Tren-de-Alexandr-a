@@ -10,11 +10,18 @@ public class PaperPuzzle : MonoBehaviour
     private int count;
     private Paper paperPiece;
 
+    private int missionCompletedOnce;
+
     private void Update()
     {
         if(count >= 8)
         {
-            AllPapersPicked?.Invoke();
+            missionCompletedOnce++;
+
+            if(missionCompletedOnce <= 1)
+            {
+                AllPapersPicked?.Invoke();
+            }
         }
     }
 

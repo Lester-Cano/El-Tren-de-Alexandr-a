@@ -7,12 +7,17 @@ public class DialogueManager : MonoBehaviour
     MissionManager missionManager;
     [SerializeField] public int phaseNumber;
 
-    public delegate void OnSetPhases(int s);
-    public event OnSetPhases OnSetPhase;
+    [SerializeField] public List<GameObject> npcList1;
+    [SerializeField] public List<GameObject> npcList2;
 
     private void Awake()
     {
         missionManager = FindObjectOfType<MissionManager>();
+    }
+
+    private void Start()
+    {
+
     }
 
     private void OnEnable()
@@ -41,6 +46,23 @@ public class DialogueManager : MonoBehaviour
 
         phaseNumber = count;
 
-        OnSetPhase?.Invoke(phaseNumber);
+        SetCurrentNpc(phaseNumber);
+    }
+
+    public void SetCurrentNpc(int phase)
+    {
+        for (int i = 0; i < npcList1.Count; i++)
+        {
+            if (i == phase)
+            {
+                npcList1[i].gameObject.SetActive(true);
+                npcList2[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                npcList1[i].gameObject.SetActive(false);
+                npcList2[i].gameObject.SetActive(false);
+            }
+        }
     }
 }
