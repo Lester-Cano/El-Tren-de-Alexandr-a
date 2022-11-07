@@ -10,11 +10,18 @@ public class ColorChecker : MonoBehaviour
     public delegate void ToolsEvents();
     public event ToolsEvents AllToolsPicked;
 
+    private int missionCompletedOnce;
+
     private void Update()
     {
         if(actualValue == valueToGet)
         {
-            AllToolsPicked?.Invoke();
+            missionCompletedOnce++;
+
+            if (missionCompletedOnce <= 1)
+            {
+                AllToolsPicked?.Invoke();
+            }
         }
     }
 }
