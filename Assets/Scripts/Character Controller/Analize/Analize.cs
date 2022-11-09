@@ -140,8 +140,6 @@ public class Analize : MonoBehaviour
         isAnalizing = false;
         characterMechanics.analizable = false;
 
-        Cursor.lockState = CursorLockMode.Locked;
-
         OnDisable();
     }
 

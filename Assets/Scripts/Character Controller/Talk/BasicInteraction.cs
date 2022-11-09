@@ -12,6 +12,8 @@ public class BasicInteraction : MonoBehaviour
     private SFXManager SFX;
     [SerializeField] AudioClip[] TalkClip;
 
+    private PlayerPickUp playerPickUp;
+
     //Canva
 
     public GameObject interactButton;
@@ -21,6 +23,8 @@ public class BasicInteraction : MonoBehaviour
         playerControls = new ThirdPersonActionsAssets();  
         ePopUp.SetActive(false);
         SFX = FindObjectOfType<SFXManager>();
+
+        playerPickUp = GameObject.Find("Edgar NIS").GetComponent<PlayerPickUp>();
     }
 
     private void OnEnable() 
@@ -35,7 +39,7 @@ public class BasicInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && playerPickUp.onHand == false)
         {
             talk.Enable();
 
