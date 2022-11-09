@@ -17,7 +17,6 @@ public class GetGameObject : MonoBehaviour
     public void GoToAnalizeFromMenu()
     {
         analize.GoToAnalizeWithObject(gameObject.name);
-        Debug.Log(gameObject.name);
         AllanCanvas.SetActive(false);
         AllanCanvas2.SetActive(false);
     }

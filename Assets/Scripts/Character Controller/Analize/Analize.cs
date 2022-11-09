@@ -111,10 +111,6 @@ public class Analize : MonoBehaviour
             mPlayer.PlayFeedbacks();
         }
 
-        Debug.Log(target);
-
-        //GameObject objectToAnalize = GameObject.Find(target);
-
         foreach (var clone in clones)
         {
             if (clone.name == target)
