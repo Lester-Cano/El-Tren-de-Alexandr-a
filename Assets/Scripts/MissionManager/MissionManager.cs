@@ -23,16 +23,22 @@ public class MissionManager : MonoBehaviour
 
     private void OnEnable()
     {
-        paperPuzzleManager.OnPuzzleSolved += PuzzleSolved;
-        toolsPuzzleManager.OnPuzzleSolved += PuzzleSolved;
-        teleportPuzzleManager.OnPuzzleSolved += PuzzleSolved;
+        if (paperPuzzleManager != null && toolsPuzzleManager != null && teleportPuzzleManager != null)
+        {
+            paperPuzzleManager.OnPuzzleSolved += PuzzleSolved;
+            toolsPuzzleManager.OnPuzzleSolved += PuzzleSolved;
+            teleportPuzzleManager.OnPuzzleSolved += PuzzleSolved;
+        }
     }
 
     private void OnDisable()
     {
-        paperPuzzleManager.OnPuzzleSolved -= PuzzleSolved;
-        toolsPuzzleManager.OnPuzzleSolved -= PuzzleSolved;
-        teleportPuzzleManager.OnPuzzleSolved -= PuzzleSolved;
+        if (paperPuzzleManager != null && toolsPuzzleManager != null && teleportPuzzleManager != null)
+        {
+            paperPuzzleManager.OnPuzzleSolved -= PuzzleSolved;
+            toolsPuzzleManager.OnPuzzleSolved -= PuzzleSolved;
+            teleportPuzzleManager.OnPuzzleSolved -= PuzzleSolved;
+        }
     }
 
     public void PuzzleSolved(int puzzleNumber)

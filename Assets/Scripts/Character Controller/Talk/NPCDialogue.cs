@@ -16,11 +16,13 @@ public class NPCDialogue : MonoBehaviour
         dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
-    private void Start() {
+    private void Start() 
+    {
         SFX = FindObjectOfType<SFXManager>();
     }
 
-    public void OnTalkNPC() {
+    public void OnTalkNPC() 
+    {
         SFX.SFXSource.PlayOneShot(TalkClip);
     }
 }
