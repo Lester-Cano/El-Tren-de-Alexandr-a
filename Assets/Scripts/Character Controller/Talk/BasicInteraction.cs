@@ -20,9 +20,7 @@ public class BasicInteraction : MonoBehaviour
     {
         playerControls = new ThirdPersonActionsAssets();  
         ePopUp.SetActive(false);
-        //interactButton.SetActive(false);
         SFX = FindObjectOfType<SFXManager>();
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void OnEnable() 
@@ -41,9 +39,6 @@ public class BasicInteraction : MonoBehaviour
         {
             talk.Enable();
 
-            Cursor.lockState = CursorLockMode.None;
-           // interactButton.gameObject.SetActive(true);
-
             hUDManager.TalkTextFadeIn();
         }
     }
@@ -53,9 +48,6 @@ public class BasicInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             talk.Disable();
-
-            Cursor.lockState = CursorLockMode.Locked;
-            //interactButton.gameObject.SetActive(false);
 
             ePopUp.SetActive(false);
 

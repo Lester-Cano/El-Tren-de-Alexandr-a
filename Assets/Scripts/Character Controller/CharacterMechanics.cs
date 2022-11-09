@@ -45,8 +45,6 @@ public class CharacterMechanics : MonoBehaviour
 
         hUDManager = FindObjectOfType<HUDManager>();
 
-        //interactButton.gameObject.SetActive(false);
-
         Cursor.lockState = CursorLockMode.None;
     }
 
@@ -70,8 +68,6 @@ public class CharacterMechanics : MonoBehaviour
             objectToInteractWith = other.gameObject;
 
             hUDManager.InteractTextFadeIn();
-            //interactButton.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
         }
         else if (other.gameObject.CompareTag("Pickable"))
         {
@@ -81,8 +77,6 @@ public class CharacterMechanics : MonoBehaviour
             objectToInteractWith = other.gameObject;
 
             hUDManager.InteractTextFadeIn();
-            //interactButton.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
         }
         else if (other.gameObject.CompareTag("Talkable"))
         {
@@ -92,8 +86,6 @@ public class CharacterMechanics : MonoBehaviour
             objectToInteractWith = other.gameObject;
 
             hUDManager.InteractTextFadeIn();
-            Cursor.lockState = CursorLockMode.None;
-            //interactButton.SetActive(true);
         }
 
     }
@@ -113,9 +105,6 @@ public class CharacterMechanics : MonoBehaviour
         {
             talk.StopTalking();
         }
-
-        //interactButton.gameObject.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private IEnumerator PickUpObject()
