@@ -33,6 +33,8 @@ public class Analize : MonoBehaviour
     public GameObject textContainer;
     public TMP_Text allanText;
 
+    [SerializeField] public List<GameObject> clones;
+
     private void Awake()
     {
         mainCam = FindObjectOfType<Camera>();
@@ -100,7 +102,7 @@ public class Analize : MonoBehaviour
         isAnalizing = true;
     }
 
-    public void GoToAnalizeWithObject(GameObject target)
+    public void GoToAnalizeWithObject(string target)
     {
         OnEnable();
 
@@ -109,20 +111,30 @@ public class Analize : MonoBehaviour
             mPlayer.PlayFeedbacks();
         }
 
-        GameObject objectToAnalize = GameObject.Find(target.name);
+        Debug.Log(target);
 
-        placeholder = Instantiate(objectToAnalize, pivot.transform.position, Quaternion.identity);
-        objectToRotate = placeholder;
+        //GameObject objectToAnalize = GameObject.Find(target);
 
-        gameCam.gameObject.SetActive(false);
-        analizeCam.gameObject.SetActive(true);
+        foreach (var clone in clones)
+        {
+            if (clone.name == target)
+            {
+                GameObject objectToAnalize = clone;
 
-        canvas.SetActive(true);
+                placeholder = Instantiate(objectToAnalize, pivot.transform.position, Quaternion.identity);
+                objectToRotate = placeholder;
 
-        characterMechanics.OnDisable();
-        controller.OnDisable();
+                gameCam.gameObject.SetActive(false);
+                analizeCam.gameObject.SetActive(true);
 
-        isAnalizing = true;
+                canvas.SetActive(true);
+
+                characterMechanics.OnDisable();
+                controller.OnDisable();
+
+                isAnalizing = true;
+            }
+        }
     }
 
     public void BackToGame()
