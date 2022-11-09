@@ -486,9 +486,9 @@ RectTransform:
   m_Father: {fileID: 4426216}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -498.1, y: 42.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 543.19, y: 42}
   m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &30712467
@@ -5460,7 +5460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.names.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.names.Array.data[0]
@@ -5472,11 +5472,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[0]
@@ -15913,6 +15913,42 @@ PrefabInstance:
       value: "Si desean pueden recorrer el lugar, hay m\xE1s personas en su situaci\xF3n.
         Pueden dar un vistazo por las bibliotecas o salas de espera. "
       objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[0]
+      value: wdwadad
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[1]
+      value: asdad
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[0]
+      value: dasda
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[1]
+      value: dawdadww
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[0].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 047185ce088ce76468f7d8dad2b486f3, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[1].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 047185ce088ce76468f7d8dad2b486f3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
 --- !u!4 &1452182451 stripped
