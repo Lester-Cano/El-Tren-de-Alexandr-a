@@ -9,7 +9,7 @@ public class PlaceScript : MonoBehaviour
     ColorChecker parentZone;
     Transform myTransform;
     private bool isEqual;
-    //Es de EXTREMA importancia que este array, y el de ColorBoxPuzzle sean del mismo tamaño, y tengan exactamente los mismos checks activados(los mismo elementos esten en true, y los mismo esten en false)
+    
     [SerializeField] bool[] correspondigPlace;
     private void Start()
     {
