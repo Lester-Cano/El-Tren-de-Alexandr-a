@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: b5633a27742871b42beb9ceb27b4e344, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: f1a8174c82901a840b93cf101f1fe00e, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: c2a92b4216f61764a9ab96fe673f6ea9, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5713,13 +5713,88 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[0]
+      value: Caperucita Roja
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[1]
+      value: Allan
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[2]
+      value: Edgar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[3]
+      value: Edgar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[4]
+      value: Edgar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: NPCImages.Array.data[0].illustrarion
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: NPCImages.Array.data[0].letterPlacement
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[0]
+      value: "Esa cosa, *Sniff*, no pude ver a mi abuela, perd\xED la comida, lo
+        peor es que perd\xED mi cita con\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[1]
+      value: "\xA1Oh! No deber\xEDa decir eso."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[2]
+      value: "Ella es muy bonita, \xBFQui\xE9n es?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[3]
+      value: "Tiene una capa roja y habla de su abuela\u2026 \xBFRecuerdas a Caperucita
+        Roja?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[4]
+      value: Su historia se contaba en los pueblos hace mucho tiempo, y luego fue
+        escrita por primera vez, a manos de Charles Perrault.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[0].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 59b68a39945cfc94c9c63707bc519b89, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[1].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 1b2e423044c1c0f43a74b08d21e4f86d, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[2].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 047185ce088ce76468f7d8dad2b486f3, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[3].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 02b24a08964b00d479ae8b221d4774d0, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[4].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d5d881fe67d29a47890f75e0bee2543, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
 --- !u!4 &501477463 stripped
@@ -5925,40 +6000,112 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.names.Array.size
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.names.Array.data[0]
-      value: dwada
+      value: Don Quijote
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.names.Array.data[1]
-      value: dawda
+      value: Don Quijote
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[2]
+      value: Allan
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[3]
+      value: Allan
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[4]
+      value: Edgar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[5]
+      value: Don Quijote
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[6]
+      value: "Allan... \xBFSancho?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[7]
+      value: Edgar
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.size
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.size
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[0]
-      value: asda
+      value: "Ostia, qu\xE9 chavales tan majos, cuando viajeis mantened la cautela
+        con los gigantes de brazos largos"
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
-      value: sda
+      value: Estoy seguro de que esos viles villanos orquestaron semejante cataclismo.
+        No tengo pruebas, pero tampoco dudas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[2]
+      value: "\xA1\xBFHAY MONSTRUOS GIGANTES TAMBI\xC9N?!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[3]
+      value: "\xBFA\xFAn tenemos vigente el seguro de vida que compramos Edgar?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[4]
+      value: "\xBFPero de qu\xE9 est\xE1 hablando se\xF1or?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[5]
+      value: "De los monstruos que hable aquel d\xEDa querido Sancho, hablando de
+        eso, \xBFd\xF3nde est\xE1 Sancho?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[6]
+      value: "Ay, no entiendo \xBFAhora soy Sancho o sigo siendo Allan?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[7]
+      value: "\xA1OH, ES USTED DON QUIJOTE! El quijote de la mism\xEDsima mancha,
+        le pedir\xEDa un aut\xF3grafo, pero tenemos prisa\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[0].illustrarion
       value: 
-      objectReference: {fileID: 21300000, guid: 047185ce088ce76468f7d8dad2b486f3, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[1].illustrarion
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[2].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 0821e605c2eaf704f8b5f7e37fe5d458, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[3].illustrarion
+      value: 
       objectReference: {fileID: 21300000, guid: 047185ce088ce76468f7d8dad2b486f3, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[4].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: a6045dd277a674143b7d020561e71c73, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[6].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 047185ce088ce76468f7d8dad2b486f3, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[7].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d5d881fe67d29a47890f75e0bee2543, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
 --- !u!4 &515632939 stripped
@@ -16963,40 +17110,169 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.names.Array.size
-      value: 2
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.names.Array.data[0]
-      value: wdwadad
+      value: Poe
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.names.Array.data[1]
-      value: asdad
+      value: Allan
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[2]
+      value: Poe
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[3]
+      value: Edgar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[4]
+      value: Poe
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[5]
+      value: Poe
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[6]
+      value: Edgar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[7]
+      value: Allan
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[8]
+      value: Edgar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[9]
+      value: Poe
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.size
-      value: 2
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.size
-      value: 2
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[10]
+      value: Poe
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.names.Array.data[11]
+      value: Allan
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[0]
-      value: dasda
+      value: "Ah, \xBFpudieron conocer a algunos de los refugiados de la literatura?"
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
-      value: dawdadww
+      value: "Si sii! Aunque no sabr\xEDa decir qu\xE9 tan cuerdos estaban, pero
+        fue divertido, leer\xEDa como Edgar ahora."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[2]
+      value: "Es agradable o\xEDrlo, desafortunadamente, me temo no poder compartir
+        ese entusiasmo en el momento."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[3]
+      value: "\xBFQu\xE9 ocurre se\xF1or Poe?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[4]
+      value: "Justo ahora \u2018la nada\u2019 se dirige hacia otra historia, otro
+        mundo al que debo partir para rescatar otros como ustedes\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[5]
+      value: "Mientras cargamos el tren, cientos de personajes pierden su sentido,
+        su luz y yo\u2026 ah, solo hago lo que puedo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[6]
+      value: "\xA1Es terrible!, pero debe haber algo que podamos hacer, \xBFc\xF3mo
+        podr\xEDamos ayudarlo?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[7]
+      value: "Tal vez si ayudamos, otros conservar\xEDan su hogar, \xBFno?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[8]
+      value: "Tiene raz\xF3n, \xBFrecuerda la frase del mito de pandora? \u201CLa
+        esperanza es lo \xFAltimo que se pierde\u201D."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[9]
+      value: Hay un cuento, de esos que tocan fibras, al que le han robado su esencia,
+        tal vez haya refugiados esperando ser hallados.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[10]
+      value: "pero les advierto: Desconozco los objetivos de la Inexistencia, ser\xE1
+        arriesgado\u2026 y de seguro no encontrar\xE1n las mismas historias que alguna
+        vez leyeron."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[11]
+      value: "Seguro que s\xED, don Poe, ser\xE1 como conocer el pueblo de al lado."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[0].illustrarion
       value: 
-      objectReference: {fileID: 21300000, guid: 047185ce088ce76468f7d8dad2b486f3, type: 3}
+      objectReference: {fileID: 21300000, guid: c1a2915940d3e1749911ac6e2d3ec3b0, type: 3}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[1].illustrarion
       value: 
-      objectReference: {fileID: 21300000, guid: 047185ce088ce76468f7d8dad2b486f3, type: 3}
+      objectReference: {fileID: 21300000, guid: d7984b6b4d9526e4988b34cacc1605ea, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[2].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: cad4b5299affbff4ba334450af1fe3a6, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[3].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: a6045dd277a674143b7d020561e71c73, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[4].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 59a12e09d5396a84189c0898dbf9e000, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[5].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: cad4b5299affbff4ba334450af1fe3a6, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[6].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: a85176e0bebdff444a472568dfc2489d, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[7].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 0821e605c2eaf704f8b5f7e37fe5d458, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[8].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d5d881fe67d29a47890f75e0bee2543, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[9].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: c1a2915940d3e1749911ac6e2d3ec3b0, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[10].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: 59a12e09d5396a84189c0898dbf9e000, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[11].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: d7984b6b4d9526e4988b34cacc1605ea, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
 --- !u!4 &1452182451 stripped
@@ -18647,7 +18923,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: no
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 814061e9416c63449a91146dab11690b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 02d6b169651d3344cbc9009a7f92a7b0, type: 2}
   m_sharedMaterial: {fileID: -3505940758912030975, guid: 814061e9416c63449a91146dab11690b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -18711,7 +18987,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1673101233
@@ -26487,7 +26763,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f089dca31a708442a6120d6308e598b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 02d6b169651d3344cbc9009a7f92a7b0, type: 2}
   m_sharedMaterial: {fileID: -3738559296396466932, guid: 7f089dca31a708442a6120d6308e598b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -26551,7 +26827,7 @@ MonoBehaviour:
   m_margin: {x: 73.70398, y: 0, z: 52.019714, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1964062957

@@ -8,7 +8,7 @@ public class AutoDialogs : MonoBehaviour
     [SerializeField] string[] Dialogues;
     [SerializeField] int secondsBeforeNextDialgue;
     [SerializeField] bool alreadySaid;
-    [SerializeField] GameObject dialoguePlace;
+    [SerializeField] GameObject dialoguePlace, dialogueCanvasImage;
     MovementController player;
     private void Awake()
     {
@@ -25,6 +25,7 @@ public class AutoDialogs : MonoBehaviour
     IEnumerator StartText()
     {
         dialoguePlace.SetActive(true);
+        dialogueCanvasImage.SetActive(true);
         player.speed = 0;
       
         for (int i = 0; i < Dialogues.Length; i++)
@@ -36,6 +37,7 @@ public class AutoDialogs : MonoBehaviour
         player.speed = 6;
         
         dialoguePlace.SetActive(false);
+        dialogueCanvasImage.SetActive(false);
     }
 
 }

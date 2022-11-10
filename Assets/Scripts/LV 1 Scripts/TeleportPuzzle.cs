@@ -48,7 +48,7 @@ public class TeleportPuzzle : MonoBehaviour
 
             MazeCompleted?.Invoke();
         }
-        else if (other.CompareTag("Z1Back")) {
+        if (other.CompareTag("Z1Back")) {
             characterController.enabled = false;
             player.transform.position = Positions[0].transform.position;
             characterController.enabled = true;
