@@ -33,8 +33,6 @@ public class followEdgar : MonoBehaviour
 
     private void tpToEdgar()
     {
-        Debug.Log("Teleporting");
-
         myTransform.position = telePos.position;
         nav.Warp(telePos.position);
     }

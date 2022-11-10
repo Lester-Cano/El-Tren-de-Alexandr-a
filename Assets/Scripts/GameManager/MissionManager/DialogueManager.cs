@@ -34,8 +34,6 @@ public class DialogueManager : MonoBehaviour
 
     public void SetPhase(List<bool> conditions)
     {
-        Debug.Log("Changing Phase");
-
         var count = 0;
 
         foreach (var condition in conditions)
