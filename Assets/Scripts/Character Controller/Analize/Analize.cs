@@ -174,8 +174,8 @@ public class Analize : MonoBehaviour
     {
         Vector2 rotationAngle = playerActionsAssets.Analize.DeltaMouse.ReadValue<Vector2>() * rotationSpeed;
 
-        Vector3 globalRightIntoLocalSpace = transform.InverseTransformDirection(Vector3.forward);
-        Vector3 globalUpIntoLocalSpace = transform.InverseTransformDirection(Vector3.up);
+        Vector3 globalRightIntoLocalSpace = transform.InverseTransformDirection(Vector3.right);
+        Vector3 globalUpIntoLocalSpace = transform.InverseTransformDirection(Vector3.back);
 
         Quaternion pitchRotation = Quaternion.AngleAxis(rotationAngle.y, globalRightIntoLocalSpace);
         Quaternion yawRotation = Quaternion.AngleAxis(rotationAngle.x, globalUpIntoLocalSpace);
