@@ -113,6 +113,8 @@ public class CharacterMechanics : MonoBehaviour
         {
             talk.StopTalking();
         }
+
+        objectToInteractWith = null;
     }
 
     private IEnumerator PickUpObject()
