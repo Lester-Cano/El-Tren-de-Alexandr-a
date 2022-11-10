@@ -20,6 +20,8 @@ public class CharacterMechanics : MonoBehaviour
     private Talk talk;
     private PlayerPickUp playerPickUp;
 
+    private CharacterController characterController;
+
     //Input area
     private ThirdPersonActionsAssets playerActionsAssets;
     private InputAction interact;
@@ -45,7 +47,13 @@ public class CharacterMechanics : MonoBehaviour
 
         hUDManager = FindObjectOfType<HUDManager>();
 
+        characterController = GetComponentInParent<CharacterController>();
+
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    private void Start()
+    {
     }
 
     public void OnEnable()
@@ -105,6 +113,8 @@ public class CharacterMechanics : MonoBehaviour
         {
             talk.StopTalking();
         }
+
+        objectToInteractWith = null;
     }
 
     private IEnumerator PickUpObject()
