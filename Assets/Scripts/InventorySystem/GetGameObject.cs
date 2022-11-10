@@ -5,7 +5,7 @@ using UnityEngine;
 public class GetGameObject : MonoBehaviour
 {
     public Analize analize;
-    public GameObject AllanCanvas,AllanCanvas2, AllanInteractButton;
+    public GameObject AllanCanvas,AllanCanvas2;
 
     private void Awake()
     {
@@ -16,7 +16,7 @@ public class GetGameObject : MonoBehaviour
 
     public void GoToAnalizeFromMenu()
     {
-        analize.GoToAnalizeWithObject(gameObject);
+        analize.GoToAnalizeWithObject(gameObject.name);
         AllanCanvas.SetActive(false);
         AllanCanvas2.SetActive(false);
     }

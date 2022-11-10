@@ -33,6 +33,8 @@ public class Analize : MonoBehaviour
     public GameObject textContainer;
     public TMP_Text allanText;
 
+    [SerializeField] public List<GameObject> clones;
+
     private void Awake()
     {
         mainCam = FindObjectOfType<Camera>();
@@ -100,7 +102,7 @@ public class Analize : MonoBehaviour
         isAnalizing = true;
     }
 
-    public void GoToAnalizeWithObject(GameObject target)
+    public void GoToAnalizeWithObject(string target)
     {
         OnEnable();
 
@@ -109,20 +111,26 @@ public class Analize : MonoBehaviour
             mPlayer.PlayFeedbacks();
         }
 
-        GameObject objectToAnalize = GameObject.Find(target.name);
+        foreach (var clone in clones)
+        {
+            if (clone.name == target)
+            {
+                GameObject objectToAnalize = clone;
 
-        placeholder = Instantiate(objectToAnalize, pivot.transform.position, Quaternion.identity);
-        objectToRotate = placeholder;
+                placeholder = Instantiate(objectToAnalize, pivot.transform.position, Quaternion.identity);
+                objectToRotate = placeholder;
 
-        gameCam.gameObject.SetActive(false);
-        analizeCam.gameObject.SetActive(true);
+                gameCam.gameObject.SetActive(false);
+                analizeCam.gameObject.SetActive(true);
 
-        canvas.SetActive(true);
+                canvas.SetActive(true);
 
-        characterMechanics.OnDisable();
-        controller.OnDisable();
+                characterMechanics.OnDisable();
+                controller.OnDisable();
 
-        isAnalizing = true;
+                isAnalizing = true;
+            }
+        }
     }
 
     public void BackToGame()
@@ -139,8 +147,6 @@ public class Analize : MonoBehaviour
 
         isAnalizing = false;
         characterMechanics.analizable = false;
-
-        Cursor.lockState = CursorLockMode.Locked;
 
         OnDisable();
     }
@@ -168,8 +174,8 @@ public class Analize : MonoBehaviour
     {
         Vector2 rotationAngle = playerActionsAssets.Analize.DeltaMouse.ReadValue<Vector2>() * rotationSpeed;
 
-        Vector3 globalRightIntoLocalSpace = transform.InverseTransformDirection(Vector3.forward);
-        Vector3 globalUpIntoLocalSpace = transform.InverseTransformDirection(Vector3.up);
+        Vector3 globalRightIntoLocalSpace = transform.InverseTransformDirection(Vector3.right);
+        Vector3 globalUpIntoLocalSpace = transform.InverseTransformDirection(Vector3.back);
 
         Quaternion pitchRotation = Quaternion.AngleAxis(rotationAngle.y, globalRightIntoLocalSpace);
         Quaternion yawRotation = Quaternion.AngleAxis(rotationAngle.x, globalUpIntoLocalSpace);

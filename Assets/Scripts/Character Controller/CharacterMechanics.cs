@@ -12,7 +12,7 @@ public class CharacterMechanics : MonoBehaviour
     private HUDManager hUDManager;
 
     //Mechanics area
-    [HideInInspector]
+    //[HideInInspector]
     public bool isInteracting, analizable, pickable, talkable;
 
     //Mechanics scripts

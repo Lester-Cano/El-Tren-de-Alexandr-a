@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
 using MoreMountains.Feedbacks;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class PlayerPickUp : MonoBehaviour
 {
@@ -25,12 +26,18 @@ public class PlayerPickUp : MonoBehaviour
     private InputAction interact;
     ThirdPersonController controller;
 
+    //Button
+
+    private Button interactButton;
+
     //Animator
     [SerializeField] Animator animator;
     private void Awake()
     {
         playerActionsAssets = new ThirdPersonActionsAssets();
         controller = GetComponent<ThirdPersonController>();
+
+        interactButton = GameObject.Find("InteractButton").GetComponent<Button>();
     }
 
     private void OnEnable()
@@ -74,6 +81,9 @@ public class PlayerPickUp : MonoBehaviour
         //handle animation
         animator.SetLayerWeight(animator.GetLayerIndex("throw"), 1);
         animator.SetFloat("pickSpeed", 1);
+
+        //
+        interactButton.onClick.AddListener(Throw);
     }
 
     public void Drop()
@@ -92,8 +102,15 @@ public class PlayerPickUp : MonoBehaviour
             objectPickUp.puzzle.pickedUp = false;
         }
         objectPickUp = null;
-        
+
         //handle animation
         //animator.SetBool("throw",true);
+
+        interactButton.onClick.RemoveListener(Throw);
+    }
+
+    private void Throw()
+    {
+        animator.SetBool("throw", true);
     }
 }

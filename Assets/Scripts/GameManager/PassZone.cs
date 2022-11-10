@@ -51,16 +51,12 @@ public class PassZone : MonoBehaviour
         {
             teleporting = false;
 
-            pos.SetActive(false);
-
             objectToMove.transform.position = pos.transform.position + offset;
 
             characterController.enabled = true;
             characterController = null;
 
             yield return new WaitForSeconds(2f);
-
-            pos.SetActive(true);
 
             teleporting = true;
         }

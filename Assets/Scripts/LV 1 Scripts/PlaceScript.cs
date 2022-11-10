@@ -27,6 +27,7 @@ public class PlaceScript : MonoBehaviour
                 other.attachedRigidbody.isKinematic = true;
                 other.transform.parent = myTransform;
                 other.transform.position = myTransform.position;
+                other.transform.rotation = myTransform.rotation;
                 //aumenta de 3 en tres?
                 parentZone.actualValue++;
             }

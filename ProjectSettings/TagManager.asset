@@ -17,6 +17,7 @@ TagManager:
   - Talkable
   - Destroyable
   - Ground
+  - Z5Next
   layers:
   - Default
   - TransparentFX
