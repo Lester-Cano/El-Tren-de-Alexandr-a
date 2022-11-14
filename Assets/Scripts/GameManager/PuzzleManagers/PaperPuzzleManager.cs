@@ -32,5 +32,6 @@ public class PaperPuzzleManager : MonoBehaviour
     {
         teleporterToActive.SetActive(true);
         OnPuzzleSolved?.Invoke(puzzleNumber);
+        Debug.Log("hola");
     }
 }
