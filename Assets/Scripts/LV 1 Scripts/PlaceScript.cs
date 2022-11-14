@@ -8,6 +8,7 @@ public class PlaceScript : MonoBehaviour
     ColorBoxPuzzle characteristic;
     ColorChecker parentZone;
     Transform myTransform;
+    [SerializeField] Transform childTransform;
     private bool isEqual;
     
     [SerializeField] bool[] correspondigPlace;
@@ -25,9 +26,9 @@ public class PlaceScript : MonoBehaviour
             if (isEqual && characteristic.pickedUp != true)
             {
                 other.attachedRigidbody.isKinematic = true;
-                other.transform.parent = myTransform;
-                other.transform.position = myTransform.position;
-                other.transform.rotation = myTransform.rotation;
+                other.transform.parent = childTransform;
+                other.transform.position = childTransform.position;
+                other.transform.rotation = childTransform.rotation;
                 //aumenta de 3 en tres?
                 parentZone.actualValue++;
             }
