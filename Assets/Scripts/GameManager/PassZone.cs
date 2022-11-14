@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class PassZone : MonoBehaviour
 {
-    [SerializeField] private GameObject pos;
+    [SerializeField] private GameObject pos,Fox;
     private GameObject objectToMove;
     // transition variables
     [SerializeField] Material transitionMaterial;
@@ -14,6 +14,7 @@ public class PassZone : MonoBehaviour
     [SerializeField] AudioClip TransitionSFX;
     [SerializeField] private Ease ease;
     [SerializeField] Vector3 offset;
+   
     float transitionValue;
     Sequence tranSequence;
 
@@ -55,7 +56,7 @@ public class PassZone : MonoBehaviour
 
             characterController.enabled = true;
             characterController = null;
-
+            Fox.SetActive(false);
             yield return new WaitForSeconds(2f);
 
             teleporting = true;
