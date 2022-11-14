@@ -18,6 +18,8 @@ public class BasicInteraction : MonoBehaviour
 
     public GameObject interactButton;
 
+    private CharacterMechanics characterMechanics;
+
     private void Awake() 
     {
         playerControls = new ThirdPersonActionsAssets();  
@@ -25,6 +27,7 @@ public class BasicInteraction : MonoBehaviour
         SFX = FindObjectOfType<SFXManager>();
 
         playerPickUp = GameObject.Find("Edgar NIS").GetComponent<PlayerPickUp>();
+        characterMechanics = GameObject.Find("Edgar NIS").GetComponent<CharacterMechanics>();
     }
 
     private void OnEnable() 
@@ -39,7 +42,7 @@ public class BasicInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && playerPickUp.onHand == false)
+        if (other.CompareTag("Player") && playerPickUp.onHand == false && characterMechanics.isInteracting == false)
         {
             talk.Enable();
 
