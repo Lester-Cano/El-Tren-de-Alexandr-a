@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class SpawnFox : MonoBehaviour
 {
-    [SerializeField] Transform[] FoxSpawnPuzzle1, FoxSpawnPuzzle2, FoxSpawnPuzzle3;
-   public void spawningFox()
+    [SerializeField] GameObject Fox;
+    int index;
+   public void spawningFox(Transform[] spawns)
     {
-
+        Fox.SetActive(true);
+        index = Random.Range(0,spawns.Length);
+        Fox.GetComponent<Transform>().position = spawns[index].position;
     }
 }

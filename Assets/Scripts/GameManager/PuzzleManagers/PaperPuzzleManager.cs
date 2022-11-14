@@ -6,6 +6,8 @@ public class PaperPuzzleManager : MonoBehaviour
 {
     [Header("Puzzle Number")]
     [SerializeField] public int puzzleNumber;
+    [SerializeField] Transform[] Puzzle1;
+    private SpawnFox foxScript;
 
     private PaperPuzzle PaperPuzzle;
     public GameObject teleporterToActive;
@@ -15,6 +17,7 @@ public class PaperPuzzleManager : MonoBehaviour
 
     private void Awake()
     {
+        foxScript = FindObjectOfType<SpawnFox>();
         PaperPuzzle = FindObjectOfType<PaperPuzzle>();
     }
 
@@ -33,5 +36,6 @@ public class PaperPuzzleManager : MonoBehaviour
         teleporterToActive.SetActive(true);
         OnPuzzleSolved?.Invoke(puzzleNumber);
         Debug.Log("hola");
+        foxScript.SpawningFox(Puzzle1);
     }
 }
