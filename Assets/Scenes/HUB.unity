@@ -5649,25 +5649,25 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[0]
       value: "Esa cosa, *Sniff*, no pude ver a mi abuela, perd\xED la comida, lo
-        peor es que perd\xED mi cita con\u2026"
+        peor es que perd\xED mi cita con\u2026."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
-      value: "\xA1Oh! No deber\xEDa decir eso."
+      value: "\xA1Oh! No deber\xEDa decir eso.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[2]
-      value: "Ella es muy bonita, \xBFQui\xE9n es?"
+      value: "Ella es muy bonita, \xBFQui\xE9n es?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[3]
       value: "Tiene una capa roja y habla de su abuela\u2026 \xBFRecuerdas a Caperucita
-        Roja?"
+        Roja?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[4]
       value: Su historia se contaba en los pueblos hace mucho tiempo, y luego fue
-        escrita por primera vez, a manos de Charles Perrault.
+        escrita por primera vez, a manos de Charles Perrault..
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[0].illustrarion
@@ -5939,33 +5939,33 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[0]
       value: "Ostia, qu\xE9 chavales tan majos, cuando viajeis mantened la cautela
-        con los gigantes de brazos largos"
+        con los gigantes de brazos largos."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
       value: Estoy seguro de que esos viles villanos orquestaron semejante cataclismo.
-        No tengo pruebas, pero tampoco dudas
+        No tengo pruebas, pero tampoco dudas.
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[2]
-      value: "\xA1\xBFHAY MONSTRUOS GIGANTES TAMBI\xC9N?!"
+      value: "\xA1\xBFHAY MONSTRUOS GIGANTES TAMBI\xC9N?!."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[3]
-      value: "\xBFA\xFAn tenemos vigente el seguro de vida que compramos Edgar?"
+      value: "\xBFA\xFAn tenemos vigente el seguro de vida que compramos Edgar?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[4]
-      value: "\xBFPero de qu\xE9 est\xE1 hablando se\xF1or?"
+      value: "\xBFPero de qu\xE9 est\xE1 hablando se\xF1or?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[5]
       value: "De los monstruos que hable aquel d\xEDa querido Sancho, hablando de
-        eso, \xBFd\xF3nde est\xE1 Sancho?"
+        eso, \xBFd\xF3nde est\xE1 Sancho?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[6]
-      value: "Ay, no entiendo \xBFAhora soy Sancho o sigo siendo Allan?"
+      value: "Ay, no entiendo \xBFAhora soy Sancho o sigo siendo Allan?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[7]
@@ -17159,7 +17159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[0]
-      value: "Ah, \xBFpudieron conocer a algunos de los refugiados de la literatura?"
+      value: "Ah, \xBFpudieron conocer a algunos de los refugiados de la literatura?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
@@ -17173,7 +17173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[3]
-      value: "\xBFQu\xE9 ocurre se\xF1or Poe?"
+      value: "\xBFQu\xE9 ocurre se\xF1or Poe?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[4]
@@ -17188,11 +17188,11 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[6]
       value: "\xA1Es terrible!, pero debe haber algo que podamos hacer, \xBFc\xF3mo
-        podr\xEDamos ayudarlo?"
+        podr\xEDamos ayudarlo?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[7]
-      value: "Tal vez si ayudamos, otros conservar\xEDan su hogar, \xBFno?"
+      value: "Tal vez si ayudamos, otros conservar\xEDan su hogar, \xBFno?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[8]
