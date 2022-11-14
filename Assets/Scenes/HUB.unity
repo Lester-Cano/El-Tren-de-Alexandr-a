@@ -153,7 +153,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 23326632}
   - {fileID: 1702408986}
   - {fileID: 780805799}
   - {fileID: 2075609469}
@@ -416,81 +415,6 @@ Transform:
   m_Father: {fileID: 813085909}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!1 &23326629
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 23326632}
-  - component: {fileID: 23326631}
-  - component: {fileID: 23326630}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &23326630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 23326629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &23326631
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 23326629}
-  m_CullTransparentMesh: 1
---- !u!224 &23326632
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 23326629}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4426216}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 543.19, y: 42}
-  m_SizeDelta: {x: 350, y: 350}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &30712467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,7 +2562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalArrow: {fileID: 1172966702}
   arrowHeight: 30
-  illustrationImage: {fileID: 23326630}
+  illustrationImage: {fileID: 1314903379}
 --- !u!4 &244727890
 Transform:
   m_ObjectHideFlags: 0
@@ -5725,25 +5649,25 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[0]
       value: "Esa cosa, *Sniff*, no pude ver a mi abuela, perd\xED la comida, lo
-        peor es que perd\xED mi cita con\u2026"
+        peor es que perd\xED mi cita con\u2026."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
-      value: "\xA1Oh! No deber\xEDa decir eso."
+      value: "\xA1Oh! No deber\xEDa decir eso.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[2]
-      value: "Ella es muy bonita, \xBFQui\xE9n es?"
+      value: "Ella es muy bonita, \xBFQui\xE9n es?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[3]
       value: "Tiene una capa roja y habla de su abuela\u2026 \xBFRecuerdas a Caperucita
-        Roja?"
+        Roja?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[4]
       value: Su historia se contaba en los pueblos hace mucho tiempo, y luego fue
-        escrita por primera vez, a manos de Charles Perrault.
+        escrita por primera vez, a manos de Charles Perrault..
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[0].illustrarion
@@ -6015,33 +5939,33 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[0]
       value: "Ostia, qu\xE9 chavales tan majos, cuando viajeis mantened la cautela
-        con los gigantes de brazos largos"
+        con los gigantes de brazos largos."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
       value: Estoy seguro de que esos viles villanos orquestaron semejante cataclismo.
-        No tengo pruebas, pero tampoco dudas
+        No tengo pruebas, pero tampoco dudas.
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[2]
-      value: "\xA1\xBFHAY MONSTRUOS GIGANTES TAMBI\xC9N?!"
+      value: "\xA1\xBFHAY MONSTRUOS GIGANTES TAMBI\xC9N?!."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[3]
-      value: "\xBFA\xFAn tenemos vigente el seguro de vida que compramos Edgar?"
+      value: "\xBFA\xFAn tenemos vigente el seguro de vida que compramos Edgar?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[4]
-      value: "\xBFPero de qu\xE9 est\xE1 hablando se\xF1or?"
+      value: "\xBFPero de qu\xE9 est\xE1 hablando se\xF1or?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[5]
       value: "De los monstruos que hable aquel d\xEDa querido Sancho, hablando de
-        eso, \xBFd\xF3nde est\xE1 Sancho?"
+        eso, \xBFd\xF3nde est\xE1 Sancho?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[6]
-      value: "Ay, no entiendo \xBFAhora soy Sancho o sigo siendo Allan?"
+      value: "Ay, no entiendo \xBFAhora soy Sancho o sigo siendo Allan?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[7]
@@ -9438,7 +9362,7 @@ RectTransform:
   m_LocalScale: {x: 0.46, y: 1.75, z: 1}
   m_Children: []
   m_Father: {fileID: 4426216}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -13576,7 +13500,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4426216}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13894,7 +13818,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4426216}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15045,6 +14969,81 @@ Transform:
   m_Father: {fileID: 141587911}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1314903377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1314903378}
+  - component: {fileID: 1314903380}
+  - component: {fileID: 1314903379}
+  m_Layer: 5
+  m_Name: Newimage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1314903378
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314903377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.1, y: 3.1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1702408986}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -505, y: 95}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1314903379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314903377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1314903380
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314903377}
+  m_CullTransparentMesh: 1
 --- !u!1 &1320433209
 GameObject:
   m_ObjectHideFlags: 0
@@ -17052,7 +17051,7 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: TalkClip
       value: 
-      objectReference: {fileID: 8300000, guid: 09c8034acf5ae0c4485d198bd57562e6, type: 3}
+      objectReference: {fileID: 8300000, guid: dc750afe9ea41d844b3ea57ceae277b6, type: 3}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: names.Array.size
       value: 4
@@ -17160,7 +17159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[0]
-      value: "Ah, \xBFpudieron conocer a algunos de los refugiados de la literatura?"
+      value: "Ah, \xBFpudieron conocer a algunos de los refugiados de la literatura?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
@@ -17174,7 +17173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[3]
-      value: "\xBFQu\xE9 ocurre se\xF1or Poe?"
+      value: "\xBFQu\xE9 ocurre se\xF1or Poe?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[4]
@@ -17189,11 +17188,11 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[6]
       value: "\xA1Es terrible!, pero debe haber algo que podamos hacer, \xBFc\xF3mo
-        podr\xEDamos ayudarlo?"
+        podr\xEDamos ayudarlo?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[7]
-      value: "Tal vez si ayudamos, otros conservar\xEDan su hogar, \xBFno?"
+      value: "Tal vez si ayudamos, otros conservar\xEDan su hogar, \xBFno?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[8]
@@ -18914,7 +18913,7 @@ MonoBehaviour:
   m_text: no
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02d6b169651d3344cbc9009a7f92a7b0, type: 2}
-  m_sharedMaterial: {fileID: -3505940758912030975, guid: 814061e9416c63449a91146dab11690b, type: 2}
+  m_sharedMaterial: {fileID: -8301714197056320850, guid: 02d6b169651d3344cbc9009a7f92a7b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19324,8 +19323,9 @@ RectTransform:
   - {fileID: 1956261205}
   - {fileID: 1222785323}
   - {fileID: 1664458588}
+  - {fileID: 1314903378}
   m_Father: {fileID: 4426216}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -26724,7 +26724,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02d6b169651d3344cbc9009a7f92a7b0, type: 2}
-  m_sharedMaterial: {fileID: -3738559296396466932, guid: 7f089dca31a708442a6120d6308e598b, type: 2}
+  m_sharedMaterial: {fileID: -8301714197056320850, guid: 02d6b169651d3344cbc9009a7f92a7b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -26748,8 +26748,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -26787,7 +26787,7 @@ MonoBehaviour:
   m_margin: {x: 73.70398, y: 0, z: 52.019714, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1964062957
@@ -28198,7 +28198,7 @@ RectTransform:
   m_LocalScale: {x: 0.46, y: 1.75, z: 1}
   m_Children: []
   m_Father: {fileID: 4426216}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}

@@ -26,18 +26,23 @@ public class AutoDialogs : MonoBehaviour
     {
         dialoguePlace.SetActive(true);
         dialogueCanvasImage.SetActive(true);
-        player.speed = 0;
+       
+        player.speed = 0f; //si encuentran una forma de hacer el boton que skipee el dialogo me dicen, porque no se me ocurre sin tener que rehacer todo este script
       
         for (int i = 0; i < Dialogues.Length; i++)
         {
             dialoguePlace.GetComponent<TextMeshProUGUI>().text = Dialogues[i];
+            
             yield return new WaitForSeconds(secondsBeforeNextDialgue);
+            
             alreadySaid = true;
+           
         }
         player.speed = 6;
         
         dialoguePlace.SetActive(false);
         dialogueCanvasImage.SetActive(false);
+       
     }
 
 }
