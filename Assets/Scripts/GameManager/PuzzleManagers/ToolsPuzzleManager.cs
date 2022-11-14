@@ -6,7 +6,8 @@ public class ToolsPuzzleManager : MonoBehaviour
 {
     [Header("Puzzle Number")]
     [SerializeField] public int puzzleNumber;
-
+    [SerializeField] Transform[] Puzzle2;
+    private SpawnFox foxScript;
     private ColorChecker toolPuzzle;
     public GameObject teleporterToActive;
 
@@ -15,6 +16,7 @@ public class ToolsPuzzleManager : MonoBehaviour
 
     private void Awake()
     {
+        foxScript = FindObjectOfType<SpawnFox>();
         toolPuzzle = FindObjectOfType<ColorChecker>();
     }
 
@@ -32,5 +34,6 @@ public class ToolsPuzzleManager : MonoBehaviour
     {
         teleporterToActive.SetActive(true);
         OnPuzzleSolved?.Invoke(puzzleNumber);
+        foxScript.SpawningFox(Puzzle2);
     }
 }

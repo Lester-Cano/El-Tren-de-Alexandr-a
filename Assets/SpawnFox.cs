@@ -6,7 +6,7 @@ public class SpawnFox : MonoBehaviour
 {
     [SerializeField] GameObject Fox;
     int index;
-   public void spawningFox(Transform[] spawns)
+   public void SpawningFox(Transform[] spawns)
     {
         Fox.SetActive(true);
         index = Random.Range(0,spawns.Length);
