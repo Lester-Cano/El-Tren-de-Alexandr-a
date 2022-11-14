@@ -9,7 +9,7 @@ public class ToolsPuzzleManager : MonoBehaviour
     [SerializeField] Transform[] Puzzle2;
     private SpawnFox foxScript;
     private ColorChecker toolPuzzle;
-    public GameObject teleporterToActive;
+    public GameObject teleporterToActive, destroyedTree, fixedTree;
 
     public delegate void PuzzleSolvedEvent(int puzzleNumber);
     public event PuzzleSolvedEvent OnPuzzleSolved;
@@ -33,6 +33,8 @@ public class ToolsPuzzleManager : MonoBehaviour
     private void AllObjetivesPicked()
     {
         teleporterToActive.SetActive(true);
+        destroyedTree.SetActive(false);
+        fixedTree.SetActive(true);
         OnPuzzleSolved?.Invoke(puzzleNumber);
         foxScript.SpawningFox(Puzzle2);
     }
