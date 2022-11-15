@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/cinematica 2.unity
     guid: 5d12d90498f0b40458244a72e4482c15
+  - enabled: 1
+    path: Assets/Scenes/Cinematica3.unity
+    guid: 716c384787d232a4fa7d9b108cbbc955
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: db0fa540169c489449d5b5c370e3ae75, type: 2}

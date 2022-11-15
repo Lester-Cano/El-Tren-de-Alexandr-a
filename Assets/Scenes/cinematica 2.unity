@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b4c3380f641bd43909e95dc3a0df36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
+  index: 5
 --- !u!328 &1153171566
 VideoPlayer:
   m_ObjectHideFlags: 0
