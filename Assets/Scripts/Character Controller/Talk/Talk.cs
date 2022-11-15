@@ -11,7 +11,6 @@ public class Talk : MonoBehaviour
     //Mechanic area
 
     NPCDialogue dialogue;
-        //this is where the the images are located and where to change them in the text
     List<NPCImage> nPCImages;
     int[,] imagePlacements; 
     private int count = 0;
@@ -68,11 +67,10 @@ public class Talk : MonoBehaviour
         FillArrays(dialogue);
         dialogue.OnTalkNPC();
 
-        if (dialogue != null  )
+        if (dialogue != null)
         {
             nameText.text = dialogue.currentDialogue.names[0];
             if(!writing) StartCoroutine("WriteText");
-
         }
         else
         {
@@ -96,6 +94,7 @@ public class Talk : MonoBehaviour
         }
         else if (dialogue != null )
         {
+            textSpeed = 0.03f;
             feedbackTalk.StopTween();
             textSpeed = initialTextSpeed;
             count++;
@@ -115,6 +114,7 @@ public class Talk : MonoBehaviour
             StopTalking();
         }
     }
+
     private void FillArrays(NPCDialogue nPCDialogue)
     {
         nPCImages = nPCDialogue.currentDialogue.NPCImages;
@@ -124,19 +124,8 @@ public class Talk : MonoBehaviour
             imagePlacements[i, 0] = nPCImages[i].Dialogue;
             imagePlacements[i, 1] = nPCImages[i].letterPlacement;
         }
-        /*
-        for (int i = 0; i < imagePlacements.GetLength(0); i++)
-        {
-            Debug.Log("Row " + i + ": ");
-
-            for (int j = 0; j < imagePlacements.GetLength(1); j++)
-            {
-                Debug.Log(imagePlacements[i, j] + " ");
-
-            }
-        }
-        */
     }
+
     IEnumerator WriteText()
     {
         feedbackTalk.StopTween();
@@ -145,7 +134,6 @@ public class Talk : MonoBehaviour
         {
             if (imagePlacements[count, 1] == i)
             {
-                Debug.Log(" dialogue: "+count+" letter: "+dialogue.currentDialogue.dialogues[count][i]);
                 feedbackTalk.fadeImage(nPCImages[imageCounter].illustrarion);
                 imageCounter++;
             }
