@@ -9,7 +9,7 @@ public class TeleportPuzzleManager : MonoBehaviour
     [SerializeField] Transform[] Puzzle3;
     private SpawnFox foxScript;
     private TeleportPuzzle teleportPuzzle;
-    public GameObject teleporterToActive;
+    public GameObject teleporterToActive, sceneToActive;
 
     public delegate void PuzzleSolvedEvent(int puzzleNumber);
     public event PuzzleSolvedEvent OnPuzzleSolved;

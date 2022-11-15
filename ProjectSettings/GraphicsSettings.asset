@@ -36,7 +36,26 @@ GraphicsSettings:
   - {fileID: 15106, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-  m_PreloadedShaders: []
+  - {fileID: 4800000, guid: 46d1ed091c5ba714f9b5e4fef4ea4a2d, type: 3}
+  - {fileID: 4800000, guid: e9ff1b29280a58548b6525fbca989bc8, type: 3}
+  - {fileID: 4800000, guid: a93bbd9d0feddc14c8b8052f10356c3e, type: 3}
+  - {fileID: 4800000, guid: 20890ec909083764ca1eaf83f26b4a27, type: 3}
+  - {fileID: 4800000, guid: 5b17cd676c27913468907d0f9221d2de, type: 3}
+  - {fileID: 4800000, guid: 371d61e0090ef2240a970d6c99a9d343, type: 3}
+  - {fileID: 4800000, guid: faa926e928935ea46b760b959b35f47a, type: 3}
+  - {fileID: 4800000, guid: 56404ec408abca9488e9cab4c651c81f, type: 3}
+  - {fileID: 4800000, guid: 51c07a789d7365e49a9edd8d658deee9, type: 3}
+  - {fileID: 4800000, guid: 6097d7cf3f84e2b4d94e59d6c530ec74, type: 3}
+  - {fileID: 4800000, guid: 0a0d542d285885e4cb4e932656978358, type: 3}
+  - {fileID: 4800000, guid: f1bdcea598a287849a7ec637237d7a23, type: 3}
+  - {fileID: 4800000, guid: 213090e563021044c92d1c27258b93f0, type: 3}
+  - {fileID: 4800000, guid: 77ea1b923175bd6439416078316b6264, type: 3}
+  - {fileID: 4800000, guid: 13049d2b8cd384845b6b1414c9d17fc9, type: 3}
+  - {fileID: 4800000, guid: 799033b0d33c8ca40ac949403ec6ee87, type: 3}
+  - {fileID: 4800000, guid: 17986fbb77e96d643bf4c6da1860b9ef, type: 3}
+  - {fileID: 4800000, guid: 4b218962224bcd449ba16572d6a50cee, type: 3}
+  m_PreloadedShaders:
+  - {fileID: 0}
   m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_CustomRenderPipeline: {fileID: 11400000, guid: 10dab049f390a3a4e9f0f032cfcc9a08, type: 2}
   m_TransparencySortMode: 0
@@ -46,7 +65,7 @@ GraphicsSettings:
   m_TierSettings: []
   m_LightmapStripping: 0
   m_FogStripping: 0
-  m_InstancingStripping: 0
+  m_InstancingStripping: 1
   m_LightmapKeepPlain: 1
   m_LightmapKeepDirCombined: 1
   m_LightmapKeepDynamicPlain: 1
@@ -60,4 +79,4 @@ GraphicsSettings:
   m_LightsUseLinearIntensity: 0
   m_LightsUseColorTemperature: 0
   m_DefaultRenderingLayerMask: 1
-  m_LogWhenShaderIsCompiled: 0
+  m_LogWhenShaderIsCompiled: 1
