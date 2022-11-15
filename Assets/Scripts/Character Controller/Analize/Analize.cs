@@ -88,7 +88,7 @@ public class Analize : MonoBehaviour
             mPlayer.PlayFeedbacks();
         }
 
-        placeholder = Instantiate(target, pivot.transform.position, Quaternion.identity);
+        placeholder = Instantiate(target, pivot.transform.position, pivot.transform.rotation);
         objectToRotate = placeholder;
 
         gameCam.gameObject.SetActive(false);
