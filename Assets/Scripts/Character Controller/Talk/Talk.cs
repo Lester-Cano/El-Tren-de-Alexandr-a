@@ -94,6 +94,7 @@ public class Talk : MonoBehaviour
         }
         else if (dialogue != null )
         {
+            textSpeed = 0.03f;
             feedbackTalk.StopTween();
             textSpeed = initialTextSpeed;
             count++;

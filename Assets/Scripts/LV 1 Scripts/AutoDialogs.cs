@@ -19,7 +19,7 @@ public class AutoDialogs : MonoBehaviour
     [SerializeField] private float textSpeed;
     private string currentText = "";
     private bool writing;
-    private float initialTextSpeed;
+    public float initialTextSpeed;
     [SerializeField] FeedbackTalk feedbackTalk;
 
     //Buttons
