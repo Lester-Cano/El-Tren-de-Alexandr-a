@@ -3,77 +3,124 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using static System.Net.Mime.MediaTypeNames;
+
 public class AutoDialogs : MonoBehaviour
 {
-    [SerializeField] string[] Dialogues;
-    [SerializeField] int secondsBeforeNextDialgue;
+    [SerializeField] string[] dialogue;
     [SerializeField] bool alreadySaid;
-    [SerializeField] GameObject dialoguePlace, dialogueCanvasImage;
+    [SerializeField] GameObject dialogueCanvas;
     MovementController player;
-    [SerializeField] int velState = 0;
-    [SerializeField] Button speedButton;
+    private TMP_Text canvasText;
+
+    //Letter Writer Area
+
+    private int count = 0;
+    [SerializeField] private float textSpeed;
+    private string currentText = "";
+    private bool writing;
+    public float initialTextSpeed;
+    [SerializeField] FeedbackTalk feedbackTalk;
+
+    //Buttons
+
+    private Button nextB, stopB;
 
     private void Awake()
     {
         player = FindObjectOfType<MovementController>();
+        canvasText = GameObject.Find("AutoDialogPlace").GetComponent<TMP_Text>();
+        nextB = GameObject.Find("NextBAuth").GetComponent<Button>();
+        stopB = GameObject.Find("SkipBAuth").GetComponent<Button>();
     }
+    private void Start()
+    {
+        dialogueCanvas.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")&& !alreadySaid)
         {
-            StartCoroutine(StartText());
+            nextB.onClick.AddListener(NextText);
+            stopB.onClick.AddListener(StopTalking);
+            StartText();
         }
     }
 
-    IEnumerator StartText()
+    public void StartText()
     {
-        dialoguePlace.SetActive(true);
-        speedButton.gameObject.SetActive(true);
-        dialogueCanvasImage.SetActive(true);
-       
-        player.speed = 0f; //si encuentran una forma de hacer el boton que skipee el dialogo me dicen, porque no se me ocurre sin tener que rehacer todo este script
+        alreadySaid = true;
+
+        dialogueCanvas.SetActive(true);
+        player.speed = 0f;
       
-        for (int i = 0; i < Dialogues.Length; i++)
+        for (int i = 0; i < dialogue.Length; i++)
         {
-            dialoguePlace.GetComponent<TextMeshProUGUI>().text = Dialogues[i];
-            
-            yield return new WaitForSeconds(secondsBeforeNextDialgue);
-            
-            alreadySaid = true;
-           
-        }
-        player.speed = 6;
-        
-        dialoguePlace.SetActive(false);
-        speedButton.gameObject.SetActive(false);
-        dialogueCanvasImage.SetActive(false);
-       
+            if (dialogue != null)
+            {
+                if (!writing) StartCoroutine(WriteText());
+            }
+            else
+            {
+                StopTalking();
+            }                       
+        }    
     }
 
-    public void ChangeVelocity()
+    public void NextText()
     {
-
-        Debug.Log("Cambio velocidad");
-        if (velState == 0)
+        if (writing)
         {
-            secondsBeforeNextDialgue = 3;
-            speedButton.image.color = Color.blue;
-            velState = 1;
+            textSpeed = 0;
         }
-        else if (velState == 1)
+        else if (dialogue != null)
         {
-            secondsBeforeNextDialgue = 1;
-            speedButton.image.color = Color.red;
-            velState = 2;
+            feedbackTalk.StopTween();
+            textSpeed = initialTextSpeed;
+            count++;
+            if (count < dialogue.Length)
+            {
+                writing = true;
+                StartCoroutine(WriteText());
+            }
+            else
+            {
+                StopTalking();
+            }
         }
-        else if (velState == 2)
+        else if (dialogue == null)
         {
-            secondsBeforeNextDialgue = 6;
-            speedButton.image.color = Color.white;
-            velState = 0;
+            StopTalking();
         }
-
-
     }
 
+    IEnumerator WriteText()
+    {
+        feedbackTalk.StopTween();
+        writing = true;
+        for (int i = 0; i < dialogue[count].Length; i++)
+        {
+            currentText = dialogue[count].Substring(0, i);
+            canvasText.text = currentText;
+            if (i + 1 == dialogue[count].Length)
+            {
+                writing = false;
+                feedbackTalk.TweenArrow();
+            }
+            yield return new WaitForSeconds(textSpeed);
+        }
+    }
+
+    public void StopTalking()
+    {
+        player.speed = 6;
+        nextB.onClick.RemoveListener(NextText);
+        stopB.onClick.RemoveListener(StopTalking);
+
+        canvasText.text = null;
+        count = 0;
+
+        dialogueCanvas.SetActive(false);
+    }
 }
