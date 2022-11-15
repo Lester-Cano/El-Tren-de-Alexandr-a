@@ -7,6 +7,6 @@ public class Rotate : MonoBehaviour
    
     private void Update()
     {
-        transform.Rotate(Vector3.up, Space.World);
+        transform.Rotate(Vector3.up * 0.3f, Space.World);
     }
 }
