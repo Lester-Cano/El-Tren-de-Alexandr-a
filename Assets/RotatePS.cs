@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotate : MonoBehaviour
+public class RotatePS : MonoBehaviour
 {
-   
     private void Update()
     {
-        transform.Rotate(Vector3.up * 0.3f, Space.World);
+        transform.Rotate(Vector3.forward * 0.3f, Space.World);
     }
 }
