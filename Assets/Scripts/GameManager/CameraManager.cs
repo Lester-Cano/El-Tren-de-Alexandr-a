@@ -9,13 +9,11 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera MainCamera;
     void Start()
     {
+        Invoke("ChangePriority",1.5f);
+    }
+    void ChangePriority()
+    {
         enteringSceneCamera.Priority = 9;
         MainCamera.Priority = 11;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
