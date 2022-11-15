@@ -9,9 +9,9 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera MainCamera;
     void Start()
     {
-        Invoke("ChangePriority",1.5f);
+        Invoke("changePriority", 0.5f);
     }
-    void ChangePriority()
+    private void changePriority()
     {
         enteringSceneCamera.Priority = 9;
         MainCamera.Priority = 11;
