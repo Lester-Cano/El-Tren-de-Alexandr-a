@@ -5659,7 +5659,7 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[0]
       value: "Esa cosa, *Sniff*, no pude ver a mi abuela, perd\xED la comida, lo
-        peor es que perd\xED mi cita con\u2026."
+        peor es que perd\xED mi cita con...."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
@@ -5699,6 +5699,18 @@ PrefabInstance:
       propertyPath: currentDialogue.NPCImages.Array.data[4].illustrarion
       value: 
       objectReference: {fileID: 21300000, guid: 6d5d881fe67d29a47890f75e0bee2543, type: 3}
+    - target: {fileID: 5924902767082833535, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: m_Height
+      value: 3.4174888
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902767082833535, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.7087444
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902767082833535, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: m_Center.z
+      value: -0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2692150387812662289, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
@@ -5954,12 +5966,12 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[0]
       value: "Ostia, qu\xE9 chavales tan majos, cuando viajeis mantened la cautela
-        con los gigantes de brazos largos."
+        con los gigantes de brazos largos.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
       value: Estoy seguro de que esos viles villanos orquestaron semejante cataclismo.
-        No tengo pruebas, pero tampoco dudas.
+        No tengo pruebas, pero tampoco dudas..
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[2]
@@ -5985,7 +5997,7 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[7]
       value: "\xA1OH, ES USTED DON QUIJOTE! El quijote de la mism\xEDsima mancha,
-        le pedir\xEDa un aut\xF3grafo, pero tenemos prisa\u2026"
+        le pedir\xEDa un aut\xF3grafo, pero tenemos prisa...."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[0].illustrarion
@@ -6019,6 +6031,14 @@ PrefabInstance:
       propertyPath: currentDialogue.NPCImages.Array.data[7].illustrarion
       value: 
       objectReference: {fileID: 21300000, guid: 6d5d881fe67d29a47890f75e0bee2543, type: 3}
+    - target: {fileID: 5924902767082833535, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: m_Height
+      value: 2.876729
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902767082833535, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.4383645
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
 --- !u!4 &515632939 stripped
@@ -7365,7 +7385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: -335.3}
+  m_AnchoredPosition: {x: -40, y: -180}
   m_SizeDelta: {x: 167, y: 164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &616733157
@@ -7468,7 +7488,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6b0509dc70b665244aa5431c9a5e1a17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: adb2b4e18acf81b438fbd040a03fb93c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10148,7 +10168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &833685531
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12786,6 +12806,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Allan
       objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.names.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.names.Array.data[0]
+      value: dasd
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.names.Array.data[1]
+      value: sdad
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[0]
+      value: dwadawd
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[1]
+      value: dawda
+      objectReference: {fileID: 0}
     - target: {fileID: 2776199650822670475, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -12908,7 +12956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: -120}
+  m_AnchoredPosition: {x: -40, y: 80}
   m_SizeDelta: {x: 180, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107101465
@@ -22100,12 +22148,12 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
       value: "Si sii! Aunque no sabr\xEDa decir qu\xE9 tan cuerdos estaban, pero
-        fue divertido, leer\xEDa como Edgar ahora."
+        fue divertido, leer\xEDa como Edgar ahora.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[2]
       value: "Es agradable o\xEDrlo, desafortunadamente, me temo no poder compartir
-        ese entusiasmo en el momento."
+        ese entusiasmo en el momento.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[3]
@@ -22114,12 +22162,12 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[4]
       value: "Justo ahora \u2018la nada\u2019 se dirige hacia otra historia, otro
-        mundo al que debo partir para rescatar otros como ustedes\u2026"
+        mundo al que debo partir para rescatar otros como ustedes...."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[5]
       value: "Mientras cargamos el tren, cientos de personajes pierden su sentido,
-        su luz y yo\u2026 ah, solo hago lo que puedo."
+        su luz y yo\u2026 ah, solo hago lo que puedo.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[6]
@@ -22133,22 +22181,22 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[8]
       value: "Tiene raz\xF3n, \xBFrecuerda la frase del mito de pandora? \u201CLa
-        esperanza es lo \xFAltimo que se pierde\u201D."
+        esperanza es lo \xFAltimo que se pierde\u201D.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[9]
       value: Hay un cuento, de esos que tocan fibras, al que le han robado su esencia,
-        tal vez haya refugiados esperando ser hallados.
+        tal vez haya refugiados esperando ser hallados..
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[10]
       value: "pero les advierto: Desconozco los objetivos de la Inexistencia, ser\xE1
         arriesgado\u2026 y de seguro no encontrar\xE1n las mismas historias que alguna
-        vez leyeron."
+        vez leyeron.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[11]
-      value: "Seguro que s\xED, don Poe, ser\xE1 como conocer el pueblo de al lado."
+      value: "Seguro que s\xED, don Poe, ser\xE1 como conocer el pueblo de al lado.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[0].illustrarion
@@ -22198,6 +22246,14 @@ PrefabInstance:
       propertyPath: currentDialogue.NPCImages.Array.data[11].illustrarion
       value: 
       objectReference: {fileID: 21300000, guid: d7984b6b4d9526e4988b34cacc1605ea, type: 3}
+    - target: {fileID: 5924902767082833535, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: m_Height
+      value: 2.8227377
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924902767082833535, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.41136885
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2692150387812662289, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}

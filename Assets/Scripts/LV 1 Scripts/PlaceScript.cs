@@ -10,29 +10,37 @@ public class PlaceScript : MonoBehaviour
     Transform myTransform;
     [SerializeField] Transform childTransform;
     private bool isEqual;
-    
+
     [SerializeField] bool[] correspondigPlace;
+
+    [SerializeField] private int checker = 0;
+
     private void Start()
     {
         myTransform = GetComponent<Transform>();
         parentZone = GetComponentInParent<ColorChecker>();
+        checker = 0;
     }
     private void OnTriggerEnter(Collider other )
     {
-        if (other.GetComponent<ColorBoxPuzzle>() != null)
+        if (other.GetComponent<ColorBoxPuzzle>() != null && checker < 1)
         {
             characteristic = other.GetComponent<ColorBoxPuzzle>();
-            isEqual = correspondigPlace.SequenceEqual(characteristic.characteristics);
-            if (isEqual && characteristic.pickedUp != true)
+
+            if(characteristic.pickedUp != true)
             {
-                other.attachedRigidbody.isKinematic = true;
-                other.transform.parent = childTransform;
-                other.transform.position = childTransform.position;
-                other.transform.rotation = childTransform.rotation;
-                //aumenta de 3 en tres?
-                parentZone.actualValue++;
+                isEqual = correspondigPlace.SequenceEqual(characteristic.characteristics);
+                if (isEqual)
+                {
+                    other.attachedRigidbody.isKinematic = true;
+                    other.transform.parent = childTransform;
+                    other.transform.position = childTransform.position;
+                    other.transform.rotation = childTransform.rotation;
+
+                    checker++;
+                    parentZone.actualValue++;
+                }
             }
-            
         }
     }
 }

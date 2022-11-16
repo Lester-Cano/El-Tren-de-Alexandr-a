@@ -36,6 +36,5 @@ public class ToolsPuzzleManager : MonoBehaviour
         destroyedTree.SetActive(false);
         fixedTree.SetActive(true);
         OnPuzzleSolved?.Invoke(puzzleNumber);
-        foxScript.SpawningFox(Puzzle2);
     }
 }
