@@ -20,7 +20,7 @@ public class ChangeSceneOnvideoEND : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if (time > 10) CheckOver(myPlayer);
+        if (time > 120) CheckOver(myPlayer);
     }
 
     void CheckOver(UnityEngine.Video.VideoPlayer vp)
