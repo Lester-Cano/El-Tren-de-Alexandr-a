@@ -37,6 +37,12 @@ public class PlaceScript : MonoBehaviour
                     other.transform.position = childTransform.position;
                     other.transform.rotation = childTransform.rotation;
 
+                    Collider[] colliders = other.GetComponents<Collider>();
+                    foreach(var col in colliders)
+                    {
+                        col.enabled = false;
+                    }
+
                     checker++;
                     parentZone.actualValue++;
                 }
