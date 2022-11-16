@@ -46,6 +46,8 @@ public class DialogueManager : MonoBehaviour
 
         phaseNumber = count;
 
+        if (phaseNumber > 3) phaseNumber = 3;
+
         SetCurrentNpc(phaseNumber);
     }
 
