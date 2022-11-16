@@ -21,7 +21,7 @@ public class CharacterMechanics : MonoBehaviour
     private PlayerPickUp playerPickUp;
 
     private CharacterController characterController;
-
+    private BasicInteraction basic;
     //Input area
     private ThirdPersonActionsAssets playerActionsAssets;
     private InputAction interact;
@@ -46,7 +46,7 @@ public class CharacterMechanics : MonoBehaviour
         playerPickUp = GetComponentInParent<PlayerPickUp>();
 
         hUDManager = FindObjectOfType<HUDManager>();
-
+        basic = FindObjectOfType<BasicInteraction>();
         characterController = GetComponentInParent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.None;
@@ -69,7 +69,7 @@ public class CharacterMechanics : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Analizable"))
+        if (other.gameObject.CompareTag("Analizable") && !basic.interactingAllan)
         {
             isInteracting = true;
             analizable = true;
@@ -77,7 +77,7 @@ public class CharacterMechanics : MonoBehaviour
 
             hUDManager.InteractTextFadeIn();
         }
-        else if (other.gameObject.CompareTag("Pickable"))
+        else if (other.gameObject.CompareTag("Pickable") && !basic.interactingAllan)
         {
             isInteracting = true;
             pickable = true;
@@ -86,7 +86,7 @@ public class CharacterMechanics : MonoBehaviour
 
             hUDManager.InteractTextFadeIn();
         }
-        else if (other.gameObject.CompareTag("Talkable"))
+        else if (other.gameObject.CompareTag("Talkable") && !basic.interactingAllan)
         {
             isInteracting = true;
             talkable = true;

@@ -11,9 +11,8 @@ public class BasicInteraction : MonoBehaviour
     [SerializeField] HUDManager hUDManager;
     private SFXManager SFX;
     [SerializeField] AudioClip[] TalkClip;
-
     private PlayerPickUp playerPickUp;
-
+    public bool interactingAllan;
     //Canva
 
     public GameObject interactButton;
@@ -45,7 +44,7 @@ public class BasicInteraction : MonoBehaviour
         if (other.CompareTag("Player") && playerPickUp.onHand == false && characterMechanics.isInteracting == false)
         {
             talk.Enable();
-
+            interactingAllan = true;
             hUDManager.TalkTextFadeIn();
         }
     }
@@ -55,7 +54,7 @@ public class BasicInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             talk.Disable();
-
+            interactingAllan = false;
             ePopUp.SetActive(false);
 
             hUDManager.TalkTextFadeOut();

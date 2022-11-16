@@ -5990,11 +5990,11 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[0].illustrarion
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: fe81406c3686a3543b7a4c88ec5c63c6, type: 3}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[1].illustrarion
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: fe81406c3686a3543b7a4c88ec5c63c6, type: 3}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[2].illustrarion
       value: 
@@ -6007,6 +6007,10 @@ PrefabInstance:
       propertyPath: currentDialogue.NPCImages.Array.data[4].illustrarion
       value: 
       objectReference: {fileID: 21300000, guid: a6045dd277a674143b7d020561e71c73, type: 3}
+    - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.data[5].illustrarion
+      value: 
+      objectReference: {fileID: 21300000, guid: fe81406c3686a3543b7a4c88ec5c63c6, type: 3}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[6].illustrarion
       value: 
@@ -12867,6 +12871,7 @@ MonoBehaviour:
   TalkClip:
   - {fileID: 8300000, guid: e9774842d5354194c9308b84c61ac0ca, type: 3}
   - {fileID: 8300000, guid: 52ae169773e1db84da778a820b653559, type: 3}
+  interactingAllan: 0
   interactButton: {fileID: 1846659251}
 --- !u!1 &1107101463
 GameObject:
