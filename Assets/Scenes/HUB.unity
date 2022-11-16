@@ -5626,11 +5626,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.names.Array.data[1]
-      value: Allan
+      value: Caperucita Roja
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.names.Array.data[2]
-      value: Edgar
+      value: Allan
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.names.Array.data[3]
@@ -5965,8 +5965,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[0]
-      value: "Ostia, qu\xE9 chavales tan majos, cuando viajeis mantened la cautela
-        con los gigantes de brazos largos.."
+      value: "Ostia, \xA1Qu\xE9 chavales tan majos!, cuando viaj\xE9is, mantened
+        la cautela con los gigantes de brazos largos.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
@@ -5987,8 +5987,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[5]
-      value: "De los monstruos que hable aquel d\xEDa querido Sancho, hablando de
-        eso, \xBFd\xF3nde est\xE1 Sancho?."
+      value: "De los monstruos que habl\xE9 aquel d\xEDa querido Sancho... Hablando
+        de eso, \xBFD\xF3nde est\xE1 Sancho?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[6]
@@ -20423,6 +20423,7 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: c03b879d3edc2834aa9709465407c6ff, type: 2}
   inventoryCanva: {fileID: 960503991}
   interactButton: {fileID: 0}
+  itemToStore: {fileID: 0}
 --- !u!136 &1323677959
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -22147,12 +22148,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[1]
-      value: "Si sii! Aunque no sabr\xEDa decir qu\xE9 tan cuerdos estaban, pero
-        fue divertido, leer\xEDa como Edgar ahora.."
+      value: "\xA1S\xED! Aunque no sabr\xEDa decir qu\xE9 tan cuerdos estaban, pero
+        fue divertido, me gustar\xEDa haber le\xEDdo como Edgar ahora mismo.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[2]
-      value: "Es agradable o\xEDrlo, desafortunadamente, me temo no poder compartir
+      value: "Es agradable o\xEDrlo, desafortunadamente. Temo no poder compartir
         ese entusiasmo en el momento.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
@@ -22167,7 +22168,7 @@ PrefabInstance:
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[5]
       value: "Mientras cargamos el tren, cientos de personajes pierden su sentido,
-        su luz y yo\u2026 ah, solo hago lo que puedo.."
+        su luz y yo\u2026 Solo hago lo que puedo.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[6]
@@ -22176,27 +22177,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[7]
-      value: "Tal vez si ayudamos, otros conservar\xEDan su hogar, \xBFno?."
+      value: "Tal vez si ayudamos, otros conservar\xEDan su hogar, \xBFNo?."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[8]
-      value: "Tiene raz\xF3n, \xBFrecuerda la frase del mito de pandora? \u201CLa
+      value: "Tiene raz\xF3n, \xBFRecuerda la frase del mito de pandora? \u201CLa
         esperanza es lo \xFAltimo que se pierde\u201D.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[9]
       value: Hay un cuento, de esos que tocan fibras, al que le han robado su esencia,
-        tal vez haya refugiados esperando ser hallados..
+        tal vez haya refugiados esperando ser hayados..
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[10]
-      value: "pero les advierto: Desconozco los objetivos de la Inexistencia, ser\xE1
-        arriesgado\u2026 y de seguro no encontrar\xE1n las mismas historias que alguna
+      value: "Pero les advierto: Desconozco los objetivos de la Inexistencia, ser\xE1
+        arriesgado\u2026 De seguro no encontrar\xE1n las mismas historias que alguna
         vez leyeron.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.dialogues.Array.data[11]
-      value: "Seguro que s\xED, don Poe, ser\xE1 como conocer el pueblo de al lado.."
+      value: "Seguro que s\xED, Don Poe, ser\xE1 como conocer el pueblo de al lado.."
       objectReference: {fileID: 0}
     - target: {fileID: 5924902766495562281, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
       propertyPath: currentDialogue.NPCImages.Array.data[0].illustrarion
@@ -30282,7 +30283,7 @@ MonoBehaviour:
   drawingMode: 1
   outlineLayer: 0
   outlineTargets:
-  - IsVisible: 1
+  - IsVisible: 0
     CutoutMask: 8
     edgeDilateAmount: 5
     frontEdgeDilateAmount: 5
