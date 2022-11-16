@@ -33,6 +33,7 @@ public class TeleportPuzzleManager : MonoBehaviour
     private void AllObjetivesPicked()
     {
         teleporterToActive.SetActive(true);
+        sceneToActive.SetActive(true);
         OnPuzzleSolved?.Invoke(puzzleNumber);
     }
 }
