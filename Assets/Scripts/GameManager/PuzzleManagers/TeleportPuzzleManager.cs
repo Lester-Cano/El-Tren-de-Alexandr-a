@@ -34,6 +34,5 @@ public class TeleportPuzzleManager : MonoBehaviour
     {
         teleporterToActive.SetActive(true);
         OnPuzzleSolved?.Invoke(puzzleNumber);
-        foxScript.SpawningFox(Puzzle3);
     }
 }

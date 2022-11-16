@@ -5699,6 +5699,10 @@ PrefabInstance:
       propertyPath: currentDialogue.NPCImages.Array.data[4].illustrarion
       value: 
       objectReference: {fileID: 21300000, guid: 6d5d881fe67d29a47890f75e0bee2543, type: 3}
+    - target: {fileID: 5924902767082833534, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.96
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2692150387812662289, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
@@ -6019,6 +6023,10 @@ PrefabInstance:
       propertyPath: currentDialogue.NPCImages.Array.data[7].illustrarion
       value: 
       objectReference: {fileID: 21300000, guid: 6d5d881fe67d29a47890f75e0bee2543, type: 3}
+    - target: {fileID: 5924902767082833534, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.646
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
 --- !u!4 &515632939 stripped
@@ -7365,7 +7373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: -335.3}
+  m_AnchoredPosition: {x: -40, y: -180}
   m_SizeDelta: {x: 167, y: 164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &616733157
@@ -10148,7 +10156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &833685531
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12786,6 +12794,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Allan
       objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.names.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.names.Array.data[0]
+      value: dasd
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.names.Array.data[1]
+      value: sdad
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.NPCImages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[0]
+      value: dwadawd
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776199650822670472, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
+      propertyPath: currentDialogue.dialogues.Array.data[1]
+      value: dawda
+      objectReference: {fileID: 0}
     - target: {fileID: 2776199650822670475, guid: c4a7c8ef8d1450546aae9784d997523d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -12908,7 +12944,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: -120}
+  m_AnchoredPosition: {x: -40, y: 80}
   m_SizeDelta: {x: 180, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107101465
@@ -22198,6 +22234,10 @@ PrefabInstance:
       propertyPath: currentDialogue.NPCImages.Array.data[11].illustrarion
       value: 
       objectReference: {fileID: 21300000, guid: d7984b6b4d9526e4988b34cacc1605ea, type: 3}
+    - target: {fileID: 5924902767082833534, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.33
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2692150387812662289, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4db90bff41dd6434d8dd38a93fd2564a, type: 3}
