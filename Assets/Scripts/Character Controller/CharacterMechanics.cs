@@ -38,6 +38,8 @@ public class CharacterMechanics : MonoBehaviour
 
     public GameObject interactButton;
 
+    public Item itemToStore;
+
     private void Awake()
     {
         playerActionsAssets = new ThirdPersonActionsAssets();
@@ -74,6 +76,7 @@ public class CharacterMechanics : MonoBehaviour
             isInteracting = true;
             analizable = true;
             objectToInteractWith = other.gameObject;
+            itemToStore = objectToInteractWith.GetComponent<Item>();
 
             hUDManager.InteractTextFadeIn();
         }
@@ -117,20 +120,12 @@ public class CharacterMechanics : MonoBehaviour
         objectToInteractWith = null;
     }
 
-    private IEnumerator PickUpObject()
+    private void PickUpObject()
     {
-        var item = objectToInteractWith.GetComponent<Item>();
-        if (item)
+        if (itemToStore)
         {
-            inventory.AddItem(item.item, 1);
+            inventory.AddItem(itemToStore.item, 1);
             Destroy(objectToInteractWith);
-
-            inventoryCanva.SetActive(true);
-
-            yield return new WaitForSeconds(2f);
-
-
-            inventoryCanva.SetActive(false);
         }
     }
 
@@ -149,7 +144,7 @@ public class CharacterMechanics : MonoBehaviour
                 hUDManager.InteractTextFadeOut();
                 analize.GoToAnalize(objectToInteractWith);
 
-                StartCoroutine(PickUpObject());
+                PickUpObject();
 
                 StartCoroutine(analize.AllanBothering());
 
