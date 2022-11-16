@@ -117,7 +117,7 @@ public class Analize : MonoBehaviour
             {
                 GameObject objectToAnalize = clone;
 
-                placeholder = Instantiate(objectToAnalize, pivot.transform.position, Quaternion.identity);
+                placeholder = Instantiate(objectToAnalize, pivot.transform.position, pivot.transform.rotation);
                 objectToRotate = placeholder;
 
                 gameCam.gameObject.SetActive(false);
